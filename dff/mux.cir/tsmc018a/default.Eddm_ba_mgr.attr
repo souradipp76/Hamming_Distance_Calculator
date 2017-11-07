@@ -1,6 +1,0 @@
-A 5 u Eddm_ba_mgr 59e7960c5a25.03.ac.10.1e.48.00.59.8a 1 2 1 0
-V v 1 1 59e7960c5a26.03.ac.10.1e.48.00.59.8a
-F f 1 "default.ba_1"
-O 1
-P "eddm__stream_to_use" "eddm__propl_dstream"
-R cspuv 0 "/home/vlsi/dff/mux.cir/tsmc018a" 1 Eddm_design_viewpoint 59e7960c591c.03.ac.10.1e.48.01.59.8a 59e7960c591c.03.ac.10.1e.48.00.59.8a

@@ -1,9 +1,0 @@
-# Automagically generated file: Please do not edit!
-lvs_LvsOutFile RUNDIR /home/vlsi/g4/dhalllay
-lvs_LvsfVersion 2
-lvs_LvsInputSummary {0 1 0}
-lvs_LvsComparisonSummary {3 0 0 0}
-lvs_LvsOutFile LVS_REPORT dhalllay.lvs.report
-lvs_LvsOutFile SOURCE_NETLIST /home/vlsi/g4/dhalllay/dhalllay.src.net
-lvs_LvsOutFile RULES_FILE /home/vlsi/g4/dhalllay/_tsmc018.calibre.rules_
-lvs_LvsRunTimes 1509168258 1509168258

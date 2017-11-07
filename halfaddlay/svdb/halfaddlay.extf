@@ -1,9 +1,0 @@
-# Automagically generated file: Please do not edit!
-lvs_ExtfVersion 3
-lvs_ExtRunTimes 1509345247 1509345247
-lvs_ExtOutFile RUNDIR /home/vlsi/g4/halfaddlay
-lvs_ExtOutFile RULES_FILE /home/vlsi/g4/halfaddlay/_tsmc018.calibre.rules_
-lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
-lvs_ExtInfoDfmSummary {0}
-lvs_ExtOutFile LAYOUT_NETLIST /home/vlsi/g4/halfaddlay/halfaddlay.sp
-lvs_ExtOutFile EXTRACTION_REPORT halfaddlay.lvs.report.ext

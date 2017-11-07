@@ -1,9 +1,0 @@
-# Automagically generated file: Please do not edit!
-lvs_ExtfVersion 3
-lvs_ExtRunTimes 1507521275 1507521275
-lvs_ExtOutFile RUNDIR /home/vlsi/dff/invstage1_lay
-lvs_ExtOutFile RULES_FILE /home/vlsi/dff/invstage1_lay/_tsmc018.calibre.rules_
-lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
-lvs_ExtInfoDfmSummary {0}
-lvs_ExtOutFile LAYOUT_NETLIST svdb/invstage1_lay.sp
-lvs_ExtOutFile EXTRACTION_REPORT invstage1_lay.lvs.report.ext

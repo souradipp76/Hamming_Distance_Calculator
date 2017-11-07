@@ -1,9 +1,0 @@
-START report: Mon Oct 23 11:53:56 2017 
-** Warning: (eldo - 1615)  In file "./fulladd_tsmc018a.cir" line 11:
-+   COMMAND ".TRAN": TPRINT can not be <= 0.0.
-+   It is set to TSTOP/20.0 = 2.000e-08 s.
-** Warning: (eldo - 109)  NODE "X_OR1.VSS": This bulk node is not biased. 
-** Warning: (eldo - 109)  NODE "X_HALFADD2.X_EXC1.VSS": This bulk node is not biased. 
-** Warning: (eldo - 109)  NODE "X_HALFADD2.X_AND1.VSS": This bulk node is not biased. 
-** Warning: (eldo - 109)  NODE "X_HALFADD1.X_EXC1.VSS": This bulk node is not biased. 
-** Warning: (eldo - 109)  NODE "X_HALFADD1.X_AND1.VSS": This bulk node is not biased. 

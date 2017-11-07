@@ -1,6 +1,0 @@
-A 5 u Eddm_ba_mgr 59d32ee78813.03.ac.10.1e.48.00.2a.5e 1 2 1 0
-V v 1 1 59d32ee78813.03.ac.10.1e.48.01.2a.5e
-F f 1 "sdl.ba_1"
-O 1
-P "eddm__stream_to_use" "eddm__propl_dstream"
-R cspuv 0 "/home/vlsi/dff/masterslaveDflipflopnew.cir/accusim" 1 Eddm_design_viewpoint 59d32ee78361.03.ac.10.1e.48.01.2a.5e 59d32ee78361.03.ac.10.1e.48.00.2a.5e

@@ -1,6 +1,0 @@
-A 5 u Eddm_part 59f6bf0a906b.03.ac.10.1e.48.00.4b.77 1 2 1 0
-V v 1 1 59f6bf0a906b.03.ac.10.1e.48.01.4b.77
-F f 1 "part.part_1"
-O 1
-P "eddm__stream_to_use" "eddm__propl_dstream"
-R csduv 0 "/home/vlsi/g4/hadd/schematic" 1 mgc_schematic 59f6b92b9bc5.03.ac.10.1e.48.01.4b.77 59f6b92b9bc5.03.ac.10.1e.48.00.4b.77

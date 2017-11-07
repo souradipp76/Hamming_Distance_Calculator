@@ -1,9 +1,0 @@
-# Automagically generated file: Please do not edit!
-lvs_ExtfVersion 3
-lvs_ExtRunTimes 1509376062 1509376062
-lvs_ExtOutFile RUNDIR /home/vlsi/g4/fuladdlay
-lvs_ExtOutFile RULES_FILE /home/vlsi/g4/fuladdlay/_tsmc018.calibre.rules_
-lvs_ExtInfoExtSummary {0 0 0 0 1 0 0 0 0 0 0}
-lvs_ExtInfoDfmSummary {0}
-lvs_ExtOutFile LAYOUT_NETLIST /home/vlsi/g4/fuladdlay/fuladdlay.sp
-lvs_ExtOutFile EXTRACTION_REPORT fuladdlay.lvs.report.ext

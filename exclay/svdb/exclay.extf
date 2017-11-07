@@ -1,9 +1,0 @@
-# Automagically generated file: Please do not edit!
-lvs_ExtfVersion 3
-lvs_ExtRunTimes 1509299998 1509299999
-lvs_ExtOutFile RUNDIR /home/vlsi/g4/exclay
-lvs_ExtOutFile RULES_FILE /home/vlsi/g4/exclay/_tsmc018.calibre.rules_
-lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
-lvs_ExtInfoDfmSummary {0}
-lvs_ExtOutFile LAYOUT_NETLIST /home/vlsi/g4/exclay/exclay.sp
-lvs_ExtOutFile EXTRACTION_REPORT exclay.lvs.report.ext

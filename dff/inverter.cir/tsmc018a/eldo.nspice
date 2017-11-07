@@ -1,9 +1,0 @@
-* ELDO netlist generated with ICnet by 'vlsi' on Mon Oct  9 2017 at 08:26:15
-
-*
-* MAIN CELL: Component pathname : /home/vlsi/dff/inverter.cir
-*
-        mn1 out in gnd gnd n L=0.18u W=0.19u
-        mp1 out in vdd vdd p L=0.18u W=1.31u
-*
-.end

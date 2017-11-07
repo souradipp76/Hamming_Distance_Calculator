@@ -1,6 +1,0 @@
-A 5 u Eddm_ba_mgr 59ff246767c4.03.ac.10.1e.48.00.68.e4 1 2 1 0
-V v 1 1 59ff246767c4.03.ac.10.1e.48.01.68.e4
-F f 1 "default.ba_1"
-O 1
-P "eddm__stream_to_use" "eddm__propl_dstream"
-R cspuv 0 "/home/vlsi/g4/faddfinal/tsmc018a" 1 Eddm_design_viewpoint 59ff24675c6e.03.ac.10.1e.48.00.68.e4 59ff24675c6d.03.ac.10.1e.48.00.68.e4

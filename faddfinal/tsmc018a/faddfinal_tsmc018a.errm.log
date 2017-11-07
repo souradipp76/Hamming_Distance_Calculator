@@ -1,6 +1,0 @@
-START report: Sun Nov  5 20:38:34 2017 
-** Warning: (eldo - 1615)  In file "./faddfinal_tsmc018a.cir" line 11:
-+   COMMAND ".TRAN": TPRINT can not be <= 0.0.
-+   It is set to TSTOP/20.0 = 5.000e-09 s.
-** Warning: (eldo - 109)  NODE "VDD": This bulk node is not biased. 
-** Warning: (eldo - 109)  NODE "VSS": This bulk node is not biased. 

@@ -1,9 +1,0 @@
-# Automagically generated file: Please do not edit!
-lvs_ExtfVersion 3
-lvs_ExtRunTimes 1507563574 1507563575
-lvs_ExtOutFile RUNDIR /home/vlsi/dff/answer
-lvs_ExtOutFile RULES_FILE /home/vlsi/dff/answer/_tsmc018.calibre.rules_
-lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
-lvs_ExtInfoDfmSummary {0}
-lvs_ExtOutFile LAYOUT_NETLIST /home/vlsi/dff/answer/answer_lay.sp
-lvs_ExtOutFile EXTRACTION_REPORT answer_lay.lvs.report.ext

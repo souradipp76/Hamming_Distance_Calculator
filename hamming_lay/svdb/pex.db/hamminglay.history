@@ -1,8 +1,0 @@
-//OK 
-//NUMBER_OF_HEADER_LINES: 6
-//VERSION: 1
-//TOKEN_DELIMITER: "
-//TOKEN_SEPARATOR: " "
-//FORMAT: "time" "calibre version" "command line"
-"Sat Nov  4 18:09:14 2017 " "v2013.4_37.29" "-xrc -pdb -rcc -turbo 1 /home/vlsi/g4/hamming_lay/_tsmc018.calibre.rules_"
-"Sat Nov  4 18:09:15 2017 " "v2013.4_37.29" "-xrc -fmt -all /home/vlsi/g4/hamming_lay/_tsmc018.calibre.rules_"
