@@ -1,0 +1,26 @@
+* Component: /home/vlsi/g4/hadd Viewpoint: tsmc018a
+
+.INCLUDE /home/vlsi/g4/hadd/tsmc018a/netlist.spi
+.INCLUDE $ADK/technology/ic/models/tsmc018.mod
+.OPTION AEX
+.OPTION ENGNOT
+.OPTION LIMPROBE=10000.0
+.OPTION NOASCII
+
+* - Analysis Setup - Trans
+.TRAN 0.0001 100n 0n
+
+* --- Forces
+VFORCE__VDD GND GND DC 0
+VFORCE__VDD_1 VDD GND DC 1.8
+VFORCE__IN1 IN1 GND PULSE (0 1.8 0 1n 1n 10n 25n)
+VFORCE__IN2 IN2 GND PULSE (0 1.8 0 1n 1n 25n 50n)
+
+* --- Global Outputs
+.PROBE V SG
+
+* --- Waveform Outputs
+.PLOT TRAN V(C) V(S) V(IN1) V(IN2)
+
+* --- Params
+.TEMP 27.0

@@ -1,0 +1,11 @@
+A 5 u Eddm_part 59e909465253.03.ac.10.1e.48.00.49.b6 2 2 1 0
+V v 1 1 59e909465253.03.ac.10.1e.48.01.49.b6
+F f 1 "part.part_1"
+V v 2 1 59e909466077.03.ac.10.1e.48.00.49.b6
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/multi/schematic" 1 mgc_schematic 59e8972b7b31.03.ac.10.1e.48.00.3e.6a 59e8972b7b30.03.ac.10.1e.48.00.3e.6a
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/multi/schematic" 1 mgc_schematic 59e8972b7b31.03.ac.10.1e.48.00.3e.6a 59e8972b7b30.03.ac.10.1e.48.00.3e.6a

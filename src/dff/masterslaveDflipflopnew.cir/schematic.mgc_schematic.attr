@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 59d2f8e8361b.03.ac.10.1e.48.00.30.37 11 2 1 0
+V v 9 1 59d319491fea.03.ac.10.1e.48.00.45.46
+F o 0 ""
+V v 10 1 59d31ba9a115.03.ac.10.1e.48.00.45.46
+F o 0 ""
+V v 11 1 59e7948ebcda.03.ac.10.1e.48.00.59.8a
+F o 0 ""
+O 11
+R cspuv 0 "/home/vlsi/dff/masterslaveDflipflopnew.cir/schematic/sheet1" 10 mgc_sheet 59e7948ebcc1.03.ac.10.1e.48.00.59.8a 59d2f8e8368b.03.ac.10.1e.48.00.30.37
+O 10
+R cspuv 0 "/home/vlsi/dff/masterslaveDflipflopnew.cir/schematic/sheet1" 9 mgc_sheet 59d31ba9a0d4.03.ac.10.1e.48.00.45.46 59d2f8e8368b.03.ac.10.1e.48.00.30.37
+O 9
+R cspuv 0 "/home/vlsi/dff/masterslaveDflipflopnew.cir/schematic/sheet1" 8 mgc_sheet 59d319491fa8.03.ac.10.1e.48.00.45.46 59d2f8e8368b.03.ac.10.1e.48.00.30.37

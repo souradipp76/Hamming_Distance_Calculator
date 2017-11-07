@@ -1,0 +1,16 @@
+A 5 u Sim_setup_do 59d295d23949.03.ac.10.1e.48.00.54.7d 28 2 55 0
+V v 26 1 59da7801dcc1.03.ac.10.1e.48.00.36.4c
+F f 26 "default.db_26"
+V v 27 1 59da8c53a099.03.ac.10.1e.48.00.36.4c
+F f 27 "default.db_27"
+V v 28 1 59dae28657c4.03.ac.10.1e.48.00.64.b3
+F f 28 "default.db_28"
+O 28
+R csduv 53 "/home/vlsi/dff/inverter.cir/tsmc018a" 30 Eddm_design_viewpoint 59dae220ad8f.03.ac.10.1e.48.00.64.b3 59d295d1a149.03.ac.10.1e.48.00.54.7d
+R csdni 54 "$ADK/technology/ic/models/tsmc018.mod" 1 Mgc_file
+O 27
+R csduv 51 "/home/vlsi/dff/inverter.cir/tsmc018a" 29 Eddm_design_viewpoint 59da80ba0f67.03.ac.10.1e.48.00.36.4c 59d295d1a149.03.ac.10.1e.48.00.54.7d
+R csdni 52 "$ADK/technology/ic/models/tsmc018.mod" 1 Mgc_file
+O 26
+R csduv 49 "/home/vlsi/dff/inverter.cir/tsmc018a" 28 Eddm_design_viewpoint 59da73c9056e.03.ac.10.1e.48.00.36.4c 59d295d1a149.03.ac.10.1e.48.00.54.7d
+R csdni 50 "$ADK/technology/ic/models/tsmc018.mod" 1 Mgc_file

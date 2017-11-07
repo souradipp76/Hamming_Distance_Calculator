@@ -1,0 +1,16 @@
+A 5 u Sim_setup_do 59ed857a93d4.03.ac.10.1e.48.00.3d.aa 4 2 8 0
+V v 2 1 59eea233e4fd.03.ac.10.1e.48.00.6e.10
+F f 2 "default.db_2"
+V v 3 1 59f612244562.03.ac.10.1e.48.00.32.a7
+F f 3 "default.db_3"
+V v 4 1 59f619320a6c.03.ac.10.1e.48.00.32.a7
+F f 4 "default.db_4"
+O 4
+R csduv 6 "/home/vlsi/g4/exc/tsmc018a" 5 Eddm_design_viewpoint 59f6126ecb07.03.ac.10.1e.48.00.32.a7 59ed857a11cc.03.ac.10.1e.48.00.3d.aa
+R csdni 7 "$ADK/technology/ic/models/tsmc018.mod" 1 Mgc_file
+O 3
+R csduv 4 "/home/vlsi/g4/exc/tsmc018a" 4 Eddm_design_viewpoint 59f60dec20e2.03.ac.10.1e.48.00.32.a7 59ed857a11cc.03.ac.10.1e.48.00.3d.aa
+R csdni 5 "$ADK/technology/ic/models/tsmc018.mod" 1 Mgc_file
+O 2
+R csduv 2 "/home/vlsi/g4/exc/tsmc018a" 3 Eddm_design_viewpoint 59eea11cb3b4.03.ac.10.1e.48.00.6e.10 59ed857a11cc.03.ac.10.1e.48.00.3d.aa
+R csdni 3 "$ADK/technology/ic/models/tsmc018.mod" 1 Mgc_file

@@ -1,0 +1,33 @@
+// Registration file '/home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf' closed.
+// Registration file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/pmos4/@ncf.dir/pmos4.ncf' closed.
+// Registration file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/nmos4/@ncf.dir/nmos4.ncf' closed.
+//  Invocation args:  -check -upper -ground_nodes:GND -eldo -o /home/vlsi/dff/mux.cir/tsmc018a/netlist.spi -log /home/vlsi/dff/mux.cir/tsmc018a/netlist_transcript -quiet /home/vlsi/dff/mux.cir/tsmc018a
+
+// **** Reading </home/vlsi/dff/mux.cir/tsmc018a> for ELDO netlist ****
+
+// Checking 1 sheet(s) for out of date references to symbols and interfaces...
+// Done.
+// Parsing file '/home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf' succeeded.
+// Parsing file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/pmos4/@ncf.dir/pmos4.ncf' succeeded.
+// Parsing file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/nmos4/@ncf.dir/nmos4.ncf' succeeded.
+// NOTE: There is no part interface for the top level schematic.  The external nets in the schematic
+//       are being scanned to create the pin names for the top level subckt.
+Processing [/home/vlsi/dff/mux.cir] [mux.cir/mux.cir] [schematic] (NCF entry line: 17 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf)
+Primitive [$ADK/technology/ic/symbols/nmos4] [MG_STD/nmos4] [SPICE=mn] (NCF entry line: 72 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf) (NCF entry line: 136 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf)
+Primitive [$ADK/technology/ic/symbols/pmos4] [MG_STD/pmos4] [SPICE=mp] (NCF entry line: 72 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf) (NCF entry line: 147 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf)
+
+**** Writing </home/vlsi/dff/mux.cir/tsmc018a> netlist for ELDO ****
+ COMPONENT [$ADK/technology/ic/symbols/nmos4] CELL [$ADK/technology/ic/symbols/nmos4] INSTANCE [MN3] "/MN3" 
+ *** warning *** : The NCF entry specifies an additional pin that connects to net 'VSS'.
+     A global net or a net in the parent instance with this name cannot be found.
+ COMPONENT [$ADK/technology/ic/symbols/nmos4] CELL [$ADK/technology/ic/symbols/nmos4] INSTANCE [MN2] "/MN2" 
+ *** warning *** : The NCF entry specifies an additional pin that connects to net 'VSS'.
+     A global net or a net in the parent instance with this name cannot be found.
+ COMPONENT [$ADK/technology/ic/symbols/nmos4] CELL [$ADK/technology/ic/symbols/nmos4] INSTANCE [MN1] "/MN1" 
+ *** warning *** : The NCF entry specifies an additional pin that connects to net 'VSS'.
+     A global net or a net in the parent instance with this name cannot be found.
+
+Number of cells: 3
+Number of primitive instances: 6
+
+Done...

@@ -1,0 +1,16 @@
+A 5 u mgc_symbol 59e7a8cf2aaa.03.ac.10.1e.48.00.59.8a 6 2 1 0
+V v 4 2 59e7a8f21c06.03.ac.10.1e.48.00.59.8a
+F f 4 "sipopisonew.cir.smbl_4"
+F o 0 
+V v 5 2 59e7a8f2619d.03.ac.10.1e.48.00.59.8a
+F f 5 "sipopisonew.cir.smbl_5"
+F o 0 
+V v 6 2 59e7a8f3b557.03.ac.10.1e.48.00.59.8a
+F f 6 "sipopisonew.cir.smbl_6"
+F o 0 
+O 6
+R csduv 0 "/home/vlsi/dff/sipopisonew.cir/part" 2 Eddm_part 59e7a8cf2c9e.03.ac.10.1e.48.00.59.8a 59e79f838f38.03.ac.10.1e.48.00.59.8a
+O 5
+R csduv 0 "/home/vlsi/dff/sipopisonew.cir/part" 2 Eddm_part 59e7a8cf2c9e.03.ac.10.1e.48.00.59.8a 59e79f838f38.03.ac.10.1e.48.00.59.8a
+O 4
+R csduv 0 "/home/vlsi/dff/sipopisonew.cir/part" 2 Eddm_part 59e7a8cf2c9e.03.ac.10.1e.48.00.59.8a 59e79f838f38.03.ac.10.1e.48.00.59.8a

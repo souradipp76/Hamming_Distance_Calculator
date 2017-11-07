@@ -1,0 +1,16 @@
+A 5 u mgc_symbol 59dc5a7c930b.03.ac.10.1e.48.00.66.cc 4 2 1 0
+V v 2 2 59dc5a8138d1.03.ac.10.1e.48.00.66.cc
+F f 2 "sipopiso.cir.smbl_2"
+F o 0 
+V v 3 2 59dc5a819e8f.03.ac.10.1e.48.00.66.cc
+F f 3 "sipopiso.cir.smbl_3"
+F o 0 
+V v 4 2 59dc5a81d93f.03.ac.10.1e.48.00.66.cc
+F f 4 "sipopiso.cir.smbl_4"
+F o 0 
+O 4
+R csduv 0 "/home/vlsi/dff/sipopiso.cir/part" 1 Eddm_part 59dc5a7c945a.03.ac.10.1e.48.00.66.cc 59dc5a7c9459.03.ac.10.1e.48.00.66.cc
+O 3
+R csduv 0 "/home/vlsi/dff/sipopiso.cir/part" 1 Eddm_part 59dc5a7c945a.03.ac.10.1e.48.00.66.cc 59dc5a7c9459.03.ac.10.1e.48.00.66.cc
+O 2
+R csduv 0 "/home/vlsi/dff/sipopiso.cir/part" 1 Eddm_part 59dc5a7c945a.03.ac.10.1e.48.00.66.cc 59dc5a7c9459.03.ac.10.1e.48.00.66.cc

@@ -1,0 +1,6 @@
+A 5 u mgc_symbol 59e7b07c4924.03.ac.10.1e.48.00.27.f3 1 2 1 0
+V v 1 2 59e7b07c4924.03.ac.10.1e.48.01.27.f3
+F f 1 "fulladd.smbl_1"
+F o 0 
+O 1
+R csduv 0 "/home/vlsi/g4/fulladd/part" 2 Eddm_part 59e7b07c4ae7.03.ac.10.1e.48.00.27.f3 59e7af988f78.03.ac.10.1e.48.00.27.f3

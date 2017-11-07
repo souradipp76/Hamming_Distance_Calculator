@@ -1,0 +1,16 @@
+A 5 u mgc_symbol 59e7ab72ac20.03.ac.10.1e.48.00.10.c5 3 2 1 0
+V v 1 2 59e7ab72ac20.03.ac.10.1e.48.01.10.c5
+F f 1 "halfadd.smbl_1"
+F o 0 
+V v 2 2 59e7ab7a7a9f.03.ac.10.1e.48.00.10.c5
+F f 2 "halfadd.smbl_2"
+F o 0 
+V v 3 2 59e7ab7ae1b6.03.ac.10.1e.48.00.10.c5
+F f 3 "halfadd.smbl_3"
+F o 0 
+O 3
+R csduv 0 "/home/vlsi/g4/halfadd/part" 4 Eddm_part 59e7ab7ae1bb.03.ac.10.1e.48.00.10.c5 59e7a9f3c527.03.ac.10.1e.48.00.10.c5
+O 2
+R csduv 0 "/home/vlsi/g4/halfadd/part" 3 Eddm_part 59e7ab7a7aa3.03.ac.10.1e.48.00.10.c5 59e7a9f3c527.03.ac.10.1e.48.00.10.c5
+O 1
+R csduv 0 "/home/vlsi/g4/halfadd/part" 2 Eddm_part 59e7ab72adf0.03.ac.10.1e.48.00.10.c5 59e7a9f3c527.03.ac.10.1e.48.00.10.c5

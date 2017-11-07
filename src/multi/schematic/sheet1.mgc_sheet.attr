@@ -1,0 +1,63 @@
+A 5 u mgc_sheet 59e8972b7d24.03.ac.10.1e.48.00.3e.6a 11 2 15 0
+V v 9 4 59e90e6f4736.03.ac.10.1e.48.00.49.b6
+F f 9 "sheet1.ssht_9"
+F f 9 "sheet1.sgfx_9"
+F o 0 ""
+F o 0 ""
+V v 10 4 59e910704ba4.03.ac.10.1e.48.00.49.b6
+F f 10 "sheet1.ssht_10"
+F f 10 "sheet1.sgfx_10"
+F o 0 ""
+F o 0 ""
+V v 11 4 59e91070d995.03.ac.10.1e.48.00.49.b6
+F f 11 "sheet1.ssht_11"
+F f 11 "sheet1.sgfx_11"
+F o 0 ""
+F o 0 ""
+O 11
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/multi/schematic" 1 mgc_schematic 59e8972b7b31.03.ac.10.1e.48.00.3e.6a 59e8972b7b30.03.ac.10.1e.48.00.3e.6a
+R csduv 1 "/home/vlsi/dff/sipopisonew.cir/part" 2 Eddm_part 59e7a8cf2c9e.03.ac.10.1e.48.00.59.8a 59e79f838f38.03.ac.10.1e.48.00.59.8a
+R csduv 2 "/home/vlsi/dff/sipopisonew.cir/sipopisonew.cir" 6 mgc_symbol 59e7a8f3b557.03.ac.10.1e.48.00.59.8a 59e7a8cf2aaa.03.ac.10.1e.48.00.59.8a
+R csduv 3 "/home/vlsi/dff/masterslaveDflipflopnew.cir/part" 4 Eddm_part 59e794da1657.03.ac.10.1e.48.00.59.8a 59d2fa5a4bb2.03.ac.10.1e.48.00.30.37
+R csduv 4 "/home/vlsi/dff/masterslaveDflipflopnew.cir/masterslaveDflipflopnew.cir" 4 mgc_symbol 59e794da1456.03.ac.10.1e.48.00.59.8a 59d2fc47877d.03.ac.10.1e.48.00.30.37
+R csduv 5 "/home/vlsi/g4/and/part" 4 Eddm_part 59e78ca8c00b.03.ac.10.1e.48.00.2d.43 59e78b20832f.03.ac.10.1e.48.00.2d.43
+R csduv 6 "/home/vlsi/g4/and/and" 4 mgc_symbol 59e78caa3cf1.03.ac.10.1e.48.00.2d.43 59e78c9d6161.03.ac.10.1e.48.00.2d.43
+R csduv 7 "/home/vlsi/g4/fulladd/part" 2 Eddm_part 59e7b07c4ae7.03.ac.10.1e.48.00.27.f3 59e7af988f78.03.ac.10.1e.48.00.27.f3
+R csduv 8 "/home/vlsi/g4/fulladd/fulladd" 1 mgc_symbol 59e7b07c4924.03.ac.10.1e.48.01.27.f3 59e7b07c4924.03.ac.10.1e.48.00.27.f3
+R csduv 9 "$ADK/technology/ic/symbols/portin/part" 1 Eddm_part 35773eaadc18.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.05.02.fa
+R csduv 10 "$ADK/technology/ic/symbols/portin/portin" 1 mgc_symbol 35773d18855d.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.06.02.fa
+R csduv 13 "$ADK/technology/ic/symbols/portout/part" 1 Eddm_part 35785fdc394b.03.86.56.31.87.00.12.30 43349f1b0e02.03.93.22.46.d8.00.02.fa
+R csduv 14 "$ADK/technology/ic/symbols/portout/portout" 1 mgc_symbol 357ed6243e32.03.86.56.31.87.00.28.94 43349f1b0e02.03.93.22.46.d8.01.02.fa
+O 10
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/multi/schematic" 1 mgc_schematic 59e8972b7b31.03.ac.10.1e.48.00.3e.6a 59e8972b7b30.03.ac.10.1e.48.00.3e.6a
+R csduv 1 "/home/vlsi/dff/sipopisonew.cir/part" 2 Eddm_part 59e7a8cf2c9e.03.ac.10.1e.48.00.59.8a 59e79f838f38.03.ac.10.1e.48.00.59.8a
+R csduv 2 "/home/vlsi/dff/sipopisonew.cir/sipopisonew.cir" 6 mgc_symbol 59e7a8f3b557.03.ac.10.1e.48.00.59.8a 59e7a8cf2aaa.03.ac.10.1e.48.00.59.8a
+R csduv 3 "/home/vlsi/dff/masterslaveDflipflopnew.cir/part" 4 Eddm_part 59e794da1657.03.ac.10.1e.48.00.59.8a 59d2fa5a4bb2.03.ac.10.1e.48.00.30.37
+R csduv 4 "/home/vlsi/dff/masterslaveDflipflopnew.cir/masterslaveDflipflopnew.cir" 4 mgc_symbol 59e794da1456.03.ac.10.1e.48.00.59.8a 59d2fc47877d.03.ac.10.1e.48.00.30.37
+R csduv 5 "/home/vlsi/g4/and/part" 4 Eddm_part 59e78ca8c00b.03.ac.10.1e.48.00.2d.43 59e78b20832f.03.ac.10.1e.48.00.2d.43
+R csduv 6 "/home/vlsi/g4/and/and" 4 mgc_symbol 59e78caa3cf1.03.ac.10.1e.48.00.2d.43 59e78c9d6161.03.ac.10.1e.48.00.2d.43
+R csduv 7 "/home/vlsi/g4/fulladd/part" 2 Eddm_part 59e7b07c4ae7.03.ac.10.1e.48.00.27.f3 59e7af988f78.03.ac.10.1e.48.00.27.f3
+R csduv 8 "/home/vlsi/g4/fulladd/fulladd" 1 mgc_symbol 59e7b07c4924.03.ac.10.1e.48.01.27.f3 59e7b07c4924.03.ac.10.1e.48.00.27.f3
+R csduv 9 "$ADK/technology/ic/symbols/portin/part" 1 Eddm_part 35773eaadc18.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.05.02.fa
+R csduv 10 "$ADK/technology/ic/symbols/portin/portin" 1 mgc_symbol 35773d18855d.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.06.02.fa
+R csduv 13 "$ADK/technology/ic/symbols/portout/part" 1 Eddm_part 35785fdc394b.03.86.56.31.87.00.12.30 43349f1b0e02.03.93.22.46.d8.00.02.fa
+R csduv 14 "$ADK/technology/ic/symbols/portout/portout" 1 mgc_symbol 357ed6243e32.03.86.56.31.87.00.28.94 43349f1b0e02.03.93.22.46.d8.01.02.fa
+O 9
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/multi/schematic" 1 mgc_schematic 59e8972b7b31.03.ac.10.1e.48.00.3e.6a 59e8972b7b30.03.ac.10.1e.48.00.3e.6a
+R csduv 1 "/home/vlsi/dff/sipopisonew.cir/part" 2 Eddm_part 59e7a8cf2c9e.03.ac.10.1e.48.00.59.8a 59e79f838f38.03.ac.10.1e.48.00.59.8a
+R csduv 2 "/home/vlsi/dff/sipopisonew.cir/sipopisonew.cir" 6 mgc_symbol 59e7a8f3b557.03.ac.10.1e.48.00.59.8a 59e7a8cf2aaa.03.ac.10.1e.48.00.59.8a
+R csduv 3 "/home/vlsi/dff/masterslaveDflipflopnew.cir/part" 4 Eddm_part 59e794da1657.03.ac.10.1e.48.00.59.8a 59d2fa5a4bb2.03.ac.10.1e.48.00.30.37
+R csduv 4 "/home/vlsi/dff/masterslaveDflipflopnew.cir/masterslaveDflipflopnew.cir" 4 mgc_symbol 59e794da1456.03.ac.10.1e.48.00.59.8a 59d2fc47877d.03.ac.10.1e.48.00.30.37
+R csduv 5 "/home/vlsi/g4/and/part" 4 Eddm_part 59e78ca8c00b.03.ac.10.1e.48.00.2d.43 59e78b20832f.03.ac.10.1e.48.00.2d.43
+R csduv 6 "/home/vlsi/g4/and/and" 4 mgc_symbol 59e78caa3cf1.03.ac.10.1e.48.00.2d.43 59e78c9d6161.03.ac.10.1e.48.00.2d.43
+R csduv 7 "/home/vlsi/g4/fulladd/part" 2 Eddm_part 59e7b07c4ae7.03.ac.10.1e.48.00.27.f3 59e7af988f78.03.ac.10.1e.48.00.27.f3
+R csduv 8 "/home/vlsi/g4/fulladd/fulladd" 1 mgc_symbol 59e7b07c4924.03.ac.10.1e.48.01.27.f3 59e7b07c4924.03.ac.10.1e.48.00.27.f3
+R csduv 9 "$ADK/technology/ic/symbols/portin/part" 1 Eddm_part 35773eaadc18.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.05.02.fa
+R csduv 10 "$ADK/technology/ic/symbols/portin/portin" 1 mgc_symbol 35773d18855d.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.06.02.fa
+R csduv 11 "/home/vlsi/dff/inverter.cir/part" 10 Eddm_part 59d2f0b037b8.03.ac.10.1e.48.00.28.f5 59d295d19578.03.ac.10.1e.48.00.54.7d
+R csduv 12 "/home/vlsi/dff/inverter.cir/inverter.cir" 11 mgc_symbol 59d2f0b942ca.03.ac.10.1e.48.00.28.f5 59d2a0613ec7.03.ac.10.1e.48.00.54.7d
+R csduv 13 "$ADK/technology/ic/symbols/portout/part" 1 Eddm_part 35785fdc394b.03.86.56.31.87.00.12.30 43349f1b0e02.03.93.22.46.d8.00.02.fa
+R csduv 14 "$ADK/technology/ic/symbols/portout/portout" 1 mgc_symbol 357ed6243e32.03.86.56.31.87.00.28.94 43349f1b0e02.03.93.22.46.d8.01.02.fa

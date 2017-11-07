@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 59ff2308669d.03.ac.10.1e.48.00.68.e4 4 2 1 0
+V v 2 1 59ff24633c4e.03.ac.10.1e.48.00.68.e4
+F o 0 ""
+V v 3 1 59ff25db1e8b.03.ac.10.1e.48.00.68.e4
+F o 0 ""
+V v 4 1 59ff27810fa0.03.ac.10.1e.48.00.68.e4
+F o 0 ""
+O 4
+R cspuv 0 "/home/vlsi/g4/faddfinal/schematic/sheet1" 3 mgc_sheet 59ff27810f8a.03.ac.10.1e.48.00.68.e4 59ff2308679b.03.ac.10.1e.48.00.68.e4
+O 3
+R cspuv 0 "/home/vlsi/g4/faddfinal/schematic/sheet1" 2 mgc_sheet 59ff25db1e75.03.ac.10.1e.48.00.68.e4 59ff2308679b.03.ac.10.1e.48.00.68.e4
+O 2
+R cspuv 0 "/home/vlsi/g4/faddfinal/schematic/sheet1" 1 mgc_sheet 59ff2308679c.03.ac.10.1e.48.00.68.e4 59ff2308679b.03.ac.10.1e.48.00.68.e4

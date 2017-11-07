@@ -1,0 +1,204 @@
+
+Running eldo on eeessl72
+with Eldo libraries :
+/home/simulator/mentor/ams/aol/lib/libeldoudm_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos1_64.so
+/home/simulator/mentor/ams/aol/lib/libeldoekv_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomosp9_64.so
+/home/simulator/mentor/ams/aol/lib/libeldocsem_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos2_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos3_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobip_64.so
+/home/simulator/mentor/ams/aol/lib/libeldodio_64.so
+/home/simulator/mentor/ams/aol/lib/libeldojfet_64.so
+/home/simulator/mentor/ams/aol/lib/libeldosoi_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos4_64.so
+/home/simulator/mentor/ams/aol/lib/libeldoasitft_64.so
+/home/simulator/mentor/ams/aol/lib/libeldohisim_64.so
+/home/simulator/mentor/ams/aol/lib/libeldospmod_64.so
+/home/simulator/mentor/ams/aol/lib/libeldopsp_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomosvar_64.so
+/home/simulator/mentor/ams/aol/lib/libeldolegtft_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomoto_64.so
+/home/simulator/mentor/ams/aol/lib/libeldost_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobnr_64.so
+/home/simulator/mentor/ams/aol/lib/libeldorockw_64.so
+/home/simulator/mentor/ams/aol/lib/libeldopubhicum_64.so
+/home/simulator/mentor/ams/aol/lib/libeldotftsh_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobta_64.so
+/home/simulator/mentor/ams/aol/lib/libeldofas_64.so
+/home/simulator/mentor/ams/aol/lib/libeldofascm_64.so
+/home/simulator/mentor/ams/aol/lib/libeldosdsim_64.so
+/home/simulator/mentor/ams/aol/lib/libeldowire_64.so
+/home/simulator/mentor/ams/aol/lib/libogr_64.so loaded.
+
+
+
+Copyright 1988 Mentor Graphics Corporation
+All Rights Reserved
+
+THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY
+INFORMATION WHICH ARE THE PROPERTY OF MENTOR
+GRAPHICS CORPORATION OR ITS LICENSORS AND IS
+SUBJECT TO LICENSE TERMS.
+
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : vlsi@eeessl72
+*** OS    : Red Hat Enterprise Linux Server release 6.9 (Santiago) [VCO = aol]
+*** CPU   :
+    AMD Phenom(tm) II X3 710 Processor
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 3
+    Number of logical processors      : 3
+*** Freq  : 2600.000MHz
+*** Cache : 512 KB
+*** MEM   : 3665112 kB
+*** Date  : Thu Oct 19 00:57:11 2017
+
+
+***** PRE-PROCESSING ...
+
+
+***** ANALYSIS ....
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+Warning 1615: In file "./halfadd_tsmc018a.cir" line 11:
++   COMMAND ".TRAN": TPRINT can not be <= 0.0.
++   It is set to TSTOP/20.0 = 5.000e-09 s.
+
+***** 0  error(s). 
+***** 1  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION...
+
+
+Memory space allocated (MB):    248
+23 elements
+16 nodes
+3 input signals
+
+***> Parsing CPU TIME 0h 0mn 0s 010ms <***
+
+Warning 117:  NODE "X_EXC1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_AND1.VSS": Not connected to any power supply.
+Warning 109: NODE "X_EXC1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_AND1.VSS": This bulk node is not biased. 
+
+Eldo VERSION : ELDO 12.2d (64 bits) Mon Dec 16 16:33:30 GMT 2013
+
+*** DATE: 19-Oct-2017 00:57:11
+
+*** TITLE: * Component: /home/vlsi/g4/halfadd Viewpoint: tsmc018a
+
+TEMPERATURE : 27.000000 degrees C
+
+
+Performing DC analysis...
+
+--> Partitioning circuit...
+
+***> DC CPU TIME 0s 000ms <***
+
+DC:9 iterations FOR DC analysis
+C  7.9632N    
+IN1  0.0000     
+IN2  0.0000     
+S  8.7052N    
+VDD  1.8000     
+X_AND1.N$2  43.9796M   
+X_AND1.N$5  1.8000     
+X_AND1.VSS  95.9122M   
+X_EXC1.N$2  25.5849N   
+X_EXC1.N$22  1.8000     
+X_EXC1.N$24  1.4252     
+X_EXC1.N$31  1.8000     
+X_EXC1.N$47  1.8000     
+X_EXC1.N$59  1.8000     
+X_EXC1.N$7  1.8000     
+X_EXC1.VSS  120.6799M  
+
+   TOTAL POWER DISSIPATION:  257.8502P   WATTS
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=6.111111e-04
+
+Connecting to JWDB server, please wait...
+connected to wdb server : -jwdbhost eeessl72 -jwdbport 34513
+
+Compute from 0.000000 Nano to 100.000000 Nano
+................................................
+Simulation progress                : 10% (t = 11.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s  20   ( 0h  0mn  0s  20)
+CPU Usage                          :  95%               ( 95%)
+................................................
+Simulation progress                : 20% (t = 21.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 66%)
+................................................
+Simulation progress                : 30% (t = 30.4543 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  30)
+CPU Usage                          : 100%               ( 75%)
+................................................
+Simulation progress                : 40% (t = 40.0014 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  40)
+CPU Usage                          : 100%               ( 88%)
+................................................
+Simulation progress                : 50% (t = 50.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  40)
+CPU Usage                          : 100%               ( 88%)
+................................................
+Simulation progress                : 60% (t = 61.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  50)
+CPU Usage                          : 100%               ( 92%)
+................................................
+Simulation progress                : 70% (t = 71.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  50)
+CPU Usage                          :   0%               ( 81%)
+................................................
+Simulation progress                : 80% (t = 80.7609 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  60)
+CPU Usage                          :  90%               ( 83%)
+................................................
+Simulation progress                : 90% (t = 92.9882 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  70)
+CPU Usage                          : 100%               ( 90%)
+................................................
+Simulation progress                : 100% (t = 100.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  70)
+CPU Usage                          : 100%               ( 90%)
+
+
+***>Current simulation completed
+
+
+
+
+SIMULATION INFORMATION 
+memory size allocated in Mbytes  250.4
+Latency: 0.000000%
+average number of newton iterations: 3.474227
+nb of components: 23
+nb of nodes: 56
+nb of MOS or BIP calls: 13136
+Number of steps computed: 264
+
+***>CPU TIME 0s 070ms <***
+
+***>MESSAGE SUMMARY: 5 warnings
+
+***>GLOBAL CPU TIME 0s 130ms <***
+
+
+***>GLOBAL ELAPSED TIME 1s <***
+

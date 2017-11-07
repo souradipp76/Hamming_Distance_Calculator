@@ -1,0 +1,23 @@
+A 5 u Ic_cell_template 59da3337e4eb.03.ac.10.1e.48.00.33.fc 2 4 10 0
+V v 1 2 59da74a88915.03.ac.10.1e.48.00.33.fc
+F f 1 "invstage1_lay.iccel_1"
+F o 0 ""
+V v 2 2 59db01914ac3.03.ac.10.1e.48.00.18.6d
+F f 2 "invstage1_lay.iccel_2"
+F o 0 ""
+O 2
+R csduv 1 "$ADK/technology/ic/process/tsmc018" 1 Ic_lib_template 43349e4fe097.03.93.22.46.d8.00.02.ea 43349f1b0fb1.03.93.22.46.d8.06.02.fa
+R csduv 2 "$ADK/technology/ic/process/tsmc018" 1 Ic_persist_process 43348e50e208.03.93.22.46.d8.00.6c.be 43349f1b0fb4.03.93.22.46.d8.06.02.fa
+R cmduv 4 "49052f642000.0d.00.01.a5.b0.00.00.00" 1 Ic_device_template 49fba4394000.0d.00.01.a5.b0.00.00.00 49052f642000.0d.00.01.a5.b0.00.00.00
+R csdui 5 "$ADK/technology/ic/process/tsmc018.rules" 0 Mgc_file 43349f1b0e3a.03.93.22.46.d8.01.02.fa
+R csduv 6 "$ADK/technology/ic/process/tsmc025_via/via" 1 Ic_cell_template 40d9f3dc7d8b.03.93.22.46.d8.00.3c.c7 43349f1b0e14.03.93.22.46.d8.02.02.fa
+R csduv 8 "$ADK/technology/ic/process/ami12_via/pwell_contact" 1 Ic_cell_template 3741b8a1b8a4.03.80.fc.a8.96.00.08.23 43349f1b0e4c.03.93.22.46.d8.01.02.fa
+R csduv 9 "$ADK/technology/ic/process/ami12_via/nwell_contact" 1 Ic_cell_template 3741b888987e.03.80.fc.a8.96.00.08.23 43349f1b0e4c.03.93.22.46.d8.02.02.fa
+O 1
+R csduv 1 "$ADK/technology/ic/process/tsmc018" 1 Ic_lib_template 43349e4fe097.03.93.22.46.d8.00.02.ea 43349f1b0fb1.03.93.22.46.d8.06.02.fa
+R csduv 2 "$ADK/technology/ic/process/tsmc018" 1 Ic_persist_process 43348e50e208.03.93.22.46.d8.00.6c.be 43349f1b0fb4.03.93.22.46.d8.06.02.fa
+R cmduv 4 "49052f642000.0d.00.01.a5.b0.00.00.00" 1 Ic_device_template 49fba4394000.0d.00.01.a5.b0.00.00.00 49052f642000.0d.00.01.a5.b0.00.00.00
+R csdui 5 "$ADK/technology/ic/process/tsmc018.rules" 0 Mgc_file 43349f1b0e3a.03.93.22.46.d8.01.02.fa
+R csduv 6 "$ADK/technology/ic/process/tsmc025_via/via" 1 Ic_cell_template 40d9f3dc7d8b.03.93.22.46.d8.00.3c.c7 43349f1b0e14.03.93.22.46.d8.02.02.fa
+R csduv 8 "$ADK/technology/ic/process/ami12_via/pwell_contact" 1 Ic_cell_template 3741b8a1b8a4.03.80.fc.a8.96.00.08.23 43349f1b0e4c.03.93.22.46.d8.01.02.fa
+R csduv 9 "$ADK/technology/ic/process/ami12_via/nwell_contact" 1 Ic_cell_template 3741b888987e.03.80.fc.a8.96.00.08.23 43349f1b0e4c.03.93.22.46.d8.02.02.fa

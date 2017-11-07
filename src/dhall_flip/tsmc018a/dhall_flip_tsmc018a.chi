@@ -1,0 +1,246 @@
+  Run on eeessl72 (Linux 2.6.32-696.1.1.el6.x86_64)
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : vlsi@eeessl72
+*** OS    : Red Hat Enterprise Linux Server release 6.9 (Santiago) [VCO = aol]
+*** CPU   :
+    AMD Phenom(tm) II X3 710 Processor
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 3
+    Number of logical processors      : 3
+*** Freq  : 800.000MHz
+*** Cache : 512 KB
+*** MEM   : 3665112 kB
+*** Date  : Sat Oct 28 04:09:34 2017
+
+/home/simulator/mentor/ams/aol/bin/eldo_64.exe -i /home/vlsi/g4/dhall_flip/tsmc018a/dhall_flip_tsmc018a.cir -64b -gwl JWDB 
+
+
+***** PRE-PROCESSING ...
+
+1*******28-Oct-17 *******  ELDO 12.2d (64 bits)  (v7.8_5.1)  *******04:09:34******
+
+0* Component: /home/vlsi/g4/dhall_flip Viewpoint: tsmc018a
+
+0****     INPUT LISTING                                               
+
+0***********************************************************************
+    2  
+    3  ** including /home/vlsi/g4/dhall_flip/tsmc018a/netlist.spi
+    1  * ELDO netlist generated with ICnet by 'vlsi' on Sat Oct 28 2017 at 04:09:33
+    2  
+    3  .CONNECT GND 0
+    4  
+    5  *
+    6  * Globals.
+    7  *
+    8  .GLOBAL VDD GND
+    9  
+   10  
+   11  *
+   12  * Component pathname : $ADK/technology/ic/symbols/rxfer [SPICE]
+   13  *
+   14  *       .include /home/simulator/mentor/Library/ADK/technology/ic/symbols/rxfer/asim_lib/rxfer
+   15  
+   16  
+   17  *
+   18  * Component pathname : $ADK/technology/ic/symbols/prxfer [SPICE]
+   19  *
+   20  *       .include /home/simulator/mentor/Library/ADK/technology/ic/symbols/prxfer/asim_lib/prxfer
+   21  
+   22  *
+   23  * Component pathname : $ADK/technology/ic/symbols/pmos4
+   24  *
+   25  .SUBCKT PMOS4  B D G S
+   26  
+   27          X_I$410 D G S PRXFER
+   28  .ENDS PMOS4
+   29  
+   30  *
+   31  * Component pathname : $ADK/technology/ic/symbols/nmos4
+   32  *
+   33  .SUBCKT NMOS4  B S D G
+   34  
+   35          X_I$409 D G S RXFER
+   36  .ENDS NMOS4
+   37  
+   38  *
+   39  * MAIN CELL: Component pathname : /home/vlsi/g4/dhall_flip
+   40  *
+   41          X_MP3 VDD N$10 N_CLK_ESC1 N$7 PMOS4
+   42          X_MN3 GND N$7 N$10 CLK NMOS4
+   43          X_MP2 VDD N$2 CLK N$7 PMOS4
+   44          X_MN2 GND N$7 N$2 N_CLK_ESC1 NMOS4
+   45          X_MP1 VDD N$2 D VDD PMOS4
+   46          X_MN1 GND GND N$2 D NMOS4
+   47          X_MP10 VDD OUT N$21 VDD PMOS4
+   48          X_MN10 GND GND OUT N$21 NMOS4
+   49          X_MP9 VDD N$24 OUT VDD PMOS4
+   50          X_MN9 GND GND N$24 OUT NMOS4
+   51          X_MP4 VDD N$10 N$12 VDD PMOS4
+   52          X_MN4 GND GND N$10 N$12 NMOS4
+   53          X_MP8 VDD N$24 CLK N$21 PMOS4
+   54          X_MN8 GND N$21 N$24 N_CLK_ESC1 NMOS4
+   55          X_MP7 VDD N$17 N_CLK_ESC1 N$21 PMOS4
+   56          X_MN7 GND N$21 N$17 CLK NMOS4
+   57          X_MP6 VDD N$17 N$12 VDD PMOS4
+   58          X_MN6 GND GND N$17 N$12 NMOS4
+   59          X_MP5 VDD N$12 N$7 VDD PMOS4
+   60          X_MN5 GND GND N$12 N$7 NMOS4
+   61  *
+   62  *end
+    3  
+    4  ** including /home/simulator/mentor/Library/ADK/technology/ic/models/tsmc018.mod
+    1  * DATE: Jun 15/04
+    2  * LOT: T44E                  WAF: 3009
+    3  * Temperature_parameters=Default
+    4  .MODEL NOTCHEDROW C
+    5  .MODEL HR R
+    6  .MODEL N NMOS (                                LEVEL   = 53 
+    7  +VERSION = 3.1            TNOM    = 27             TOX     = 4.1E-9
+    8  +XJ      = 1E-7           NCH     = 2.3549E17      VTH0    = 0.3725327
+    9  +K1      = 0.5933684      K2      = 2.050755E-3    K3      = 1E-3
+   10  +K3B     = 4.5116437      W0      = 1E-7           NLX     = 1.870758E-7
+   11  +DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
+   12  +DVT0    = 1.3621338      DVT1    = 0.3845146      DVT2    = 0.0577255
+   13  +U0      = 259.5304169    UA      = -1.413292E-9   UB      = 2.229959E-18
+   14  +UC      = 4.525942E-11   VSAT    = 9.411671E4     A0      = 1.7572867
+   15  +AGS     = 0.3740333      B0      = -7.087476E-9   B1      = -1E-7
+   16  +KETA    = -4.331915E-3   A1      = 0              A2      = 1
+   17  +RDSW    = 111.886044     PRWG    = 0.5            PRWB    = -0.2
+   18  +WR      = 1              WINT    = 0              LINT    = 1.701524E-8
+   19  +XL      = 0              XW      = -1E-8          DWG     = -1.365589E-8
+   20  +DWB     = 1.045599E-8    VOFF    = -0.0927546     NFACTOR = 2.4494296
+   21  +CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
+   22  +CDSCB   = 0              ETA0    = 3.175457E-3    ETAB    = 3.494694E-5
+   23  +DSUB    = 0.0175288      PCLM    = 0.7273497      PDIBLC1 = 0.1886574
+   24  +PDIBLC2 = 2.617136E-3    PDIBLCB = -0.1           DROUT   = 0.7779462
+   25  +PSCBE1  = 3.488238E10    PSCBE2  = 6.841553E-10   PVAG    = 0.0162206
+   26  +DELTA   = 0.01           RSH     = 6.5            MOBMOD  = 1
+   27  +PRT     = 0              UTE     = -1.5           KT1     = -0.11
+   28  +KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
+   29  +UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
+   30  +WL      = 0              WLN     = 1              WW      = 0
+   31  +WWN     = 1              WWL     = 0              LL      = 0
+   32  +LLN     = 1              LW      = 0              LWN     = 1
+   33  +LWL     = 0              CAPMOD  = 2              XPART   = 0.5
+   34  +CGDO    = 8.53E-10       CGSO    = 8.53E-10       CGBO    = 1E-12
+   35  +CJ      = 9.513993E-4    PB      = 0.8            MJ      = 0.3773625
+   36  +CJSW    = 2.600853E-10   PBSW    = 0.8157101      MJSW    = 0.1004233
+   37  +CJSWG   = 3.3E-10        PBSWG   = 0.8157101      MJSWG   = 0.1004233
+   38  +CF      = 0              PVTH0   = -8.863347E-4   PRDSW   = -3.6877287
+   39  +PK2     = 3.730349E-4    WKETA   = 6.284186E-3    LKETA   = -0.0106193
+   40  +PU0     = 16.6114107     PUA     = 6.572846E-11   PUB     = 0
+   41  +PVSAT   = 1.112243E3     PETA0   = 1.002968E-4    PKETA   = -2.906037E-3    )
+   42  *
+   43  .MODEL P PMOS (                                LEVEL   = 53
+   44  +VERSION = 3.1            TNOM    = 27             TOX     = 4.1E-9
+   45  +XJ      = 1E-7           NCH     = 4.1589E17      VTH0    = -0.3948389
+   46  +K1      = 0.5763529      K2      = 0.0289236      K3      = 0
+   47  +K3B     = 13.8420955     W0      = 1E-6           NLX     = 1.337719E-7
+   48  +DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
+   49  +DVT0    = 0.5281977      DVT1    = 0.2185978      DVT2    = 0.1
+   50  +U0      = 109.9762536    UA      = 1.325075E-9    UB      = 1.577494E-21
+   51  +UC      = -1E-10         VSAT    = 1.910164E5     A0      = 1.7233027
+   52  +AGS     = 0.3631032      B0      = 2.336565E-7    B1      = 5.517259E-7
+   53  +KETA    = 0.0217218      A1      = 0.3935816      A2      = 0.401311
+   54  +RDSW    = 252.7123939    PRWG    = 0.5            PRWB    = 0.0158894
+   55  +WR      = 1              WINT    = 0              LINT    = 2.718137E-8
+   56  +XL      = 0              XW      = -1E-8          DWG     = -4.363993E-8
+   57  +DWB     = 8.876273E-10   VOFF    = -0.0942201     NFACTOR = 2
+   58  +CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
+   59  +CDSCB   = 0              ETA0    = 0.2091053      ETAB    = -0.1097233
+   60  +DSUB    = 1.2513945      PCLM    = 2.1999615      PDIBLC1 = 1.238047E-3
+   61  +PDIBLC2 = 0.0402861      PDIBLCB = -1E-3          DROUT   = 0
+   62  +PSCBE1  = 1.034924E10    PSCBE2  = 2.991339E-9    PVAG    = 15
+   63  +DELTA   = 0.01           RSH     = 7.5            MOBMOD  = 1
+   64  +PRT     = 0              UTE     = -1.5           KT1     = -0.11
+   65  +KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
+   66  +UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
+   67  +WL      = 0              WLN     = 1              WW      = 0
+   68  +WWN     = 1              WWL     = 0              LL      = 0
+   69  +LLN     = 1              LW      = 0              LWN     = 1
+   70  +LWL     = 0              CAPMOD  = 2              XPART   = 0.5
+   71  +CGDO    = 6.28E-10       CGSO    = 6.28E-10       CGBO    = 1E-12
+   72  +CJ      = 1.160855E-3    PB      = 0.8484374      MJ      = 0.4079216
+   73  +CJSW    = 2.306564E-10   PBSW    = 0.842712       MJSW    = 0.3673317
+   74  +CJSWG   = 4.22E-10       PBSWG   = 0.842712       MJSWG   = 0.3673317
+   75  +CF      = 0              PVTH0   = 2.619929E-3    PRDSW   = 1.0634509
+   76  +PK2     = 1.940657E-3    WKETA   = 0.0355444      LKETA   = -3.037019E-3
+   77  +PU0     = -1.0227548     PUA     = -4.36707E-11   PUB     = 1E-21
+   78  +PVSAT   = -50            PETA0   = 1E-4           PKETA   = -5.167295E-3    )
+   79  *
+   80  *END
+    4  
+    5  .OPTION AEX
+    6  .OPTION ENGNOT
+    7  .OPTION LIMPROBE=10000.0
+    8  .OPTION NOASCII
+    9  
+   10  * - Analysis Setup - DCOP
+   11  .OPTION PROBEOP2
+   12  .OP
+   13  
+   14  * - Analysis Setup - Trans
+   15  .TRAN 0.0 100n 0
+   16  
+   17  * --- Forces
+   18  VFORCE___VDD VDD GND DC 1.8
+   19  VFORCE___GND GND GND DC 0
+   20  VFORCE__D D GND DC 1.8
+   21  VFORCE__~clk N_CLK_ESC1 GND PULSE (1.8 0 5n 1n 1n 20n 50n)
+   22  VFORCE__clk CLK GND PULSE (0 1.8 5n 1n 1n 20n 50n)
+   23  
+   24  * --- Global Outputs
+   25  .PROBE V SG
+   26  
+   27  * --- Waveform Outputs
+   28  .PLOT DC V(OUT)
+   29  .PLOT TRAN V(OUT)
+   30  
+   31  * --- Params
+   32  .TEMP 27.0
+   33  .END
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+ERROR  702: In file "./netlist.spi" line 27:
++   SUBCKT "PMOS4.PRXFER": Undeclared subcircuit reference.
+
+***** 1  error(s). 
+***** 0  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+
+Memory space allocated (MB):    245
+0 elements
+13 nodes 
+0 input signals
+
+Check your input netlist...
+
+***>MESSAGE SUMMARY: 1 error
+
+***>GLOBAL CPU TIME 0s 050ms <***
+
+
+***>GLOBAL ELAPSED TIME 0s <***
+
+
+  Job started at 28-Oct-2017 04:09:34
+  Job end at     28-Oct-2017 04:09:34
+
+  Run on eeessl72 (Linux 2.6.32-696.1.1.el6.x86_64)
+

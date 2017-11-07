@@ -1,0 +1,6 @@
+A 5 u Eddm_part 59ea1700a278.03.ac.10.1e.48.00.6d.db 1 2 1 0
+V v 1 1 59ea1700a278.03.ac.10.1e.48.01.6d.db
+F f 1 "part.part_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/final.cir/schematic" 1 mgc_schematic 59ea130fa6c3.03.ac.10.1e.48.01.6d.db 59ea130fa6c3.03.ac.10.1e.48.00.6d.db

@@ -1,0 +1,14 @@
+A 5 u mgc_schematic 59f8bbe60fd1.03.ac.10.1e.48.00.4c.90 3 2 1 0
+V v 1 1 59f8bbe60fd2.03.ac.10.1e.48.00.4c.90
+F o 0 ""
+V v 2 1 59f8bed315a3.03.ac.10.1e.48.00.4c.90
+F o 0 ""
+V v 3 1 59f8bee36304.03.ac.10.1e.48.00.4c.90
+F o 0 ""
+O 3
+R cspuv 0 "/home/vlsi/g4/lvsschematic/schematic/sheet1" 2 mgc_sheet 59f8bee362e8.03.ac.10.1e.48.00.4c.90 59f8bbe6103b.03.ac.10.1e.48.00.4c.90
+O 2
+R cspuv 0 "/home/vlsi/g4/lvsschematic/schematic/sheet1" 1 mgc_sheet 59f8bbe6103b.03.ac.10.1e.48.01.4c.90 59f8bbe6103b.03.ac.10.1e.48.00.4c.90
+O 1
+R cspuv 0 "/home/vlsi/g4/lvsschematic/schematic/sheet1" 1 mgc_sheet 59f8bbe6103b.03.ac.10.1e.48.01.4c.90 59f8bbe6103b.03.ac.10.1e.48.00.4c.90
+P "eddm__refer_state" "eddm__refer_floating"

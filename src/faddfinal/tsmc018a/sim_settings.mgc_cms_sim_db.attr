@@ -1,0 +1,10 @@
+A 5 u mgc_cms_sim_db 59ff2467748c.03.ac.10.1e.48.00.68.e4 5 2 0 0
+V v 3 1 59ff26458ef9.03.ac.10.1e.48.00.68.e4
+F f 3 "sim_settings.simdb_3"
+V v 4 1 59ff26bef032.03.ac.10.1e.48.00.68.e4
+F f 4 "sim_settings.simdb_4"
+V v 5 1 59ff289fe60f.03.ac.10.1e.48.00.0e.88
+F f 5 "sim_settings.simdb_5"
+O 5
+O 4
+O 3

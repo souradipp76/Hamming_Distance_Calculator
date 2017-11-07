@@ -1,0 +1,40 @@
+
+//  Pyxis Netlister  v10.2_0.0  Mon Aug 13 21:08:06 PDT 2012
+//
+//             Copyright Mentor Graphics Corporation 1982
+//
+//                      All Rights Reserved.
+//
+//    THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+//      WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR
+//           ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+//
+//  Mentor Graphics software executing under x86_64 Linux.
+//
+
+//  Invocation args:  -log /home/vlsi/g4/dhall_flip/tsmc018a/netlist_transcript /home/vlsi/g4/dhall_flip/tsmc018a
+
+// **** Reading </home/vlsi/g4/dhall_flip/tsmc018a> for ELDO netlist ****
+
+// Checking 3 sheet(s) for out of date references to symbols and interfaces...
+// Done.
+// Parsing file '/home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf' succeeded.
+// Parsing file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/nmos4/@ncf.dir/nmos4.ncf' succeeded.
+// Parsing file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/pmos4/@ncf.dir/pmos4.ncf' succeeded.
+// NOTE: There is no part interface for the top level schematic.  The external nets in the schematic
+//       are being scanned to create the pin names for the top level subckt.
+Processing [/home/vlsi/g4/dhall_flip] [dhall_flip/dhall_flip] [schematic] (NCF entry line: 17 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf)
+Processing [$ADK/technology/ic/symbols/nmos4] [MG_STD/nmos3] [schematic] (NCF entry line: 17 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf)
+Processing [$ADK/technology/ic/symbols/pmos4] [MG_STD/pmos3] [schematic] (NCF entry line: 17 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf)
+Primitive [$ADK/technology/ic/symbols/prxfer] [prxfer/prxfer] [SPICE=X] (NCF entry line: 72 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf) (NCF entry line: 88 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf)
+Primitive [$ADK/technology/ic/symbols/rxfer] [rxfer/rxfer] [SPICE=X] (NCF entry line: 72 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf) (NCF entry line: 88 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf)
+
+**** Writing </home/vlsi/g4/dhall_flip/tsmc018a> netlist for ELDO ****
+
+Number of cells: 5
+Number of primitive instances: 20
+
+Done...
+// Registration file '/home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf' closed.
+// Registration file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/nmos4/@ncf.dir/nmos4.ncf' closed.
+// Registration file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/pmos4/@ncf.dir/pmos4.ncf' closed.

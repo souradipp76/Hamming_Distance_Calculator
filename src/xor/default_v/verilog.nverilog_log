@@ -1,0 +1,36 @@
+
+//  Pyxis Netlister  v10.2_0.0  Mon Aug 13 21:08:06 PDT 2012
+//
+//             Copyright Mentor Graphics Corporation 1982
+//
+//                      All Rights Reserved.
+//
+//    THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+//      WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR
+//           ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+//
+//  Mentor Graphics software executing under x86_64 Linux.
+//
+
+//  Invocation args:  -verilog -o /home/vlsi/g4/xor/default_v/default_v.v -preserve_case -check /home/vlsi/g4/xor/default_v
+
+// **** Reading </home/vlsi/g4/xor/default_v> for VERILOG netlist ****
+
+// Checking 1 sheet(s) for out of date references to symbols and interfaces...
+// Done.
+// Parsing file '/home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf' succeeded.
+// Parsing file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/pmos4/@ncf.dir/pmos4.ncf' succeeded.
+// Parsing file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/nmos4/@ncf.dir/nmos4.ncf' succeeded.
+Processing [/home/vlsi/g4/xor] [xor/xor] [schematic] (NCF entry line: 17 file: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf)
+ COMPONENT [$ADK/technology/ic/symbols/pmos4] INSTANCE [MP1] "/MP1" 
+ *** error *** : The default model selection 'VERILOG=verilog' cannot be found in an NCF.
+                 The closest matching NCF item is 'SYMBOL'. Line: 6 File: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf
+ COMPONENT [$ADK/technology/ic/symbols/nmos4] INSTANCE [MN2] "/MN2" 
+ *** error *** : The default model selection 'VERILOG=verilog' cannot be found in an NCF.
+                 The closest matching NCF item is 'SYMBOL'. Line: 6 File: /home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf
+
+Must stop due to the previous 2 error(s).
+
+// Registration file '/home/simulator/mentor/pyxis10.2/v10.2_linux_x86_64/pyxis_home/mgc_icstd_lib/global.ncf' closed.
+// Registration file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/pmos4/@ncf.dir/pmos4.ncf' closed.
+// Registration file '/home/simulator/mentor/Library/ADK/technology/ic/symbols/nmos4/@ncf.dir/nmos4.ncf' closed.

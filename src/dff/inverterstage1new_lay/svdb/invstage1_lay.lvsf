@@ -1,0 +1,8 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /home/vlsi/dff/inverterstage1new_lay
+lvs_LvsfVersion 2
+lvs_LvsInputSummary {0 1 1}
+lvs_LvsComparisonSummary {2 0 0 0}
+lvs_LvsOutFile LVS_REPORT invstage1_lay.lvs.report
+lvs_LvsOutFile SOURCE_NETLIST /home/vlsi/dff/inverterstage1new_lay/invstage1new_lay.sp
+lvs_LvsOutFile RULES_FILE /home/vlsi/dff/inverterstage1new_lay/_tsmc018.rules_

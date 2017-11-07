@@ -1,0 +1,101 @@
+
+Running eldo on eeessl72
+with Eldo libraries :
+/home/simulator/mentor/ams/aol/lib/libeldoudm_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos1_64.so
+/home/simulator/mentor/ams/aol/lib/libeldoekv_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomosp9_64.so
+/home/simulator/mentor/ams/aol/lib/libeldocsem_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos2_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos3_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobip_64.so
+/home/simulator/mentor/ams/aol/lib/libeldodio_64.so
+/home/simulator/mentor/ams/aol/lib/libeldojfet_64.so
+/home/simulator/mentor/ams/aol/lib/libeldosoi_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos4_64.so
+/home/simulator/mentor/ams/aol/lib/libeldoasitft_64.so
+/home/simulator/mentor/ams/aol/lib/libeldohisim_64.so
+/home/simulator/mentor/ams/aol/lib/libeldospmod_64.so
+/home/simulator/mentor/ams/aol/lib/libeldopsp_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomosvar_64.so
+/home/simulator/mentor/ams/aol/lib/libeldolegtft_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomoto_64.so
+/home/simulator/mentor/ams/aol/lib/libeldost_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobnr_64.so
+/home/simulator/mentor/ams/aol/lib/libeldorockw_64.so
+/home/simulator/mentor/ams/aol/lib/libeldopubhicum_64.so
+/home/simulator/mentor/ams/aol/lib/libeldotftsh_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobta_64.so
+/home/simulator/mentor/ams/aol/lib/libeldofas_64.so
+/home/simulator/mentor/ams/aol/lib/libeldofascm_64.so
+/home/simulator/mentor/ams/aol/lib/libeldosdsim_64.so
+/home/simulator/mentor/ams/aol/lib/libeldowire_64.so
+/home/simulator/mentor/ams/aol/lib/libogr_64.so loaded.
+
+
+
+Copyright 1988 Mentor Graphics Corporation
+All Rights Reserved
+
+THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY
+INFORMATION WHICH ARE THE PROPERTY OF MENTOR
+GRAPHICS CORPORATION OR ITS LICENSORS AND IS
+SUBJECT TO LICENSE TERMS.
+
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : vlsi@eeessl72
+*** OS    : Red Hat Enterprise Linux Server release 6.9 (Santiago) [VCO = aol]
+*** CPU   :
+    AMD Phenom(tm) II X3 710 Processor
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 3
+    Number of logical processors      : 3
+*** Freq  : 800.000MHz
+*** Cache : 512 KB
+*** MEM   : 3665112 kB
+*** Date  : Sat Oct 28 04:09:34 2017
+
+
+***** PRE-PROCESSING ...
+
+
+***** ANALYSIS ....
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+ERROR  702: In file "./netlist.spi" line 27:
++   SUBCKT "PMOS4.PRXFER": Undeclared subcircuit reference.
+
+***** 1  error(s). 
+***** 0  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION...
+
+
+Memory space allocated (MB):    245
+0 elements
+13 nodes
+0 input signals
+
+Check your input netlist...
+
+
+***>CPU TIME 0h 0mn 0s 110ms <***
+
+***>MESSAGE SUMMARY: 1 error
+
+***>GLOBAL CPU TIME 0s 050ms <***
+
+
+***>GLOBAL ELAPSED TIME 0s <***
+

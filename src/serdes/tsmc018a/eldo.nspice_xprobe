@@ -1,0 +1,143 @@
+# This file provides name mapping information for all objects
+# on the schematic design.  It provides a mapping for each
+# object between its name on the schematic and its name in the netlist.
+version 1.0
+
+Cell NMOS4
+   Pin D D
+   Pin G G
+   Pin S S
+   Pin B B
+End Cell
+
+Cell PMOS4
+   Pin D D
+   Pin G G
+   Pin S S
+   Pin B B
+End Cell
+
+Cell MUX_CIR_ESC1
+   Pin OUT OUT
+   Pin GND GND
+   Pin IN1 IN1
+   Pin IN2 IN2
+   Pin S S
+   Pin VDD VDD
+   Net N$3 N$3
+   Net GND GND
+   Net VDD VDD
+   Net S S
+   Net IN2 IN2
+   Net IN1 IN1
+   Net OUT OUT
+   Inst MN3 MN3 NMOS4
+   Inst MP3 MP3 PMOS4
+   Inst MN2 MN2 NMOS4
+   Inst MP2 MP2 PMOS4
+   Inst MN1 MN1 NMOS4
+   Inst MP1 MP1 PMOS4
+End Cell
+
+Cell INVERTER_CIR_ESC2
+   Pin OUT OUT
+   Pin GND GND
+   Pin IN IN
+   Pin VDD VDD
+   Net GND GND
+   Net VDD VDD
+   Net IN IN
+   Net OUT OUT
+   Inst MN1 MN1 NMOS4
+   Inst MP1 MP1 PMOS4
+End Cell
+
+Cell DFLIPFLOPNOINVNEW_CIR_ESC3
+   Pin OUT OUT
+   Pin CLK CLK
+   Pin D D
+   Pin GND GND
+   Pin NCLK NCLK
+   Pin VDD VDD
+   Net N$56 N$56
+   Net N$7 N$7
+   Net N$4 N$4
+   Net NCLK NCLK
+   Net CLK CLK
+   Net D D
+   Net GND GND
+   Net VDD VDD
+   Net OUT OUT
+   Inst MN2 MN2 NMOS4
+   Inst MP2 MP2 PMOS4
+   Inst MN1 MN1 NMOS4
+   Inst MP1 MP1 PMOS4
+   Inst INVERTER.CIR3 X_INVERTER_CIR3_ESC4 INVERTER_CIR_ESC2
+   Inst INVERTER.CIR2 X_INVERTER_CIR2_ESC5 INVERTER_CIR_ESC2
+   Inst INVERTER.CIR1 X_INVERTER_CIR1_ESC6 INVERTER_CIR_ESC2
+End Cell
+
+Cell MASTERSLAVEDFLIPFLOPNEW_CIR_ESC7
+   Pin OUT OUT
+   Pin CLEAR CLEAR
+   Pin CLK CLK
+   Pin D D
+   Pin GND GND
+   Pin NCLK NCLK
+   Pin PRESET PRESET
+   Pin VDD VDD
+   Net N$34 N$34
+   Net D D
+   Net CLK CLK
+   Net GND GND
+   Net VDD VDD
+   Net OUT OUT
+   Net NCLK NCLK
+   Net CLEAR CLEAR
+   Net PRESET PRESET
+   Inst DFLIPFLOPNOINVNEW.CIR1 X_DFLIPFLOPNOINVNEW_CIR1_ESC8 DFLIPFLOPNOINVNEW_CIR_ESC3
+   Inst DFLIPFLOPNOINVNEW.CIR2 X_DFLIPFLOPNOINVNEW_CIR2_ESC9 DFLIPFLOPNOINVNEW_CIR_ESC3
+End Cell
+
+Cell #top#
+   Pin P1 P1
+   Pin P2 P2
+   Pin P3 P3
+   Pin CLK CLK
+   Pin GND GND
+   Pin L1 L1
+   Pin L2 L2
+   Pin L3 L3
+   Pin NCLK NCLK
+   Pin SEL SEL
+   Pin SIN SIN
+   Pin VDD VDD
+   Net N$16 N$16
+   Net N$14 N$14
+   Net N$13 N$13
+   Net N$12 N$12
+   Net N$10 N$10
+   Net N$9 N$9
+   Net N$7 N$7
+   Net N$3 N$3
+   Net N$1 N$1
+   Net CLK CLK
+   Net GND GND
+   Net NCLK NCLK
+   Net P1 P1
+   Net VDD VDD
+   Net P2 P2
+   Net P3 P3
+   Net L1 L1
+   Net SIN SIN
+   Net SEL SEL
+   Net L2 L2
+   Net L3 L3
+   Inst MUX.CIR3 X_MUX_CIR3_ESC10 MUX_CIR_ESC1
+   Inst MUX.CIR2 X_MUX_CIR2_ESC11 MUX_CIR_ESC1
+   Inst MUX.CIR1 X_MUX_CIR1_ESC12 MUX_CIR_ESC1
+   Inst Q3 X_Q3 MASTERSLAVEDFLIPFLOPNEW_CIR_ESC7
+   Inst Q2 X_Q2 MASTERSLAVEDFLIPFLOPNEW_CIR_ESC7
+   Inst Q1 X_Q1 MASTERSLAVEDFLIPFLOPNEW_CIR_ESC7
+End Cell
+

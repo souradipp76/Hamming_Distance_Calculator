@@ -1,0 +1,6 @@
+A 5 u Eddm_ba_mgr 59f388a845d6.03.ac.10.1e.48.00.34.5c 1 2 1 0
+V v 1 1 59f388a845d6.03.ac.10.1e.48.01.34.5c
+F f 1 "default.ba_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/vlsi/g4/dhall_sipo/tsmc018a" 1 Eddm_design_viewpoint 59f388a84459.03.ac.10.1e.48.01.34.5c 59f388a84459.03.ac.10.1e.48.00.34.5c

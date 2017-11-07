@@ -1,0 +1,10 @@
+A 5 u mgc_schematic 59e79f7a149a.03.ac.10.1e.48.00.59.8a 2 2 1 0
+V v 1 1 59e79f7a149b.03.ac.10.1e.48.00.59.8a
+F o 0 ""
+V v 2 1 59e79f838fc4.03.ac.10.1e.48.00.59.8a
+F o 0 ""
+O 2
+R cspuv 0 "/home/vlsi/dff/sipopisonew.cir/schematic/sheet1" 1 mgc_sheet 59e79f7a14fc.03.ac.10.1e.48.01.59.8a 59e79f7a14fc.03.ac.10.1e.48.00.59.8a
+O 1
+R cspuv 0 "/home/vlsi/dff/sipopisonew.cir/schematic/sheet1" 1 mgc_sheet 59e79f7a14fc.03.ac.10.1e.48.01.59.8a 59e79f7a14fc.03.ac.10.1e.48.00.59.8a
+P "eddm__refer_state" "eddm__refer_floating"

@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 59ed83b8b0ca.03.ac.10.1e.48.00.3d.aa 4 2 1 0
+V v 2 1 59ed857620fb.03.ac.10.1e.48.00.3d.aa
+F o 0 ""
+V v 3 1 59ed8576bf2f.03.ac.10.1e.48.00.3d.aa
+F o 0 ""
+V v 4 1 59fcb19ff27f.03.ac.10.1e.48.00.1a.e1
+F o 0 ""
+O 4
+R cspuv 0 "/home/vlsi/g4/exc/schematic/sheet1" 3 mgc_sheet 59fcb19ff267.03.ac.10.1e.48.00.1a.e1 59ed83b8b227.03.ac.10.1e.48.00.3d.aa
+O 3
+R cspuv 0 "/home/vlsi/g4/exc/schematic/sheet1" 2 mgc_sheet 59ed8576bf17.03.ac.10.1e.48.00.3d.aa 59ed83b8b227.03.ac.10.1e.48.00.3d.aa
+O 2
+R cspuv 0 "/home/vlsi/g4/exc/schematic/sheet1" 1 mgc_sheet 59ed83b8b227.03.ac.10.1e.48.01.3d.aa 59ed83b8b227.03.ac.10.1e.48.00.3d.aa

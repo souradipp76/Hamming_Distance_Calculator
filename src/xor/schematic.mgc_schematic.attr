@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 59e78cd75f9a.03.ac.10.1e.48.00.40.3c 7 2 1 0
+V v 5 1 59e792a6710c.03.ac.10.1e.48.00.40.3c
+F o 0 ""
+V v 6 1 59e792a720f4.03.ac.10.1e.48.00.40.3c
+F o 0 ""
+V v 7 1 59eead49cf19.03.ac.10.1e.48.00.41.96
+F o 0 ""
+O 7
+R cspuv 0 "/home/vlsi/g4/xor/schematic/sheet1" 6 mgc_sheet 59eead49ced1.03.ac.10.1e.48.00.41.96 59e78cd76039.03.ac.10.1e.48.00.40.3c
+O 6
+R cspuv 0 "/home/vlsi/g4/xor/schematic/sheet1" 5 mgc_sheet 59e792a720db.03.ac.10.1e.48.00.40.3c 59e78cd76039.03.ac.10.1e.48.00.40.3c
+O 5
+R cspuv 0 "/home/vlsi/g4/xor/schematic/sheet1" 4 mgc_sheet 59e792a670bf.03.ac.10.1e.48.00.40.3c 59e78cd76039.03.ac.10.1e.48.00.40.3c

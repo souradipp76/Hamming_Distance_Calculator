@@ -1,0 +1,28 @@
+* Component: /home/vlsi/g4/final.cir Viewpoint: tsmc018a
+
+.INCLUDE /home/vlsi/g4/final.cir/tsmc018a/netlist.spi
+.INCLUDE $ADK/technology/ic/models/tsmc018.mod
+.OPTION AEX
+.OPTION ENGNOT
+.OPTION LIMPROBE=10000.0
+.OPTION NOASCII
+
+* - Analysis Setup - Trans
+.TRAN 0 200n 0 UIC
+
+* --- Forces
+VFORCE__GND GND GND DC 0
+VFORCE__VDD VDD GND DC 1.8
+VFORCE__CLK CLK GND PULSE (1.8 0 2n 1n 1n 25n 50n)
+VFORCE__IN1 IN1 GND PATTERN 1.8 0 5n 1n 1n 50n 100 R=0
+VFORCE__IN2 IN2 GND PATTERN 1.8 0 5n 1n 1n 50n 010 R=-1
+
+* --- Global Outputs
+.PROBE V SG
+
+* --- Waveform Outputs
+.PROBE TRAN V(CLK) V(GND) V(VDD) V(IN2) V(IN1)
+.PLOT TRAN V(OP1) V(OP3) V(OP2) V(EXC) V(/EXC) V(S1) V(S0)
+
+* --- Params
+.TEMP 27.0

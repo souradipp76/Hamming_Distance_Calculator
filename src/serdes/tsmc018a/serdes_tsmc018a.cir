@@ -1,0 +1,30 @@
+* Component: /home/vlsi/g4/serdes Viewpoint: tsmc018a
+
+.INCLUDE /home/vlsi/g4/serdes/tsmc018a/netlist.spi
+.OPTION AEX
+.OPTION ENGNOT
+.OPTION LIMPROBE=10000
+.OPTION NOASCII
+
+* - Analysis Setup - Trans
+.TRAN 0 400n 0 UIC
+
+* --- Forces
+VFORCE__GND GND GND DC 0
+VFORCE__L1 L1 GND DC 0
+VFORCE__L2 L2 GND DC 0
+VFORCE__L3 L3 GND DC 0
+VFORCE__SEL SEL GND DC 0
+VFORCE__VDD VDD GND DC 0
+VFORCE__SIN SIN GND PATTERN 1.8 0 5n 1n 1n 50n 110111 R=0
+VFORCE__CLK CLK GND PULSE (0 1.8 0u 1n 1n 10n 25n)
+VFORCE__NCLK NCLK GND PULSE (1.8 0 0u 1n 1n 10n 25n)
+
+* --- Global Outputs
+.PROBE V SG
+
+* --- Waveform Outputs for Group PROBES__P1
+.PROBE TRAN V(P2) V(P1) V(P3)
+
+* --- Params
+.TEMP 27
