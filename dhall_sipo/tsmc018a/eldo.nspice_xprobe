@@ -1,0 +1,173 @@
+# This file provides name mapping information for all objects
+# on the schematic design.  It provides a mapping for each
+# object between its name on the schematic and its name in the netlist.
+version 1.0
+
+Cell PMOS4
+   Pin D D
+   Pin G G
+   Pin S S
+   Pin B B
+End Cell
+
+Cell NMOS4
+   Pin D D
+   Pin G G
+   Pin S S
+   Pin B B
+End Cell
+
+Cell #top#
+   Pin OUT OUT
+   Pin s0 S0
+   Pin s1 S1
+   Pin clk CLK
+   Pin GND GND
+   Pin IN1 IN1
+   Pin IN2 IN2
+   Pin VDD VDD
+   Net N$454 N$454
+   Net N$450 N$450
+   Net N$446 N$446
+   Net N$444 N$444
+   Net N$428 N$428
+   Net N$427 N$427
+   Net N$425 N$425
+   Net N$423 N$423
+   Net N$421 N$421
+   Net N$419 N$419
+   Net N$416 N$416
+   Net N$415 N$415
+   Net N$412 N$412
+   Net N$410 N$410
+   Net N$391 N$391
+   Net N$388 N$388
+   Net N$384 N$384
+   Net N$379 N$379
+   Net N$377 N$377
+   Net N$374 N$374
+   Net N$373 N$373
+   Net N$369 N$369
+   Net N$364 N$364
+   Net N$362 N$362
+   Net N$359 N$359
+   Net N$355 N$355
+   Net N$350 N$350
+   Net N$348 N$348
+   Net N$345 N$345
+   Net N$340 N$340
+   Net N$333 N$333
+   Net N$330 N$330
+   Net N$326 N$326
+   Net N$321 N$321
+   Net N$319 N$319
+   Net N$316 N$316
+   Net N$311 N$311
+   Net clk CLK
+   Net IN1 IN1
+   Net OUT OUT
+   Net IN2 IN2
+   Net VDD VDD
+   Net GND GND
+   Net s0 S0
+   Net s1 S1
+   Inst MP48 MP48 PMOS4
+   Inst MP41 MP41 PMOS4
+   Inst MP40 MP40 PMOS4
+   Inst MN41 MN41 NMOS4
+   Inst MN40 MN40 NMOS4
+   Inst MN48 MN48 NMOS4
+   Inst MN49 MN49 NMOS4
+   Inst MP49 MP49 PMOS4
+   Inst MP10 MP10 PMOS4
+   Inst MP29 MP29 PMOS4
+   Inst MN29 MN29 NMOS4
+   Inst MP28 MP28 PMOS4
+   Inst MN28 MN28 NMOS4
+   Inst MP27 MP27 PMOS4
+   Inst MN27 MN27 NMOS4
+   Inst MP17 MP17 PMOS4
+   Inst MP26 MP26 PMOS4
+   Inst MN26 MN26 NMOS4
+   Inst MN16 MN16 NMOS4
+   Inst MN8 MN8 NMOS4
+   Inst MP7 MP7 PMOS4
+   Inst MP14 MP14 PMOS4
+   Inst MN14 MN14 NMOS4
+   Inst MP13 MP13 PMOS4
+   Inst MN13 MN13 NMOS4
+   Inst MP12 MP12 PMOS4
+   Inst MN12 MN12 NMOS4
+   Inst MP16 MP16 PMOS4
+   Inst MP19 MP19 PMOS4
+   Inst MN9 MN9 NMOS4
+   Inst MP5 MP5 PMOS4
+   Inst MN5 MN5 NMOS4
+   Inst MN10 MN10 NMOS4
+   Inst MP18 MP18 PMOS4
+   Inst MP4 MP4 PMOS4
+   Inst MN4 MN4 NMOS4
+   Inst MN24 MN24 NMOS4
+   Inst MP21 MP21 PMOS4
+   Inst MN21 MN21 NMOS4
+   Inst MP22 MP22 PMOS4
+   Inst MN22 MN22 NMOS4
+   Inst MP1 MP1 PMOS4
+   Inst MP23 MP23 PMOS4
+   Inst MP20 MP20 PMOS4
+   Inst MN47 MN47 NMOS4
+   Inst MN46 MN46 NMOS4
+   Inst MP47 MP47 PMOS4
+   Inst MP46 MP46 PMOS4
+   Inst MN34 MN34 NMOS4
+   Inst MN45 MN45 NMOS4
+   Inst MP45 MP45 PMOS4
+   Inst MN44 MN44 NMOS4
+   Inst MP44 MP44 PMOS4
+   Inst MN43 MN43 NMOS4
+   Inst MP43 MP43 PMOS4
+   Inst MP42 MP42 PMOS4
+   Inst MN42 MN42 NMOS4
+   Inst MN33 MN33 NMOS4
+   Inst MP33 MP33 PMOS4
+   Inst MN32 MN32 NMOS4
+   Inst MP32 MP32 PMOS4
+   Inst MN31 MN31 NMOS4
+   Inst MP31 MP31 PMOS4
+   Inst MP11 MP11 PMOS4
+   Inst MN11 MN11 NMOS4
+   Inst MN15 MN15 NMOS4
+   Inst MP15 MP15 PMOS4
+   Inst MN23 MN23 NMOS4
+   Inst MP24 MP24 PMOS4
+   Inst MP25 MP25 PMOS4
+   Inst MN18 MN18 NMOS4
+   Inst MN37 MN37 NMOS4
+   Inst MN1 MN1 NMOS4
+   Inst MP8 MP8 PMOS4
+   Inst MN7 MN7 NMOS4
+   Inst MN19 MN19 NMOS4
+   Inst MP9 MP9 PMOS4
+   Inst MP6 MP6 PMOS4
+   Inst MN6 MN6 NMOS4
+   Inst MN25 MN25 NMOS4
+   Inst MN20 MN20 NMOS4
+   Inst MP3 MP3 PMOS4
+   Inst MN3 MN3 NMOS4
+   Inst MP2 MP2 PMOS4
+   Inst MN2 MN2 NMOS4
+   Inst MN39 MN39 NMOS4
+   Inst MP39 MP39 PMOS4
+   Inst MN38 MN38 NMOS4
+   Inst MP38 MP38 PMOS4
+   Inst MN17 MN17 NMOS4
+   Inst MP30 MP30 PMOS4
+   Inst MN30 MN30 NMOS4
+   Inst MP37 MP37 PMOS4
+   Inst MP36 MP36 PMOS4
+   Inst MN36 MN36 NMOS4
+   Inst MP35 MP35 PMOS4
+   Inst MP34 MP34 PMOS4
+   Inst MN35 MN35 NMOS4
+End Cell
+

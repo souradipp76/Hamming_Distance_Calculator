@@ -1,0 +1,21 @@
+ Logic loading report
+ ====================
+
+ Top level Layout cell : inverter_lay_lay
+ Eddm Logic source : /home/vlsi/dff/inverter.cir/layout
+
+
+*** Existing cell /home/vlsi/dff/inverter_lay/inverter_lay_lay
+
+
+IGNORED CELLS
+=============
+Following primitive cells are ignored since they are not found
+in library(working directory) and @nocreate_prim option is used.
+Resync of library may be required.
+
+
+       Schematic instance name                   Physical cell name
+       -------------------------                 --------------------
+      /MP1/I$410                                 prxfer
+      /MN1/I$409                                 rxfer

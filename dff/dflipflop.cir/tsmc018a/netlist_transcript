@@ -1,0 +1,27 @@
+
+//  Pyxis Netlister  v10.2_0.0  Mon Aug 13 21:08:06 PDT 2012
+//
+//             Copyright Mentor Graphics Corporation 1982
+//
+//                      All Rights Reserved.
+//
+//    THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+//      WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR
+//           ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+//
+//  Mentor Graphics software executing under x86_64 Linux.
+//
+
+//  Invocation args:  -log /home/vlsi/dff/dflipflop.cir/tsmc018a/netlist_transcript /home/vlsi/dff/dflipflop.cir/tsmc018a
+
+// **** Reading </home/vlsi/dff/dflipflop.cir/tsmc018a> for ELDO netlist ****
+
+// Checking 2 sheet(s) for out of date references to symbols and interfaces...
+
+ *** error *** : Out of date symbol reference in sheet '/home/vlsi/dff/dflipflop.cir/schematic/sheet1'.
+  Version 8 of symbol '/home/vlsi/dff/inverter.cir/inverter.cir' is referenced by the sheet but is not the most current (11).
+*** Please use Pyxis Schematic to update the schematic current versions by updating individual sheets
+*** or use the 'Update All Schematics' command in Pyxis Schematic.
+
+Must stop due to the previous 1 error(s).
+

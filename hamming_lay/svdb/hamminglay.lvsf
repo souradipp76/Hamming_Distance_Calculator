@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /home/vlsi/g4/hamming_lay
+lvs_LvsfVersion 2
+lvs_LvsInputSummary {0 1 0}
+lvs_LvsComparisonSummary {5 0 3 0}
+lvs_LvsOutFile LVS_REPORT hamminglay.lvs.report
+lvs_LvsOutFile SOURCE_NETLIST /home/vlsi/g4/hamming_lay/hamminglay.src.net
+lvs_LvsOutFile RULES_FILE /home/vlsi/g4/hamming_lay/_tsmc018.calibre.rules_
+lvs_LvsRunTimes 1509798230 1509798230

@@ -1,0 +1,31 @@
+* Component: /home/vlsi/dff/sipopisonew.cir Viewpoint: tsmc018a
+
+.INCLUDE /home/vlsi/dff/sipopisonew.cir/tsmc018a/netlist.spi
+.INCLUDE $ADK/technology/ic/models/tsmc018.mod
+.OPTION AEX
+.OPTION ENGNOT
+.OPTION LIMPROBE=10000.0
+.OPTION NOASCII
+
+* - Analysis Setup - Trans
+.TRAN 0 400n 0 UIC
+
+* --- Forces
+VFORCE__SEL SEL GND DC 0
+VFORCE__GND GND GND DC 0
+VFORCE__L1 L1 GND DC 0
+VFORCE__L2 L2 GND DC 0
+VFORCE__L3 L3 GND DC 0
+VFORCE__VDD VDD GND DC 1.8
+VFORCE__SIN SIN GND PATTERN 1.8 0 0n 1n 1n 20n 110110111 R=0.0
+VFORCE__CLK CLK GND PULSE (0 1.8 1n 1n 1n 10n 25n)
+VFORCE__NCLK NCLK GND PULSE (1.8 0 1n 1n 1n 10n 25n)
+
+* --- Global Outputs
+.PROBE V SG
+
+* --- Waveform Outputs for Group PROBES__P1
+.PROBE TRAN V(P2) V(P1) V(P3)
+
+* --- Params
+.TEMP 27.0

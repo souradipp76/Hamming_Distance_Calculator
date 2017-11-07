@@ -1,0 +1,12 @@
+A 5 u Eddm_part 59e7af988f78.03.ac.10.1e.48.00.27.f3 2 2 2 0
+V v 1 1 59e7af988f79.03.ac.10.1e.48.00.27.f3
+F f 1 "part.part_1"
+V v 2 1 59e7b07c4ae7.03.ac.10.1e.48.00.27.f3
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/fulladd/schematic" 1 mgc_schematic 59e7ae2043e9.03.ac.10.1e.48.01.27.f3 59e7ae2043e9.03.ac.10.1e.48.00.27.f3
+R csduv 1 "/home/vlsi/g4/fulladd/fulladd" 1 mgc_symbol 59e7b07c4924.03.ac.10.1e.48.01.27.f3 59e7b07c4924.03.ac.10.1e.48.00.27.f3
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/fulladd/schematic" 1 mgc_schematic 59e7ae2043e9.03.ac.10.1e.48.01.27.f3 59e7ae2043e9.03.ac.10.1e.48.00.27.f3

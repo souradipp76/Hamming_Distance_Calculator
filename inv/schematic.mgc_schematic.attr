@@ -1,0 +1,14 @@
+A 5 u mgc_schematic 59f37d7c29e1.03.ac.10.1e.48.00.1f.6e 3 2 1 0
+V v 1 1 59f37d7c29e1.03.ac.10.1e.48.01.1f.6e
+F o 0 ""
+V v 2 1 59f37df8155b.03.ac.10.1e.48.00.1f.6e
+F o 0 ""
+V v 3 1 59f37df901c3.03.ac.10.1e.48.00.1f.6e
+F o 0 ""
+O 3
+R cspuv 0 "/home/vlsi/g4/inv/schematic/sheet1" 2 mgc_sheet 59f37df901b0.03.ac.10.1e.48.00.1f.6e 59f37d7c2dd7.03.ac.10.1e.48.00.1f.6e
+O 2
+R cspuv 0 "/home/vlsi/g4/inv/schematic/sheet1" 1 mgc_sheet 59f37d7c2dd7.03.ac.10.1e.48.01.1f.6e 59f37d7c2dd7.03.ac.10.1e.48.00.1f.6e
+O 1
+R cspuv 0 "/home/vlsi/g4/inv/schematic/sheet1" 1 mgc_sheet 59f37d7c2dd7.03.ac.10.1e.48.01.1f.6e 59f37d7c2dd7.03.ac.10.1e.48.00.1f.6e
+P "eddm__refer_state" "eddm__refer_floating"

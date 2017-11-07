@@ -1,0 +1,43 @@
+A 5 u mgc_sheet 59ea0fdf0f5f.03.ac.10.1e.48.00.6d.db 7 2 7 0
+V v 5 4 59ede9ebebc1.03.ac.10.1e.48.00.1f.2d
+F f 5 "sheet1.ssht_5"
+F f 5 "sheet1.sgfx_5"
+F o 0 ""
+F o 0 ""
+V v 6 4 59edead84294.03.ac.10.1e.48.00.1f.2d
+F f 6 "sheet1.ssht_6"
+F f 6 "sheet1.sgfx_6"
+F o 0 ""
+F o 0 ""
+V v 7 4 59edead8c09d.03.ac.10.1e.48.00.1f.2d
+F f 7 "sheet1.ssht_7"
+F f 7 "sheet1.sgfx_7"
+F o 0 ""
+F o 0 ""
+O 7
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/sipo.cir/schematic" 1 mgc_schematic 59ea0fdf0e72.03.ac.10.1e.48.01.6d.db 59ea0fdf0e72.03.ac.10.1e.48.00.6d.db
+R csduv 1 "/home/vlsi/dff/masterslaveDflipflopnew.cir/part" 4 Eddm_part 59e794da1657.03.ac.10.1e.48.00.59.8a 59d2fa5a4bb2.03.ac.10.1e.48.00.30.37
+R csduv 2 "/home/vlsi/dff/masterslaveDflipflopnew.cir/masterslaveDflipflopnew.cir" 4 mgc_symbol 59e794da1456.03.ac.10.1e.48.00.59.8a 59d2fc47877d.03.ac.10.1e.48.00.30.37
+R csduv 3 "$ADK/technology/ic/symbols/portin/part" 1 Eddm_part 35773eaadc18.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.05.02.fa
+R csduv 4 "$ADK/technology/ic/symbols/portin/portin" 1 mgc_symbol 35773d18855d.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.06.02.fa
+R csduv 5 "$ADK/technology/ic/symbols/portout/part" 1 Eddm_part 35785fdc394b.03.86.56.31.87.00.12.30 43349f1b0e02.03.93.22.46.d8.00.02.fa
+R csduv 6 "$ADK/technology/ic/symbols/portout/portout" 1 mgc_symbol 357ed6243e32.03.86.56.31.87.00.28.94 43349f1b0e02.03.93.22.46.d8.01.02.fa
+O 6
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/sipo.cir/schematic" 1 mgc_schematic 59ea0fdf0e72.03.ac.10.1e.48.01.6d.db 59ea0fdf0e72.03.ac.10.1e.48.00.6d.db
+R csduv 1 "/home/vlsi/dff/masterslaveDflipflopnew.cir/part" 4 Eddm_part 59e794da1657.03.ac.10.1e.48.00.59.8a 59d2fa5a4bb2.03.ac.10.1e.48.00.30.37
+R csduv 2 "/home/vlsi/dff/masterslaveDflipflopnew.cir/masterslaveDflipflopnew.cir" 4 mgc_symbol 59e794da1456.03.ac.10.1e.48.00.59.8a 59d2fc47877d.03.ac.10.1e.48.00.30.37
+R csduv 3 "$ADK/technology/ic/symbols/portin/part" 1 Eddm_part 35773eaadc18.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.05.02.fa
+R csduv 4 "$ADK/technology/ic/symbols/portin/portin" 1 mgc_symbol 35773d18855d.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.06.02.fa
+R csduv 5 "$ADK/technology/ic/symbols/portout/part" 1 Eddm_part 35785fdc394b.03.86.56.31.87.00.12.30 43349f1b0e02.03.93.22.46.d8.00.02.fa
+R csduv 6 "$ADK/technology/ic/symbols/portout/portout" 1 mgc_symbol 357ed6243e32.03.86.56.31.87.00.28.94 43349f1b0e02.03.93.22.46.d8.01.02.fa
+O 5
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/sipo.cir/schematic" 1 mgc_schematic 59ea0fdf0e72.03.ac.10.1e.48.01.6d.db 59ea0fdf0e72.03.ac.10.1e.48.00.6d.db
+R csduv 1 "/home/vlsi/dff/masterslaveDflipflopnew.cir/part" 4 Eddm_part 59e794da1657.03.ac.10.1e.48.00.59.8a 59d2fa5a4bb2.03.ac.10.1e.48.00.30.37
+R csduv 2 "/home/vlsi/dff/masterslaveDflipflopnew.cir/masterslaveDflipflopnew.cir" 4 mgc_symbol 59e794da1456.03.ac.10.1e.48.00.59.8a 59d2fc47877d.03.ac.10.1e.48.00.30.37
+R csduv 3 "$ADK/technology/ic/symbols/portin/part" 1 Eddm_part 35773eaadc18.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.05.02.fa
+R csduv 4 "$ADK/technology/ic/symbols/portin/portin" 1 mgc_symbol 35773d18855d.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.06.02.fa
+R csduv 5 "$ADK/technology/ic/symbols/portout/part" 1 Eddm_part 35785fdc394b.03.86.56.31.87.00.12.30 43349f1b0e02.03.93.22.46.d8.00.02.fa
+R csduv 6 "$ADK/technology/ic/symbols/portout/portout" 1 mgc_symbol 357ed6243e32.03.86.56.31.87.00.28.94 43349f1b0e02.03.93.22.46.d8.01.02.fa

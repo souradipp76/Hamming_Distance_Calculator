@@ -1,0 +1,33 @@
+A 5 u mgc_sheet 59e7ae2045f9.03.ac.10.1e.48.00.27.f3 2 2 9 0
+V v 1 4 59e7ae2045f9.03.ac.10.1e.48.01.27.f3
+F f 1 "sheet1.ssht_1"
+F f 1 "sheet1.sgfx_1"
+F o 0 
+F o 0 
+V v 2 4 59e7af991068.03.ac.10.1e.48.00.27.f3
+F f 2 "sheet1.ssht_2"
+F f 2 "sheet1.sgfx_2"
+F o 0 
+F o 0 
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/fulladd/schematic" 1 mgc_schematic 59e7ae2043e9.03.ac.10.1e.48.01.27.f3 59e7ae2043e9.03.ac.10.1e.48.00.27.f3
+R csduv 1 "/home/vlsi/g4/halfadd/part" 4 Eddm_part 59e7ab7ae1bb.03.ac.10.1e.48.00.10.c5 59e7a9f3c527.03.ac.10.1e.48.00.10.c5
+R csduv 2 "/home/vlsi/g4/halfadd/halfadd" 3 mgc_symbol 59e7ab7ae1b6.03.ac.10.1e.48.00.10.c5 59e7ab72ac20.03.ac.10.1e.48.00.10.c5
+R csduv 3 "/home/vlsi/g4/or/part" 4 Eddm_part 59e7aecb72e0.03.ac.10.1e.48.00.27.f3 59e7ad2ae792.03.ac.10.1e.48.00.1e.c8
+R csduv 4 "/home/vlsi/g4/or/or" 3 mgc_symbol 59e7aecb71c5.03.ac.10.1e.48.00.27.f3 59e7ae0c5643.03.ac.10.1e.48.00.1e.c8
+R csduv 5 "$ADK/technology/ic/symbols/portin/part" 1 Eddm_part 35773eaadc18.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.05.02.fa
+R csduv 6 "$ADK/technology/ic/symbols/portin/portin" 1 mgc_symbol 35773d18855d.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.06.02.fa
+R csduv 7 "$ADK/technology/ic/symbols/portout/part" 1 Eddm_part 35785fdc394b.03.86.56.31.87.00.12.30 43349f1b0e02.03.93.22.46.d8.00.02.fa
+R csduv 8 "$ADK/technology/ic/symbols/portout/portout" 1 mgc_symbol 357ed6243e32.03.86.56.31.87.00.28.94 43349f1b0e02.03.93.22.46.d8.01.02.fa
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/g4/fulladd/schematic" 1 mgc_schematic 59e7ae2043e9.03.ac.10.1e.48.01.27.f3 59e7ae2043e9.03.ac.10.1e.48.00.27.f3
+R csduv 1 "/home/vlsi/g4/halfadd/part" 4 Eddm_part 59e7ab7ae1bb.03.ac.10.1e.48.00.10.c5 59e7a9f3c527.03.ac.10.1e.48.00.10.c5
+R csduv 2 "/home/vlsi/g4/halfadd/halfadd" 3 mgc_symbol 59e7ab7ae1b6.03.ac.10.1e.48.00.10.c5 59e7ab72ac20.03.ac.10.1e.48.00.10.c5
+R csduv 3 "/home/vlsi/g4/or/part" 4 Eddm_part 59e7aecb72e0.03.ac.10.1e.48.00.27.f3 59e7ad2ae792.03.ac.10.1e.48.00.1e.c8
+R csduv 4 "/home/vlsi/g4/or/or" 3 mgc_symbol 59e7aecb71c5.03.ac.10.1e.48.00.27.f3 59e7ae0c5643.03.ac.10.1e.48.00.1e.c8
+R csduv 5 "$ADK/technology/ic/symbols/portin/part" 1 Eddm_part 35773eaadc18.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.05.02.fa
+R csduv 6 "$ADK/technology/ic/symbols/portin/portin" 1 mgc_symbol 35773d18855d.03.86.56.31.87.00.0e.9f 43349f1b0e01.03.93.22.46.d8.06.02.fa
+R csduv 7 "$ADK/technology/ic/symbols/portout/part" 1 Eddm_part 35785fdc394b.03.86.56.31.87.00.12.30 43349f1b0e02.03.93.22.46.d8.00.02.fa
+R csduv 8 "$ADK/technology/ic/symbols/portout/portout" 1 mgc_symbol 357ed6243e32.03.86.56.31.87.00.28.94 43349f1b0e02.03.93.22.46.d8.01.02.fa

@@ -1,0 +1,14 @@
+A 5 u mgc_schematic 59e7ae2043e9.03.ac.10.1e.48.00.27.f3 3 2 1 0
+V v 1 1 59e7ae2043e9.03.ac.10.1e.48.01.27.f3
+F o 0 ""
+V v 2 1 59e7af9890d4.03.ac.10.1e.48.00.27.f3
+F o 0 ""
+V v 3 1 59e7af99107e.03.ac.10.1e.48.00.27.f3
+F o 0 ""
+O 3
+R cspuv 0 "/home/vlsi/g4/fulladd/schematic/sheet1" 2 mgc_sheet 59e7af991068.03.ac.10.1e.48.00.27.f3 59e7ae2045f9.03.ac.10.1e.48.00.27.f3
+O 2
+R cspuv 0 "/home/vlsi/g4/fulladd/schematic/sheet1" 1 mgc_sheet 59e7ae2045f9.03.ac.10.1e.48.01.27.f3 59e7ae2045f9.03.ac.10.1e.48.00.27.f3
+O 1
+R cspuv 0 "/home/vlsi/g4/fulladd/schematic/sheet1" 1 mgc_sheet 59e7ae2045f9.03.ac.10.1e.48.01.27.f3 59e7ae2045f9.03.ac.10.1e.48.00.27.f3
+P "eddm__refer_state" "eddm__refer_floating"

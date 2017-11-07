@@ -1,0 +1,25 @@
+A 5 u Eddm_design_viewpoint 59ed857a11cc.03.ac.10.1e.48.00.3d.aa 5 2 64 0
+V v 4 4 59f60dec20e2.03.ac.10.1e.48.00.32.a7
+F f 4 "tsmc018a.dvpt_4"
+F o 0 ""
+F o 0 ""
+F o 0 ""
+V v 5 4 59f6126ecb07.03.ac.10.1e.48.00.32.a7
+F f 5 "tsmc018a.dvpt_5"
+F o 0 ""
+F o 0 ""
+F o 0 ""
+O 5
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/vlsi/g4/exc/part" 4 Eddm_part 59ed8d8b63c0.03.ac.10.1e.48.00.3d.aa 59ed85761ebc.03.ac.10.1e.48.00.3d.aa
+R cspuv 1 "/home/vlsi/g4/exc/schematic" 3 mgc_schematic 59ed8576bf2f.03.ac.10.1e.48.00.3d.aa 59ed83b8b0ca.03.ac.10.1e.48.00.3d.aa
+R cspuv 2 "/home/vlsi/g4/exc/tsmc018a/default" 1 Eddm_ba_mgr 59ed857a13a9.03.ac.10.1e.48.01.3d.aa 59ed857a13a9.03.ac.10.1e.48.00.3d.aa
+R cspuv 3 "$ADK/technology/ic/symbols/pmos4/part" 1 Eddm_part 40edb88c70ab.03.93.22.46.d8.00.35.07 43349f1b0e00.03.93.22.46.d8.05.02.fa
+R cspuv 4 "$ADK/technology/ic/symbols/nmos4/part" 1 Eddm_part 40edb84b1b42.03.93.22.46.d8.00.35.07 43349f1b0dfe.03.93.22.46.d8.01.02.fa
+O 4
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/vlsi/g4/exc/part" 4 Eddm_part 59ed8d8b63c0.03.ac.10.1e.48.00.3d.aa 59ed85761ebc.03.ac.10.1e.48.00.3d.aa
+R cspuv 1 "/home/vlsi/g4/exc/schematic" 3 mgc_schematic 59ed8576bf2f.03.ac.10.1e.48.00.3d.aa 59ed83b8b0ca.03.ac.10.1e.48.00.3d.aa
+R cspuv 2 "/home/vlsi/g4/exc/tsmc018a/default" 1 Eddm_ba_mgr 59ed857a13a9.03.ac.10.1e.48.01.3d.aa 59ed857a13a9.03.ac.10.1e.48.00.3d.aa
+R cspuv 3 "$ADK/technology/ic/symbols/pmos4/part" 1 Eddm_part 40edb88c70ab.03.93.22.46.d8.00.35.07 43349f1b0e00.03.93.22.46.d8.05.02.fa
+R cspuv 4 "$ADK/technology/ic/symbols/nmos4/part" 1 Eddm_part 40edb84b1b42.03.93.22.46.d8.00.35.07 43349f1b0dfe.03.93.22.46.d8.01.02.fa

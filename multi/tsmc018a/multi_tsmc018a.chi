@@ -1,0 +1,2021 @@
+  Run on eeessl72 (Linux 2.6.32-696.1.1.el6.x86_64)
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : vlsi@eeessl72
+*** OS    : Red Hat Enterprise Linux Server release 6.9 (Santiago) [VCO = aol]
+*** CPU   :
+    AMD Phenom(tm) II X3 710 Processor
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 3
+    Number of logical processors      : 3
+*** Freq  : 2600.000MHz
+*** Cache : 512 KB
+*** MEM   : 3665112 kB
+*** Date  : Fri Oct 20 02:29:09 2017
+
+/home/simulator/mentor/ams/aol/bin/eldo_64.exe -i /home/vlsi/g4/multi/tsmc018a/multi_tsmc018a.cir -64b -gwl JWDB 
+
+
+***** PRE-PROCESSING ...
+
+1*******20-Oct-17 *******  ELDO 12.2d (64 bits)  (v7.8_5.1)  *******02:29:09******
+
+0* Component: /home/vlsi/g4/multi Viewpoint: tsmc018a
+
+0****     INPUT LISTING                                               
+
+0***********************************************************************
+    2  
+    3  ** including /home/vlsi/g4/multi/tsmc018a/netlist.spi
+    1  * ELDO netlist generated with ICnet by 'vlsi' on Fri Oct 20 2017 at 02:29:08
+    2  
+    3  .CONNECT GND 0
+    4  
+    5  *
+    6  * Component pathname : /home/vlsi/dff/inverter.cir
+    7  *
+    8  .SUBCKT INVERTER_CIR_ESC1  OUT GND IN VDD
+    9  
+   10          MN1 OUT IN GND VSS N L=1.8E-07 W=1.9E-07
+   11          MP1 OUT IN VDD VDD P L=1.8E-07 W=1.31E-06
+   12  .ENDS INVERTER_CIR_ESC1
+   13  
+   14  *
+   15  * Component pathname : /home/vlsi/dff/Dflipflopnoinvnew.cir
+   16  *
+   17  .SUBCKT DFLIPFLOPNOINVNEW_CIR_ESC2  OUT CLK D GND NCLK VDD
+   18  
+   19          MN2 N$7 CLK N$56 VSS N L=1.8E-07 W=1.9E-07
+   20          MP2 N$7 NCLK N$56 VDD P L=1.8E-07 W=1.31E-06
+   21          MN1 N$4 NCLK N$56 VSS N L=1.8E-07 W=1.9E-07
+   22          MP1 N$4 CLK N$56 VDD P L=1.8E-07 W=1.31E-06
+   23          X_INVERTER_CIR3_ESC3 OUT GND N$56 VDD INVERTER_CIR_ESC1
+   24          X_INVERTER_CIR2_ESC4 N$7 GND D VDD INVERTER_CIR_ESC1
+   25          X_INVERTER_CIR1_ESC5 N$4 GND OUT VDD INVERTER_CIR_ESC1
+   26  .ENDS DFLIPFLOPNOINVNEW_CIR_ESC2
+   27  
+   28  *
+   29  * Component pathname : /home/vlsi/dff/masterslaveDflipflopnew.cir
+   30  *
+   31  .SUBCKT MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6  OUT CLEAR CLK D GND NCLK PRESET
+   32  + VDD
+   33  
+   34          X_DFLIPFLOPNOINVNEW_CIR1_ESC7 N$34 NCLK D GND CLK VDD DFLIPFLOPNOINVNEW_CIR_ESC2
+   35          X_DFLIPFLOPNOINVNEW_CIR2_ESC8 OUT CLK N$34 GND NCLK VDD DFLIPFLOPNOINVNEW_CIR_ESC2
+   36  .ENDS MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+   37  
+   38  *
+   39  * Component pathname : /home/vlsi/g4/or
+   40  *
+   41  .SUBCKT OR  OUT GND IN1 IN2 VDD
+   42  
+   43          MN3 OUT N$7 GND VSS N L=1.8E-07 W=3.6E-07
+   44          MP3 OUT N$7 VDD VDD P L=1.8E-07 W=1.26E-06
+   45          MN2 N$7 IN2 GND VSS N L=1.8E-07 W=3.6E-07
+   46          MN1 N$7 IN1 GND VSS N L=1.8E-07 W=3.6E-07
+   47          MP2 N$5 IN1 VDD VDD P L=1.8E-07 W=2.52E-06
+   48          MP1 N$7 IN2 N$5 VDD P L=1.8E-07 W=2.52E-06
+   49  .ENDS OR
+   50  
+   51  *
+   52  * Component pathname : /home/vlsi/g4/xor
+   53  *
+   54  .SUBCKT XOR  OUT GND IN1 IN2 VDD
+   55  
+   56          MN7 OUT N$22 GND VSS N L=1.8E-07 W=3.6E-07
+   57          MP7 OUT N$22 VDD VDD P L=1.8E-07 W=1.26E-06
+   58          MP6 N$47 IN2 VDD VDD P L=1.8E-07 W=1.26E-06
+   59          MN6 N$47 IN2 GND VSS N L=1.8E-07 W=3.6E-07
+   60          MP5 N$59 IN1 VDD VDD P L=1.8E-07 W=1.26E-06
+   61          MN5 N$59 IN1 GND VSS N L=1.8E-07 W=3.6E-07
+   62          MN1 N$22 N$59 N$24 VSS N L=1.8E-07 W=7.2E-07
+   63          MN4 N$2 N$47 GND VSS N L=1.8E-07 W=7.2E-07
+   64          MN3 N$24 IN2 GND VSS N L=1.8E-07 W=7.2E-07
+   65          MN2 N$22 IN1 N$2 VSS N L=1.8E-07 W=7.2E-07
+   66          MP4 N$22 N$47 N$7 VDD P L=1.8E-07 W=2.52E-06
+   67          MP3 N$7 N$59 VDD VDD P L=1.8E-07 W=2.52E-06
+   68          MP2 N$22 IN2 N$31 VDD P L=1.8E-07 W=2.52E-06
+   69          MP1 N$31 IN1 VDD VDD P L=1.8E-07 W=2.52E-06
+   70  .ENDS XOR
+   71  
+   72  *
+   73  * Component pathname : /home/vlsi/g4/and
+   74  *
+   75  .SUBCKT AND  OUT GND IN1 IN2 VDD
+   76  
+   77          MP3 OUT N$5 VDD VDD P L=1.8E-07 W=1.26E-06
+   78          MN3 OUT N$5 GND VSS N L=1.8E-07 W=3.6E-07
+   79          MP2 N$5 IN2 VDD VDD P L=1.8E-07 W=1.26E-06
+   80          MP1 N$5 IN1 VDD VDD P L=1.8E-07 W=1.26E-06
+   81          MN2 N$2 IN2 GND VSS N L=1.8E-07 W=7.2E-07
+   82          MN1 N$5 IN1 N$2 VSS N L=1.8E-07 W=7.2E-07
+   83  .ENDS AND
+   84  
+   85  *
+   86  * Component pathname : /home/vlsi/g4/halfadd
+   87  *
+   88  .SUBCKT HALFADD  C S GND IN1 IN2 VDD
+   89  
+   90          X_EXC1 S GND IN1 IN2 VDD XOR
+   91          X_AND1 C GND IN2 IN1 VDD AND
+   92  .ENDS HALFADD
+   93  
+   94  *
+   95  * Component pathname : /home/vlsi/g4/fulladd
+   96  *
+   97  .SUBCKT FULLADD  C S CIN GND IN1 IN2 VDD
+   98  
+   99          X_OR1 C GND N$16 N$13 VDD OR
+  100          X_HALFADD2 N$16 S GND N$11 CIN VDD HALFADD
+  101          X_HALFADD1 N$13 N$11 GND IN2 IN1 VDD HALFADD
+  102  .ENDS FULLADD
+  103  
+  104  *
+  105  * Component pathname : /home/vlsi/dff/mux.cir
+  106  *
+  107  .SUBCKT MUX_CIR_ESC9  OUT GND IN1 IN2 S VDD
+  108  
+  109          MN3 N$3 S GND VSS N L=1.8E-07 W=3.6E-07
+  110          MP3 N$3 S VDD VDD P L=1.8E-07 W=1.26E-06
+  111          MN2 IN2 N$3 OUT VSS N L=1.8E-07 W=3.6E-07
+  112          MP2 IN2 S OUT VDD P L=1.8E-07 W=1.26E-06
+  113          MN1 IN1 S OUT VSS N L=1.8E-07 W=3.6E-07
+  114          MP1 IN1 N$3 OUT VDD P L=1.8E-07 W=1.26E-06
+  115  .ENDS MUX_CIR_ESC9
+  116  
+  117  *
+  118  * Component pathname : /home/vlsi/dff/sipopisonew.cir
+  119  *
+  120  .SUBCKT SIPOPISONEW_CIR_ESC10  P1 P2 P3 CLK GND L1 L2 L3 NCLK SEL SIN VDD
+  121  
+  122          X_MUX_CIR3_ESC11 N$14 GND L3 P2 SEL VDD MUX_CIR_ESC9
+  123          X_MUX_CIR2_ESC12 N$10 GND L2 P1 SEL VDD MUX_CIR_ESC9
+  124          X_MUX_CIR1_ESC13 N$3 GND L1 SIN SEL VDD MUX_CIR_ESC9
+  125          X_Q3 P3 N$13 CLK N$14 GND NCLK N$16 VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  126          X_Q2 P2 N$9 CLK N$10 GND NCLK N$12 VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  127          X_Q1 P1 N$1 CLK N$3 GND NCLK N$7 VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  128  .ENDS SIPOPISONEW_CIR_ESC10
+  129  
+  130  *
+  131  * MAIN CELL: Component pathname : /home/vlsi/g4/multi
+  132  *
+  133          X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14 N$91 N$149 CLK N$89 GND NCLK
+  134  + N$150 VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  135          X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15 N$78 N$147 CLK N$76 GND NCLK
+  136  + N$148 VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  137          X_FULLADD2 N$89 N$92 N$91 GND N$83 N$87 VDD FULLADD
+  138          X_FULLADD1 N$76 N$83 N$78 GND N$80 N$74 VDD FULLADD
+  139          X_AND3 N$87 GND IN N$64 VDD AND
+  140          X_AND2 N$80 GND IN N$61 VDD AND
+  141          X_AND1 N$74 GND IN N$58 VDD AND
+  142          X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16 O4 N$21 CLK O3 GND NCLK N$52
+  143  + VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  144          X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17 O3 N$16 CLK O2 GND NCLK N$49
+  145  + VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  146          X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18 O5 N$26 CLK O4 GND NCLK N$55
+  147  + VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  148          X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19 O2 N$11 CLK O1 GND NCLK N$46
+  149  + VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  150          X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20 O1 N$6 CLK O0 GND NCLK N$43
+  151  + VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  152          X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21 O0 N$1 CLK N$92 GND NCLK N$40
+  153  + VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  154          X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22 N$64 N$145 CLK N$61 GND NCLK
+  155  + N$146 VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  156          X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23 N$61 N$143 CLK N$58 GND NCLK
+  157  + N$144 VDD MASTERSLAVEDFLIPFLOPNEW_CIR_ESC6
+  158          X_SIPOPISONEW_CIR1_ESC24 N$139 N$140 N$58 CLK GND IN IN IN NCLK
+  159  + SEL IN VDD SIPOPISONEW_CIR_ESC10
+  160  *
+  161  *end
+    3  
+    4  ** including /home/simulator/mentor/Library/ADK/technology/ic/models/tsmc018.mod
+    1  * DATE: Jun 15/04
+    2  * LOT: T44E                  WAF: 3009
+    3  * Temperature_parameters=Default
+    4  .MODEL NOTCHEDROW C
+    5  .MODEL HR R
+    6  .MODEL N NMOS (                                LEVEL   = 53 
+    7  +VERSION = 3.1            TNOM    = 27             TOX     = 4.1E-9
+    8  +XJ      = 1E-7           NCH     = 2.3549E17      VTH0    = 0.3725327
+    9  +K1      = 0.5933684      K2      = 2.050755E-3    K3      = 1E-3
+   10  +K3B     = 4.5116437      W0      = 1E-7           NLX     = 1.870758E-7
+   11  +DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
+   12  +DVT0    = 1.3621338      DVT1    = 0.3845146      DVT2    = 0.0577255
+   13  +U0      = 259.5304169    UA      = -1.413292E-9   UB      = 2.229959E-18
+   14  +UC      = 4.525942E-11   VSAT    = 9.411671E4     A0      = 1.7572867
+   15  +AGS     = 0.3740333      B0      = -7.087476E-9   B1      = -1E-7
+   16  +KETA    = -4.331915E-3   A1      = 0              A2      = 1
+   17  +RDSW    = 111.886044     PRWG    = 0.5            PRWB    = -0.2
+   18  +WR      = 1              WINT    = 0              LINT    = 1.701524E-8
+   19  +XL      = 0              XW      = -1E-8          DWG     = -1.365589E-8
+   20  +DWB     = 1.045599E-8    VOFF    = -0.0927546     NFACTOR = 2.4494296
+   21  +CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
+   22  +CDSCB   = 0              ETA0    = 3.175457E-3    ETAB    = 3.494694E-5
+   23  +DSUB    = 0.0175288      PCLM    = 0.7273497      PDIBLC1 = 0.1886574
+   24  +PDIBLC2 = 2.617136E-3    PDIBLCB = -0.1           DROUT   = 0.7779462
+   25  +PSCBE1  = 3.488238E10    PSCBE2  = 6.841553E-10   PVAG    = 0.0162206
+   26  +DELTA   = 0.01           RSH     = 6.5            MOBMOD  = 1
+   27  +PRT     = 0              UTE     = -1.5           KT1     = -0.11
+   28  +KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
+   29  +UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
+   30  +WL      = 0              WLN     = 1              WW      = 0
+   31  +WWN     = 1              WWL     = 0              LL      = 0
+   32  +LLN     = 1              LW      = 0              LWN     = 1
+   33  +LWL     = 0              CAPMOD  = 2              XPART   = 0.5
+   34  +CGDO    = 8.53E-10       CGSO    = 8.53E-10       CGBO    = 1E-12
+   35  +CJ      = 9.513993E-4    PB      = 0.8            MJ      = 0.3773625
+   36  +CJSW    = 2.600853E-10   PBSW    = 0.8157101      MJSW    = 0.1004233
+   37  +CJSWG   = 3.3E-10        PBSWG   = 0.8157101      MJSWG   = 0.1004233
+   38  +CF      = 0              PVTH0   = -8.863347E-4   PRDSW   = -3.6877287
+   39  +PK2     = 3.730349E-4    WKETA   = 6.284186E-3    LKETA   = -0.0106193
+   40  +PU0     = 16.6114107     PUA     = 6.572846E-11   PUB     = 0
+   41  +PVSAT   = 1.112243E3     PETA0   = 1.002968E-4    PKETA   = -2.906037E-3    )
+   42  *
+   43  .MODEL P PMOS (                                LEVEL   = 53
+   44  +VERSION = 3.1            TNOM    = 27             TOX     = 4.1E-9
+   45  +XJ      = 1E-7           NCH     = 4.1589E17      VTH0    = -0.3948389
+   46  +K1      = 0.5763529      K2      = 0.0289236      K3      = 0
+   47  +K3B     = 13.8420955     W0      = 1E-6           NLX     = 1.337719E-7
+   48  +DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
+   49  +DVT0    = 0.5281977      DVT1    = 0.2185978      DVT2    = 0.1
+   50  +U0      = 109.9762536    UA      = 1.325075E-9    UB      = 1.577494E-21
+   51  +UC      = -1E-10         VSAT    = 1.910164E5     A0      = 1.7233027
+   52  +AGS     = 0.3631032      B0      = 2.336565E-7    B1      = 5.517259E-7
+   53  +KETA    = 0.0217218      A1      = 0.3935816      A2      = 0.401311
+   54  +RDSW    = 252.7123939    PRWG    = 0.5            PRWB    = 0.0158894
+   55  +WR      = 1              WINT    = 0              LINT    = 2.718137E-8
+   56  +XL      = 0              XW      = -1E-8          DWG     = -4.363993E-8
+   57  +DWB     = 8.876273E-10   VOFF    = -0.0942201     NFACTOR = 2
+   58  +CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
+   59  +CDSCB   = 0              ETA0    = 0.2091053      ETAB    = -0.1097233
+   60  +DSUB    = 1.2513945      PCLM    = 2.1999615      PDIBLC1 = 1.238047E-3
+   61  +PDIBLC2 = 0.0402861      PDIBLCB = -1E-3          DROUT   = 0
+   62  +PSCBE1  = 1.034924E10    PSCBE2  = 2.991339E-9    PVAG    = 15
+   63  +DELTA   = 0.01           RSH     = 7.5            MOBMOD  = 1
+   64  +PRT     = 0              UTE     = -1.5           KT1     = -0.11
+   65  +KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
+   66  +UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
+   67  +WL      = 0              WLN     = 1              WW      = 0
+   68  +WWN     = 1              WWL     = 0              LL      = 0
+   69  +LLN     = 1              LW      = 0              LWN     = 1
+   70  +LWL     = 0              CAPMOD  = 2              XPART   = 0.5
+   71  +CGDO    = 6.28E-10       CGSO    = 6.28E-10       CGBO    = 1E-12
+   72  +CJ      = 1.160855E-3    PB      = 0.8484374      MJ      = 0.4079216
+   73  +CJSW    = 2.306564E-10   PBSW    = 0.842712       MJSW    = 0.3673317
+   74  +CJSWG   = 4.22E-10       PBSWG   = 0.842712       MJSWG   = 0.3673317
+   75  +CF      = 0              PVTH0   = 2.619929E-3    PRDSW   = 1.0634509
+   76  +PK2     = 1.940657E-3    WKETA   = 0.0355444      LKETA   = -3.037019E-3
+   77  +PU0     = -1.0227548     PUA     = -4.36707E-11   PUB     = 1E-21
+   78  +PVSAT   = -50            PETA0   = 1E-4           PKETA   = -5.167295E-3    )
+   79  *
+   80  *END
+    4  
+    5  .OPTION AEX
+    6  .OPTION ENGNOT
+    7  .OPTION LIMPROBE=10000.0
+    8  .OPTION NOASCII
+    9  
+   10  * - Analysis Setup - Trans
+   11  .TRAN 0.0 2000n 0
+   12  
+   13  * --- Forces
+   14  VFORCE__IN IN GND DC 1.8
+   15  VFORCE__GND GND GND DC 0
+   16  VFORCE__VDD VDD GND DC 1.8
+   17  VFORCE__SEL SEL GND DC 0
+   18  VFORCE__CLK CLK GND PULSE (0 1.8 4n 1n 1n 45n 100n)
+   19  VFORCE__NCLK NCLK GND PULSE (1.8 0 4n 1n 1n 45n 100n)
+   20  
+   21  * --- Global Outputs
+   22  .PROBE V SG
+   23  
+   24  * --- Waveform Outputs
+   25  .PLOT TRAN V(O5) V(O3) V(O4) V(O2) V(O1) V(O0)
+   26  
+   27  * --- Params
+   28  .TEMP 27.0
+   29  .END
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+Warning 1615: In file "./multi_tsmc018a.cir" line 11:
++   COMMAND ".TRAN": TPRINT can not be <= 0.0.
++   It is set to TSTOP/20.0 = 1.000e-07 s.
+Warning 113:  NODE "N$149": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$150": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$147": Not connected to any element.
++   This node has been removed from the netlist.
+Warning  29: Such messages will not be displayed in future. Set .option MSGNODE = 0 to receive all such warnings.
+
+Warning 113:  NODE "N$148": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$21": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$52": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$16": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$49": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$26": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$55": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$11": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$46": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$6": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$43": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$1": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$40": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$145": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$146": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$143": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "N$144": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "X_SIPOPISONEW_CIR1_ESC24.N$13": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "X_SIPOPISONEW_CIR1_ESC24.N$16": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "X_SIPOPISONEW_CIR1_ESC24.N$9": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "X_SIPOPISONEW_CIR1_ESC24.N$12": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "X_SIPOPISONEW_CIR1_ESC24.N$1": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 113:  NODE "X_SIPOPISONEW_CIR1_ESC24.N$7": Not connected to any element.
++   This node has been removed from the netlist.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning  29: Such messages will not be displayed in future. Set .option MSGNODE = 0 to receive all such warnings.
+
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+
+***** 0  error(s). 
+***** 107  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+
+Memory space allocated (MB):    248
+392 elements
+293 nodes 
+4 input signals
+Detail about objects and nodes found in the design, and simulated by Eldo:
+Number of nodes                     293
+Number of intrinsic nodes           0
+Number of input signals             4
+Number of resistors                 0
+Number of floating capacitors       0
+Number of grounded capacitors       0
+Number of inductors                 0
+Number of voltage sources           4
+Number of current sources           0
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       388
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements simulated  392
+Total number of elements removed    2
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_FULLADD2.X_OR1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_FULLADD2.X_HALFADD2.X_EXC1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_FULLADD2.X_HALFADD2.X_AND1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_FULLADD2.X_HALFADD1.X_EXC1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_FULLADD2.X_HALFADD1.X_AND1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_FULLADD1.X_OR1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_FULLADD1.X_HALFADD2.X_EXC1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_FULLADD1.X_HALFADD2.X_AND1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_FULLADD1.X_HALFADD1.X_EXC1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_FULLADD1.X_HALFADD1.X_AND1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_AND3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_AND2.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_AND1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR3_ESC11.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR2_ESC12.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR1_ESC13.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_FULLADD2.X_OR1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_FULLADD2.X_HALFADD2.X_EXC1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_FULLADD2.X_HALFADD2.X_AND1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_FULLADD2.X_HALFADD1.X_EXC1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_FULLADD2.X_HALFADD1.X_AND1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_FULLADD1.X_OR1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_FULLADD1.X_HALFADD2.X_EXC1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_FULLADD1.X_HALFADD2.X_AND1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_FULLADD1.X_HALFADD1.X_EXC1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_FULLADD1.X_HALFADD1.X_AND1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_AND3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_AND2.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_AND1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR3_ESC11.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR2_ESC12.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR1_ESC13.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+
+Eldo VERSION : ELDO 12.2d (64 bits) Mon Dec 16 16:33:30 GMT 2013
+
+*** DATE: 20-Oct-2017 02:29:09
+
+*** TITLE: * Component: /home/vlsi/g4/multi Viewpoint: tsmc018a
+
+TEMPERATURE : 27.000000 degrees C
+
+1***************20-Oct-2017 ***********************  ELDO 12.2d (64 bits)  (v7.8_5.1)  ***********************02:29:09*****************
+
+0* Component: /home/vlsi/g4/multi Viewpoi
+0****                 MODELS PARAMETERS                                    TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+ DEVICE          MOS
+ MODEL: N
+ TYPE            N
+ LEVEL 53 : Bsim3v3 version 3.1
+ LIBRARY : /home/simulator/mentor/Library/ADK/technology/ic/models/tsmc018.mod
+
+  names    values    units     names    values    units     names    values    units   
+  -----    ------    -----     -----    ------    -----     -----    ------    -----   
+VER     = 3.1000E+00 -       MOBMOD  = 1          -       CAPMOD  = 2          -      
+VFBFLAG = 0          -       NQSMOD  = 0          -       NOIMOD  = 1          -      
+DERIV   = 1          -       BINFLAG = 0          -       PARAMCHK= 0          -      
+IIMOD   = 0          -       FNLEV   = 0          -       
+
+ * Threshold voltage related model parameters *
+   ------------------------------------------  
+VTH0    = 3.7253E-01 V       DELVTO  = 0.0        V       K1      = 5.9337E-01 V^1/2  
+K2      = 2.0508E-03 -       NCH     = 2.3549E+17 At/cm^3 K3      = 1.0000E-03 -      
+K3B     = 4.5116E+00 1/V     DVT0    = 1.3621E+00 -       DVT1    = 3.8451E-01 -      
+DVT2    = 5.7725E-02 1/V     DVT0W   = 0.0        -       DVT1W   = 0.0        1/m    
+DVT2W   = 0.0        1/V     DSUB    = 1.7529E-02 -       ETA0    = 3.1755E-03 -      
+ETAB    = 3.4947E-05 1/V     
+
+ * Subthreshold related parameters *
+   -------------------------------  
+NFACTOR = 2.4494E+00 -       CDSC    = 2.4000E-04 F/m^2   CDSCB   = 0.0        F/Vm^2 
+CDSCD   = 0.0        F/Vm^2  VOFF    =-9.2755E-02 V       CIT     = 0.0        F/m^2  
+
+ * Mobility related model parameters *
+   ---------------------------------  
+UA      =-1.4133E-09 m/V     UB      = 2.2300E-18 (m/V)^2 UC      = 4.5259E-11 m/V^2  
+U0      = 2.5953E-02 unit1   
+
+ * Saturation related parameters *
+   -----------------------------  
+PCLM    = 7.2735E-01 -       KETA    =-4.3319E-03 1/V     DELTA   = 1.0000E-02 V      
+A0      = 1.7573E+00 -       A1      = 0.0        1/V     A2      = 1.0000E+00 -      
+B0      =-7.0875E-09 m       B1      =-1.0000E-07 m       PVAG    = 1.6221E-02 -      
+PDIBLC1 = 1.8866E-01 -       PDIBLC2 = 2.6171E-03 -       PDIBLCB =-1.0000E-01 1/V    
+DROUT   = 7.7795E-01 -       VSAT    = 9.4117E+04 m/s     PSCBE1  = 3.4882E+10 V/m    
+PSCBE2  = 6.8416E-10 m/V     PRWB    =-2.0000E-01 V^-1/2  PRWG    = 5.0000E-01 1/V    
+RDSW    = 1.1189E+02 Ohm.um  AGS     = 3.7403E-01 1/V     
+
+ * Geometry modulation related parameters *
+   --------------------------------------  
+LREF    = 0.0        m       WREF    = 0.0        m       LINT    = 1.7015E-08 m      
+DLC     = 1.7015E-08 m       LL      = 0.0        m       LW      = 0.0        m      
+LWL     = 0.0        m       LLN     = 1.0000E+00 -       LWN     = 1.0000E+00 -      
+WINT    = 0.0        m       DWC     = 0.0        m       WL      = 0.0        m      
+WW      = 0.0        m       WWL     = 0.0        m       WLN     = 1.0000E+00 -      
+WWN     = 1.0000E+00 -       WR      = 1.0000E+00 -       W0      = 1.0000E-07 m      
+DWG     =-1.3656E-08 m/V     DWB     = 1.0456E-08 m/V^1/2 
+
+ * Temperature effect parameters *
+   -----------------------------  
+UPDATEPHI= 0          -       AT      = 3.3000E+04 m/sec   UTE     =-1.5000E+00 -      
+KT1     =-1.1000E-01 V       KT2     = 2.2000E-02 -       KT1L    = 0.0        mV     
+UA1     = 4.3100E-09 m/V     UB1     =-7.6100E-18 (m/V)^2 UC1     =-5.6000E-11 m/V^2  
+PRT     = 0.0        Ohm.um  RDSWTPOS= 1          -       
+
+ * Overlap capacitance related and dynamic model parameters *
+   --------------------------------------------------------  
+XPART   = 5.0000E-01 -       CLC     = 1.0000E-07 m       CLE     = 6.0000E-01 -      
+CGDO    = 8.5300E-10 F/m     CGDL    = 0.0        F/m     CGSO    = 8.5300E-10 F/m    
+CGSL    = 0.0        F/m     CGBO    = 1.0000E-12 F/m     CKAPPA  = 6.0000E-01 V      
+CF      = 0.0        F/m     ELM     = 5.0000E+00 -       VFBCV   =-1.0000E+00 -      
+
+ * Substrate current related model parameters *
+   ----------------------------------------------
+ALPHA0  = 0.0        m/V     BETA0   = 3.0000E+01 V       
+
+ * Process and parameters extraction related model parameters *
+   ----------------------------------------------------------  
+TOX     = 4.1000E-09 m       DTOXCV  = 0.0        m       NGATE   = 0.0        At/cm^3
+NLX     = 1.8708E-07 m       XL      = 0.0        m       XW      =-1.0000E-08 m      
+ND      = 1.0000E+20 At/cm^3 
+
+ * Noise effect related model parameters *
+   -------------------------------------  
+THMLEV  = 0          -       FLKLEV  = 0          -       AF      = 1.0000E+00 -      
+KF      = 0.0        -       EF      = 1.0000E+00 -       NSTAR   = 2.0000E+14 -      
+FLKFLAG = 0.0        -       NOIFLAG = 0.0        -       NOIA    = 1.0000E+20 unit2  
+NOIB    = 5.0000E+04 1/V     NOIC    =-1.4000E-12 unit3   EM      = 4.1000E+07 V/m    
+
+ * Sidewall parasitic capacitances at gate side *
+   --------------------------------------------  
+MJSWG   = 1.0042E-01 -       PBSWG   = 8.1571E-01 V       CJSWG   = 3.3000E-10 F/m    
+WPEMOD  = 0.0        -       SCREF   = 1.0000E-06 m       KVTH0WE = 0.0        V      
+K2WE    = 0.0        -       KU0WE   = 0.0        -       WEB     = 0.0        -      
+WEC     = 0.0        -       
+
+ * Binning Parameters *
+   -------------------  
+BINUNIT = 1.0000E+00 -       
+* Display only non null Binning Parameters *
+PK2     = 3.7303E-04 -       PU0     = 1.6611E+01 -       PUA     = 6.5728E-11 -      
+PVSAT   = 1.1122E+03 -       LKETA   =-1.0619E-02 -       WKETA   = 6.2842E-03 -      
+PKETA   =-2.9060E-03 -       PRDSW   =-3.6877E+00 -       PETA0   = 1.0030E-04 -      
+PVTH0   =-8.8633E-04 -       
+   ------------------------------------------------------------------------  
+
+ *** Common extrinsic model parameters ***
+OPTACM  = 0          -       ALEV    = 0          -       RLEV    = 4          -      
+ * Access resistances related parameters *
+RD      = 0.0        Ohm     RS      = 0.0        Ohm     RSH     = 6.5000E+00 Ohm/Sq.
+RDC     = 0.0        Ohm     RSC     = 0.0        Ohm     
+ * Geometry related parameters *
+LD      = 1.7015E-08 m       WD      = 0.0        m       DL      = 0.0        m      
+DW      = 0.0        m       LDIF    = 0.0        m       HDIF    = 0.0        m      
+WMLT    = 1.0000E+00 -       LMLT    = 1.0000E+00 -       DEL     = 0.0        m      
+XJ      = 1.0000E-07 m       
+ * Static bulk-diode related parameters *
+DIOLEV  = 6          -       JS      = 1.0000E-04 A/m^2   JSW     = 0.0        A/m    
+IS      = 1.0000E-14 A       NJ      = 1.0000E+00 -       NDS     = 1.0000E+00 -      
+VNDS    =-1.0000E+00 V       VDLIN   = 5.0000E-01 -       
+ * Dynamic bulk-diode related parameters *
+DCAPLEV = 4          -       CJGATE  = 0.0                CBD     = 0.0        F      
+CBS     = 0.0        F       CJ      = 9.5140E-04 F/m^2   CJSW    = 2.6009E-10 F/m    
+FC      = 0.0        -       MJ      = 3.7736E-01 -       MJSW    = 1.0042E-01 -      
+TT      = 0.0        s       PB      = 8.0000E-01 V       PBSW    = 8.1571E-01 V      
+ * Temperature related Parameters 
+EG      = 1.1100E+00 eV      GAP1    = 7.0200E-04 eV/degK GAP2    = 1.1080E+03 degK   
+TNOM    = 2.7000E+01 degC    TLEV    = 0          -       TLEVC   = 0          -      
+TLEVI   = 3          -       XTI     = 3.0000E+00 -       
+ * Temperature Access Resistance related parameters * TLEVR = 1 
+TRD1    = 0.0        1/degK  TRS1    = 0.0        1/degK  TRSH1   = 0.0        1/degK 
+TRD2    = 0.0        unit4   TRS2    = 0.0        unit4   TRSH2   = 0.0        unit4  
+
+unit1 represents m^2/V/sec
+unit2 represents V^-1.m^-2
+unit3 represents V^-1.m^2
+unit4 represents 1/degK^2
+
+ DEVICE          MOS
+ MODEL: P
+ TYPE            P
+ LEVEL 53 : Bsim3v3 version 3.1
+ LIBRARY : /home/simulator/mentor/Library/ADK/technology/ic/models/tsmc018.mod
+
+  names    values    units     names    values    units     names    values    units   
+  -----    ------    -----     -----    ------    -----     -----    ------    -----   
+VER     = 3.1000E+00 -       MOBMOD  = 1          -       CAPMOD  = 2          -      
+VFBFLAG = 0          -       NQSMOD  = 0          -       NOIMOD  = 1          -      
+DERIV   = 1          -       BINFLAG = 0          -       PARAMCHK= 0          -      
+IIMOD   = 0          -       FNLEV   = 0          -       
+
+ * Threshold voltage related model parameters *
+   ------------------------------------------  
+VTH0    =-3.9484E-01 V       DELVTO  = 0.0        V       K1      = 5.7635E-01 V^1/2  
+K2      = 2.8924E-02 -       NCH     = 4.1589E+17 At/cm^3 K3      = 0.0        -      
+K3B     = 1.3842E+01 1/V     DVT0    = 5.2820E-01 -       DVT1    = 2.1860E-01 -      
+DVT2    = 1.0000E-01 1/V     DVT0W   = 0.0        -       DVT1W   = 0.0        1/m    
+DVT2W   = 0.0        1/V     DSUB    = 1.2514E+00 -       ETA0    = 2.0911E-01 -      
+ETAB    =-1.0972E-01 1/V     
+
+ * Subthreshold related parameters *
+   -------------------------------  
+NFACTOR = 2.0000E+00 -       CDSC    = 2.4000E-04 F/m^2   CDSCB   = 0.0        F/Vm^2 
+CDSCD   = 0.0        F/Vm^2  VOFF    =-9.4220E-02 V       CIT     = 0.0        F/m^2  
+
+ * Mobility related model parameters *
+   ---------------------------------  
+UA      = 1.3251E-09 m/V     UB      = 1.5775E-21 (m/V)^2 UC      =-1.0000E-10 m/V^2  
+U0      = 1.0998E-02 unit1   
+
+ * Saturation related parameters *
+   -----------------------------  
+PCLM    = 2.2000E+00 -       KETA    = 2.1722E-02 1/V     DELTA   = 1.0000E-02 V      
+A0      = 1.7233E+00 -       A1      = 3.9358E-01 1/V     A2      = 4.0131E-01 -      
+B0      = 2.3366E-07 m       B1      = 5.5173E-07 m       PVAG    = 1.5000E+01 -      
+PDIBLC1 = 1.2380E-03 -       PDIBLC2 = 4.0286E-02 -       PDIBLCB =-1.0000E-03 1/V    
+DROUT   = 0.0        -       VSAT    = 1.9102E+05 m/s     PSCBE1  = 1.0349E+10 V/m    
+PSCBE2  = 2.9913E-09 m/V     PRWB    = 1.5889E-02 V^-1/2  PRWG    = 5.0000E-01 1/V    
+RDSW    = 2.5271E+02 Ohm.um  AGS     = 3.6310E-01 1/V     
+
+ * Geometry modulation related parameters *
+   --------------------------------------  
+LREF    = 0.0        m       WREF    = 0.0        m       LINT    = 2.7181E-08 m      
+DLC     = 2.7181E-08 m       LL      = 0.0        m       LW      = 0.0        m      
+LWL     = 0.0        m       LLN     = 1.0000E+00 -       LWN     = 1.0000E+00 -      
+WINT    = 0.0        m       DWC     = 0.0        m       WL      = 0.0        m      
+WW      = 0.0        m       WWL     = 0.0        m       WLN     = 1.0000E+00 -      
+WWN     = 1.0000E+00 -       WR      = 1.0000E+00 -       W0      = 1.0000E-06 m      
+DWG     =-4.3640E-08 m/V     DWB     = 8.8763E-10 m/V^1/2 
+
+ * Temperature effect parameters *
+   -----------------------------  
+UPDATEPHI= 0          -       AT      = 3.3000E+04 m/sec   UTE     =-1.5000E+00 -      
+KT1     =-1.1000E-01 V       KT2     = 2.2000E-02 -       KT1L    = 0.0        mV     
+UA1     = 4.3100E-09 m/V     UB1     =-7.6100E-18 (m/V)^2 UC1     =-5.6000E-11 m/V^2  
+PRT     = 0.0        Ohm.um  RDSWTPOS= 1          -       
+
+ * Overlap capacitance related and dynamic model parameters *
+   --------------------------------------------------------  
+XPART   = 5.0000E-01 -       CLC     = 1.0000E-07 m       CLE     = 6.0000E-01 -      
+CGDO    = 6.2800E-10 F/m     CGDL    = 0.0        F/m     CGSO    = 6.2800E-10 F/m    
+CGSL    = 0.0        F/m     CGBO    = 1.0000E-12 F/m     CKAPPA  = 6.0000E-01 V      
+CF      = 0.0        F/m     ELM     = 5.0000E+00 -       VFBCV   =-1.0000E+00 -      
+
+ * Substrate current related model parameters *
+   ----------------------------------------------
+ALPHA0  = 0.0        m/V     BETA0   = 3.0000E+01 V       
+
+ * Process and parameters extraction related model parameters *
+   ----------------------------------------------------------  
+TOX     = 4.1000E-09 m       DTOXCV  = 0.0        m       NGATE   = 0.0        At/cm^3
+NLX     = 1.3377E-07 m       XL      = 0.0        m       XW      =-1.0000E-08 m      
+ND      = 1.0000E+20 At/cm^3 
+
+ * Noise effect related model parameters *
+   -------------------------------------  
+THMLEV  = 0          -       FLKLEV  = 0          -       AF      = 1.0000E+00 -      
+KF      = 0.0        -       EF      = 1.0000E+00 -       NSTAR   = 2.0000E+14 -      
+FLKFLAG = 0.0        -       NOIFLAG = 0.0        -       NOIA    = 9.9000E+18 unit2  
+NOIB    = 2.4000E+03 1/V     NOIC    = 1.4000E-12 unit3   EM      = 4.1000E+07 V/m    
+
+ * Sidewall parasitic capacitances at gate side *
+   --------------------------------------------  
+MJSWG   = 3.6733E-01 -       PBSWG   = 8.4271E-01 V       CJSWG   = 4.2200E-10 F/m    
+WPEMOD  = 0.0        -       SCREF   = 1.0000E-06 m       KVTH0WE = 0.0        V      
+K2WE    = 0.0        -       KU0WE   = 0.0        -       WEB     = 0.0        -      
+WEC     = 0.0        -       
+
+ * Binning Parameters *
+   -------------------  
+BINUNIT = 1.0000E+00 -       
+* Display only non null Binning Parameters *
+PK2     = 1.9407E-03 -       PU0     =-1.0228E+00 -       PUA     =-4.3671E-11 -      
+PUB     = 1.0000E-21 -       PVSAT   =-5.0000E+01 -       LKETA   =-3.0370E-03 -      
+WKETA   = 3.5544E-02 -       PKETA   =-5.1673E-03 -       PRDSW   = 1.0635E+00 -      
+PETA0   = 1.0000E-04 -       PVTH0   = 2.6199E-03 -       
+   ------------------------------------------------------------------------  
+
+ *** Common extrinsic model parameters ***
+OPTACM  = 0          -       ALEV    = 0          -       RLEV    = 4          -      
+ * Access resistances related parameters *
+RD      = 0.0        Ohm     RS      = 0.0        Ohm     RSH     = 7.5000E+00 Ohm/Sq.
+RDC     = 0.0        Ohm     RSC     = 0.0        Ohm     
+ * Geometry related parameters *
+LD      = 2.7181E-08 m       WD      = 0.0        m       DL      = 0.0        m      
+DW      = 0.0        m       LDIF    = 0.0        m       HDIF    = 0.0        m      
+WMLT    = 1.0000E+00 -       LMLT    = 1.0000E+00 -       DEL     = 0.0        m      
+XJ      = 1.0000E-07 m       
+ * Static bulk-diode related parameters *
+DIOLEV  = 6          -       JS      = 1.0000E-04 A/m^2   JSW     = 0.0        A/m    
+IS      = 1.0000E-14 A       NJ      = 1.0000E+00 -       NDS     = 1.0000E+00 -      
+VNDS    =-1.0000E+00 V       VDLIN   = 5.0000E-01 -       
+ * Dynamic bulk-diode related parameters *
+DCAPLEV = 4          -       CJGATE  = 0.0                CBD     = 0.0        F      
+CBS     = 0.0        F       CJ      = 1.1609E-03 F/m^2   CJSW    = 2.3066E-10 F/m    
+FC      = 0.0        -       MJ      = 4.0792E-01 -       MJSW    = 3.6733E-01 -      
+TT      = 0.0        s       PB      = 8.4844E-01 V       PBSW    = 8.4271E-01 V      
+ * Temperature related Parameters 
+EG      = 1.1100E+00 eV      GAP1    = 7.0200E-04 eV/degK GAP2    = 1.1080E+03 degK   
+TNOM    = 2.7000E+01 degC    TLEV    = 0          -       TLEVC   = 0          -      
+TLEVI   = 3          -       XTI     = 3.0000E+00 -       
+ * Temperature Access Resistance related parameters * TLEVR = 1 
+TRD1    = 0.0        1/degK  TRS1    = 0.0        1/degK  TRSH1   = 0.0        1/degK 
+TRD2    = 0.0        unit4   TRS2    = 0.0        unit4   TRSH2   = 0.0        unit4  
+
+unit1 represents m^2/V/sec
+unit2 represents V^-1.m^-2
+unit3 represents V^-1.m^2
+unit4 represents 1/degK^2
+
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+
+
+
+1***************20-Oct-2017 ***********************  ELDO 12.2d (64 bits)  (v7.8_5.1)  ***********************02:29:09*****************
+
+0* Component: /home/vlsi/g4/multi Viewpoint: tsmc018a
+0****                 OPTION SUMMARY                                        TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+*** DC Control Options : 
+
+GMIN           = 1.00e-12 NMAXSIZE       = 100000   ITL1           = 100      
+GRAMP          = 0        NETSIZE        = 100      VMINDC         = UNDEF    
+VMAXDC         = UNDEF    
+
+*** Initial Accuracy Control Options (May be adjusted during simulation): 
+
+ITOL           = 1.00e-06 EPS            = 5.00e-03 VNTOL          = 1.00e-06 
+RELTOL         = 1.00e-03 RELERR         = 5.00e-02 PIVREL         = 1.00e-03 
+PIVTOL         = 1.00e-16 ABSTOL         = 1.00e-12 FLXTOL         = 1.00e-11 
+MAXORD         = 2.00e+00 
+
+*** Time-step Control Options : 
+
+ZOOMTIME       = 1.00e+00 STEP           = 0.00e+00 STARTSMP       = 0.00e+00 
+FREQSMP        = 0.00e+00 COURESOL       = 0.00e+00 TRTOL          = 7.00e+00 
+HMIN           = 1.00e-12 ITL3           = 3        ITL4           = 13       
+FT             = 1.25e-01 DCLOG          = 1.00e+00 LVLTIM         = 2        
+LVLCNV         = 2        DVDT           = -1       RELVAR         = 1.50e-01 
+ABSVAR         = 2.00e-01 SAMPLE         = 0.00e+00 HMAX           = UNDEF    
+
+
+*** MosFet default Options : 
+
+SCALE          = 1.00e+00 SCALM          = 1.00e+00 SCALEBSIM      = 1.00e+00 
+DEFAD          = UNDEF    DEFAS          = UNDEF    DEFPD          = UNDEF    
+DEFPS          = UNDEF    DEFW           = 1.00e-04 DEFL           = 1.00e-04 
+DEFNRD         = UNDEF    DEFNRS         = UNDEF    XA             = 6.00e-06 
+LIMRMOS        = UNDEF    SHRINK         = 1.00e+00 
+
+*** General Information Options : 
+
+CPTIME         = UNDEF    STAT           = 0        TIMEDIV        = 0        
+SIMUDIV        = 10       SAVETIME       = 0        MAXTRAN        = 1000     
+MAXNODES       = 10000    MAXV           = 1.00e+13 LIMPROBE       = 10000    
+FLICKER_NOISE  = 0        THERMAL_NOISE  = 0        TNOM           = 2.70e+01 
+TMAX           = UNDEF    
+SPICDC         = 0        SPIOUT         = 0        NEWTON         = 1        
+OSR            = 0        TRAP           = 1        GEAR           = 0        
+BE             = 0        PROBEOP        = 0        NOLAT          = 0        
+NWLAT          = 0        ANALOG         = 0        BBDEBUG        = 0        
+NOSIZECHK      = 0        QTRUNC         = 0        UNBOUND        = 0        
+LCAPOP         = 0        NOAEX          = 1        AEX            = 1        
+AEX            = 1        STVER          = 0        MOTOROLA       = 0        
+AMS            = 0        ASPEC          = 0        INPUT          = 0        
+NOINIT         = 0        PSF            = 0        NOBIN          = 0        
+NOCOU          = 1        WL             = 0        NODE           = 0        
+LIST           = 0        SPI3BIN        = 0        SPI3ASC        = 0        
+NOMOD          = 0        NOBIN          = 0        NOCOU          = 1        
+RMOS           = 0        NWRMOS         = 1        NONWRMOS       = 0        
+USEDEFAP       = 0        NOASCII        = 1        ASCII          = 0        
+MIXED          = 0        SWITCH         = 0        USERSWITCH     = 0        
+TIMING         = 0        MODWL          = 1        ULOGIC         = 0        
+
+
+
+
+***> DC CPU TIME 0s 020ms <***
+
+DC:3 iterations FOR DC analysis
+
+
+
+
+1***************20-Oct-2017 ***********************  ELDO 12.2d (64 bits)  (v7.8_5.1)  ***********************02:29:09*****************
+
+0* Component: /home/vlsi/g4/multi Viewpoint: tsmc018a
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE    
+ CLK       0.0000     
+ NCLK       1.8000     
+ VDD       1.8000     
+ IN       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$56       24.8911N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$56       24.8911N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_FULLADD2.X_OR1.VSS       0.0000     
+ X_FULLADD2.X_HALFADD2.X_EXC1.VSS       0.0000     
+ X_FULLADD2.X_HALFADD2.X_AND1.VSS       0.0000     
+ X_FULLADD2.X_HALFADD1.X_EXC1.VSS       0.0000     
+ X_FULLADD2.X_HALFADD1.X_AND1.VSS       0.0000     
+ X_FULLADD1.X_OR1.VSS       0.0000     
+ X_FULLADD1.X_HALFADD2.X_EXC1.VSS       0.0000     
+ X_FULLADD1.X_HALFADD2.X_AND1.VSS       0.0000     
+ X_FULLADD1.X_HALFADD1.X_EXC1.VSS       0.0000     
+ X_FULLADD1.X_HALFADD1.X_AND1.VSS       0.0000     
+ X_AND3.VSS       0.0000     
+ X_AND2.VSS       0.0000     
+ X_AND1.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR3_ESC11.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR2_ESC12.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR1_ESC13.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS       0.0000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS       0.0000     
+ N$91       1.8000     
+ N$78       1.8000     
+ N$64       1.8000     
+ N$61       1.8000     
+ N$58       1.8000     
+ O4       1.8000     
+ O3       1.8000     
+ O2       1.8000     
+ O5       1.8000     
+ O1       1.8000     
+ O0       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.N$34       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.N$34       1.8000     
+ X_FULLADD2.X_HALFADD2.X_EXC1.N$47       0.0000     
+ X_FULLADD1.X_HALFADD2.X_EXC1.N$47       0.0000     
+ X_AND3.N$5       19.0379N   
+ X_AND2.N$5       19.0379N   
+ X_AND1.N$5       19.0379N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.N$34       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.N$34       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.N$34       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.N$34       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.N$34       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.N$34       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.N$34       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.N$34       1.8000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.N$34       1.8000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.N$34       1.8000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.N$34       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_AND3.N$2       9.5189N    
+ X_AND2.N$2       9.5189N    
+ X_AND1.N$2       9.5189N    
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR8_ESC16.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR7_ESC17.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR9_ESC18.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR5_ESC19.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR4_ESC20.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR2_ESC22.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR1_ESC23.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3147N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3147N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$4       13.3148N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$7       13.3148N   
+ N$87       1.8000     
+ N$80       1.8000     
+ N$74       1.8000     
+ X_FULLADD2.X_HALFADD1.X_EXC1.N$59       0.0000     
+ X_FULLADD1.X_HALFADD1.X_EXC1.N$47       0.0000     
+ X_FULLADD1.X_HALFADD1.X_EXC1.N$59       0.0000     
+ X_FULLADD1.X_HALFADD1.X_AND1.N$5       19.0379N   
+ X_FULLADD1.X_HALFADD1.X_EXC1.N$24       9.5206N    
+ X_FULLADD1.X_HALFADD1.X_EXC1.N$2       1.4283     
+ X_FULLADD1.X_HALFADD1.X_EXC1.N$7       1.8000     
+ X_FULLADD1.X_HALFADD1.X_EXC1.N$31       1.8000     
+ X_FULLADD1.X_HALFADD1.X_AND1.N$2       9.5189N    
+ X_FULLADD1.N$13       1.8000     
+ X_FULLADD1.X_HALFADD1.X_EXC1.N$22       1.8000     
+ X_FULLADD1.N$11       0.0000     
+ X_FULLADD1.X_HALFADD2.X_EXC1.N$59       1.8000     
+ X_FULLADD1.X_HALFADD2.X_AND1.N$5       1.8000     
+ X_FULLADD1.X_HALFADD2.X_EXC1.N$24       14.7366N   
+ X_FULLADD1.X_HALFADD2.X_EXC1.N$2       14.5818N   
+ X_FULLADD1.X_HALFADD2.X_EXC1.N$7       428.8181M  
+ X_FULLADD1.X_HALFADD2.X_EXC1.N$31       1.8000     
+ X_FULLADD1.X_HALFADD2.X_AND1.N$2       1.4282     
+ X_FULLADD1.N$16       0.0000     
+ X_FULLADD1.X_OR1.N$7       11.0016N   
+ X_FULLADD1.X_HALFADD2.X_EXC1.N$22       29.4732N   
+ X_FULLADD1.X_OR1.N$5       1.8000     
+ N$76       1.8000     
+ N$83       1.8000     
+ X_FULLADD2.X_HALFADD1.X_EXC1.N$47       0.0000     
+ X_FULLADD2.X_HALFADD1.X_AND1.N$5       19.0379N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR6_ESC15.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_FULLADD2.X_HALFADD1.X_EXC1.N$24       9.5206N    
+ X_FULLADD2.X_HALFADD1.X_EXC1.N$2       1.4283     
+ X_FULLADD2.X_HALFADD1.X_EXC1.N$7       1.8000     
+ X_FULLADD2.X_HALFADD1.X_EXC1.N$31       1.8000     
+ X_FULLADD2.X_HALFADD1.X_AND1.N$2       9.5189N    
+ X_FULLADD2.N$13       1.8000     
+ X_FULLADD2.X_HALFADD1.X_EXC1.N$22       1.8000     
+ X_FULLADD2.N$11       0.0000     
+ X_FULLADD2.X_HALFADD2.X_EXC1.N$59       1.8000     
+ X_FULLADD2.X_HALFADD2.X_AND1.N$5       1.8000     
+ X_FULLADD2.X_HALFADD2.X_EXC1.N$24       14.7366N   
+ X_FULLADD2.X_HALFADD2.X_EXC1.N$2       14.5818N   
+ X_FULLADD2.X_HALFADD2.X_EXC1.N$7       428.8181M  
+ X_FULLADD2.X_HALFADD2.X_EXC1.N$31       1.8000     
+ X_FULLADD2.X_HALFADD2.X_AND1.N$2       1.4282     
+ X_FULLADD2.N$16       0.0000     
+ X_FULLADD2.X_OR1.N$7       11.0016N   
+ X_FULLADD2.X_HALFADD2.X_EXC1.N$22       29.4732N   
+ X_FULLADD2.X_OR1.N$5       1.8000     
+ N$89       1.8000     
+ N$92       1.8000     
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR10_ESC14.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_MASTERSLAVEDFLIPFLOPNEW_CIR3_ESC21.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ N$139       1.8000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ N$140       1.8000     
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.N$4       19.1029N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_SIPOPISONEW_CIR1_ESC24.X_Q1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.N$7       19.1029N   
+ X_SIPOPISONEW_CIR1_ESC24.N$14       1.8000     
+ X_SIPOPISONEW_CIR1_ESC24.N$10       1.8000     
+ X_SIPOPISONEW_CIR1_ESC24.N$3       1.8000     
+ X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR3_ESC11.N$3       1.8000     
+ X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR2_ESC12.N$3       1.8000     
+ X_SIPOPISONEW_CIR1_ESC24.X_MUX_CIR1_ESC13.N$3       1.8000     
+
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+VFORCE__IN  -7.2400P      1.8000      -13.0320P    
+VFORCE__VDD  -817.1779P    1.8000      -1.4709N     
+VFORCE__CLK   0.0000       0.0000       0.0000      
+VFORCE__NCLK   0.0000       1.8000       0.0000      
+
+   TOTAL POWER DISSIPATION:  1.4840N     WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=6.111111e-04
+
+................................................
+Simulation progress                : 10% (t = 204.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s 120   ( 0h  0mn  0s 120)
+CPU Usage                          :  85%               ( 85%)
+................................................
+Simulation progress                : 20% (t = 404.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s 100   ( 0h  0mn  0s 220)
+CPU Usage                          : 100%               ( 92%)
+................................................
+Simulation progress                : 30% (t = 604.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s  90   ( 0h  0mn  0s 310)
+CPU Usage                          :  96%               ( 93%)
+................................................
+Simulation progress                : 40% (t = 804.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s  90   ( 0h  0mn  0s 400)
+CPU Usage                          :  97%               ( 94%)
+................................................
+Simulation progress                : 50% (t = 1.0040 U)
+Elapsed CPU time                   :  0h  0mn  0s  90   ( 0h  0mn  0s 490)
+CPU Usage                          :  97%               ( 94%)
+................................................
+Simulation progress                : 60% (t = 1.2040 U)
+Elapsed CPU time                   :  0h  0mn  0s  90   ( 0h  0mn  0s 580)
+CPU Usage                          :  97%               ( 95%)
+................................................
+Simulation progress                : 70% (t = 1.4040 U)
+Elapsed CPU time                   :  0h  0mn  0s 100   ( 0h  0mn  0s 680)
+CPU Usage                          : 100%               ( 97%)
+................................................
+Simulation progress                : 80% (t = 1.6040 U)
+Elapsed CPU time                   :  0h  0mn  0s  90   ( 0h  0mn  0s 770)
+CPU Usage                          :  97%               ( 97%)
+................................................
+Simulation progress                : 90% (t = 1.8040 U)
+Elapsed CPU time                   :  0h  0mn  0s  90   ( 0h  0mn  0s 860)
+CPU Usage                          :  96%               ( 97%)
+................................................
+Simulation progress                : 100% (t = 2.0000 U)
+Elapsed CPU time                   :  0h  0mn  0s  90   ( 0h  0mn  0s 950)
+CPU Usage                          :  96%               ( 97%)
+
+
+
+1***************20-Oct-2017 ***********************  ELDO 12.2d (64 bits)  (v7.8_5.1)  ***********************02:29:09*****************
+
+0* Component: /home/vlsi/g4/multi Viewpoint: tsmc018a
+0****                 ACCOUNTING INFORMATION                                TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+Number of nodes                     1069
+Number of intrinsic nodes           776
+Number of input signals             4
+Number of resistors                 0
+Number of floating capacitors       0
+Number of grounded capacitors       0
+Number of inductors                 0
+Number of voltage sources           4
+Number of current sources           0
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       388
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements simulated  392
+Total number of elements removed    2
+Number of equations                 1065
+Number of non-zero terms            6279
+Percent Zeros                      99.45
+Number of Newton iterations         1692
+Average number of Newton iterations 2.729
+Number of accepted time steps       620
+Number of rejected time steps       0
+      due to LTE                    0
+      due to Newton                 0
+Evaluation of active devices        93895
+Memory size (MB)                      254
+
+***>CPU TIME 0s 950ms <***
+
+***>MESSAGE SUMMARY: 607 warnings
+
+***>GLOBAL CPU TIME 1s 060ms <***
+
+
+***>GLOBAL ELAPSED TIME 2s <***
+
+
+  Job started at 20-Oct-2017 02:29:09
+  Job end at     20-Oct-2017 02:29:11
+
+  Run on eeessl72 (Linux 2.6.32-696.1.1.el6.x86_64)
+

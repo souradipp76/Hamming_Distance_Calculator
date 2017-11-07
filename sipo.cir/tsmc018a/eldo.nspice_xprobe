@@ -1,0 +1,103 @@
+# This file provides name mapping information for all objects
+# on the schematic design.  It provides a mapping for each
+# object between its name on the schematic and its name in the netlist.
+version 1.0
+
+Cell nmos4
+   Pin D d
+   Pin G g
+   Pin S s
+   Pin B b
+End Cell
+
+Cell pmos4
+   Pin D d
+   Pin G g
+   Pin S s
+   Pin B b
+End Cell
+
+Cell inverter_cir_esc1
+   Pin OUT out
+   Pin GND gnd
+   Pin IN in
+   Pin VDD vdd
+   Net GND gnd
+   Net VDD vdd
+   Net IN in
+   Net OUT out
+   Inst MN1 mn1 nmos4
+   Inst MP1 mp1 pmos4
+End Cell
+
+Cell dflipflopnoinvnew_cir_esc2
+   Pin OUT out
+   Pin CLK clk
+   Pin D d
+   Pin GND gnd
+   Pin NCLK nclk
+   Pin VDD vdd
+   Net N$56 n$56
+   Net N$7 n$7
+   Net N$4 n$4
+   Net NCLK nclk
+   Net CLK clk
+   Net D d
+   Net GND gnd
+   Net VDD vdd
+   Net OUT out
+   Inst MN2 mn2 nmos4
+   Inst MP2 mp2 pmos4
+   Inst MN1 mn1 nmos4
+   Inst MP1 mp1 pmos4
+   Inst INVERTER.CIR3 x_inverter_cir3_esc3 inverter_cir_esc1
+   Inst INVERTER.CIR2 x_inverter_cir2_esc4 inverter_cir_esc1
+   Inst INVERTER.CIR1 x_inverter_cir1_esc5 inverter_cir_esc1
+End Cell
+
+Cell masterslavedflipflopnew_cir_esc6
+   Pin OUT out
+   Pin CLEAR clear
+   Pin CLK clk
+   Pin D d
+   Pin GND gnd
+   Pin NCLK nclk
+   Pin PRESET preset
+   Pin VDD vdd
+   Net N$34 n$34
+   Net D d
+   Net CLK clk
+   Net GND gnd
+   Net VDD vdd
+   Net OUT out
+   Net NCLK nclk
+   Net CLEAR clear
+   Net PRESET preset
+   Inst DFLIPFLOPNOINVNEW.CIR1 x_dflipflopnoinvnew_cir1_esc7 dflipflopnoinvnew_cir_esc2
+   Inst DFLIPFLOPNOINVNEW.CIR2 x_dflipflopnoinvnew_cir2_esc8 dflipflopnoinvnew_cir_esc2
+End Cell
+
+Cell #top#
+   Pin P1 p1
+   Pin P2 p2
+   Pin P3 p3
+   Pin CLK clk
+   Pin GND gnd
+   Pin NCLK nclk
+   Pin SIN sin
+   Pin VDD vdd
+   Net N$44 n$44
+   Net N$45 n$45
+   Net SIN sin
+   Net NCLK nclk
+   Net CLK clk
+   Net GND gnd
+   Net VDD vdd
+   Net P3 p3
+   Net P2 p2
+   Net P1 p1
+   Inst DFF3 x_dff3 masterslavedflipflopnew_cir_esc6
+   Inst DFF2 x_dff2 masterslavedflipflopnew_cir_esc6
+   Inst DFF1 x_dff1 masterslavedflipflopnew_cir_esc6
+End Cell
+

@@ -1,0 +1,6 @@
+A 5 u Sim_setup_do 59e7ad3051b3.03.ac.10.1e.48.00.1e.c8 1 2 2 0
+V v 1 1 59e7adfc5a22.03.ac.10.1e.48.00.1e.c8
+F f 1 "default.db_1"
+O 1
+R csduv 0 "/home/vlsi/g4/or/tsmc018a" 2 Eddm_design_viewpoint 59e7ad3051a2.03.ac.10.1e.48.00.1e.c8 59e7ad2fc4ac.03.ac.10.1e.48.00.1e.c8
+R csdni 1 "$ADK/technology/ic/models/tsmc018.mod" 1 Mgc_file

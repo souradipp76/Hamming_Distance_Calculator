@@ -1,0 +1,26 @@
+* Component: /home/vlsi/dff/dflipflop.cir Viewpoint: tsmc018a
+
+.INCLUDE /home/vlsi/dff/dflipflop.cir/tsmc018a/netlist.spi
+.INCLUDE $ADK/technology/ic/models/tsmc018.mod
+.OPTION AEX
+.OPTION ENGNOT
+.OPTION LIMPROBE=10000.0
+.OPTION NOASCII
+
+* - Analysis Setup - Trans
+.TRAN 0 100n 0 UIC
+
+* --- Forces
+VFORCE__VDD VDD GND DC 1.8
+VFORCE__GND GND GND DC 0
+VFORCE__D D GND PULSE (0 1.8 0n 1n 1n 25n 50n)
+VFORCE__CLK CLK GND DC 0
+
+* --- Global Outputs
+.PROBE V SG
+
+* --- Waveform Outputs
+.PROBE TRAN V(OUT)
+
+* --- Params
+.TEMP 27.0

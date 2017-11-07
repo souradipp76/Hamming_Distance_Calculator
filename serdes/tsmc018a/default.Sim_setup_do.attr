@@ -1,0 +1,5 @@
+A 5 u Sim_setup_do 59e7a6e40d53.03.ac.10.1e.48.00.59.8a 1 2 1 0
+V v 1 1 59e7a82ed393.03.ac.10.1e.48.00.59.8a
+F f 1 "default.db_1"
+O 1
+R csduv 0 "/home/vlsi/g4/serdes/tsmc018a" 2 Eddm_design_viewpoint 59e7a6e40d4e.03.ac.10.1e.48.00.59.8a 59e7a6e3f387.03.ac.10.1e.48.00.59.8a

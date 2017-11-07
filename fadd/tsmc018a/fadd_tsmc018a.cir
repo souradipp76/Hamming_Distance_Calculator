@@ -1,0 +1,30 @@
+* Component: /home/vlsi/g4/fadd Viewpoint: tsmc018a
+
+.INCLUDE /home/vlsi/g4/fadd/tsmc018a/netlist.spi
+.INCLUDE $ADK/technology/ic/models/tsmc018.mod
+.OPTION AEX
+.OPTION ENGNOT
+.OPTION LIMPROBE=10000.0
+.OPTION NOASCII
+
+* - Analysis Setup - Trans
+.TRAN 0 200n 0 UIC
+
+* --- Forces
+VFORCE__GND GND GND DC 0
+VFORCE__VDD VDD GND DC 1.8
+VFORCE__IN1 IN1 GND PATTERN 1.8 0 0 1n 1n 50n 11011 R=0.0
+VFORCE__IN2 IN2 GND PATTERN 1.8 0 0 1n 1n 50n 10110 R=0.0
+VFORCE__Cin CIN GND PATTERN 1.8 0 0 1n 1n 50n 10101 R=0.0
+
+* --- Global Outputs
+.PROBE V SG
+
+* --- Waveform Outputs
+.PLOT TRAN V(S)
+
+* --- Waveform Outputs for Group PROBES__CIN
+.PLOT TRAN V(COUT) V(IN2) V(IN1) V(CIN)
+
+* --- Params
+.TEMP 27.0

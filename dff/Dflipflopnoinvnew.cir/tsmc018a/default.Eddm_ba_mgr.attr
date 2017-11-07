@@ -1,0 +1,6 @@
+A 5 u Eddm_ba_mgr 59d2f5f31aee.03.ac.10.1e.48.00.30.37 1 2 1 0
+V v 1 1 59d2f5f31aee.03.ac.10.1e.48.01.30.37
+F f 1 "default.ba_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/vlsi/dff/Dflipflopnoinvnew.cir/tsmc018a" 1 Eddm_design_viewpoint 59d2f5f318fc.03.ac.10.1e.48.01.30.37 59d2f5f318fc.03.ac.10.1e.48.00.30.37

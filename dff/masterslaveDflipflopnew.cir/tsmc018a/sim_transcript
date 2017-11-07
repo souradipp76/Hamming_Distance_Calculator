@@ -1,0 +1,234 @@
+
+Running eldo on eeessl72
+with Eldo libraries :
+/home/simulator/mentor/ams/aol/lib/libeldoudm_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos1_64.so
+/home/simulator/mentor/ams/aol/lib/libeldoekv_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomosp9_64.so
+/home/simulator/mentor/ams/aol/lib/libeldocsem_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos2_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos3_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobip_64.so
+/home/simulator/mentor/ams/aol/lib/libeldodio_64.so
+/home/simulator/mentor/ams/aol/lib/libeldojfet_64.so
+/home/simulator/mentor/ams/aol/lib/libeldosoi_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos4_64.so
+/home/simulator/mentor/ams/aol/lib/libeldoasitft_64.so
+/home/simulator/mentor/ams/aol/lib/libeldohisim_64.so
+/home/simulator/mentor/ams/aol/lib/libeldospmod_64.so
+/home/simulator/mentor/ams/aol/lib/libeldopsp_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomosvar_64.so
+/home/simulator/mentor/ams/aol/lib/libeldolegtft_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomoto_64.so
+/home/simulator/mentor/ams/aol/lib/libeldost_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobnr_64.so
+/home/simulator/mentor/ams/aol/lib/libeldorockw_64.so
+/home/simulator/mentor/ams/aol/lib/libeldopubhicum_64.so
+/home/simulator/mentor/ams/aol/lib/libeldotftsh_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobta_64.so
+/home/simulator/mentor/ams/aol/lib/libeldofas_64.so
+/home/simulator/mentor/ams/aol/lib/libeldofascm_64.so
+/home/simulator/mentor/ams/aol/lib/libeldosdsim_64.so
+/home/simulator/mentor/ams/aol/lib/libeldowire_64.so
+/home/simulator/mentor/ams/aol/lib/libogr_64.so loaded.
+
+
+
+Copyright 1988 Mentor Graphics Corporation
+All Rights Reserved
+
+THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY
+INFORMATION WHICH ARE THE PROPERTY OF MENTOR
+GRAPHICS CORPORATION OR ITS LICENSORS AND IS
+SUBJECT TO LICENSE TERMS.
+
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : vlsi@eeessl72
+*** OS    : Red Hat Enterprise Linux Server release 6.9 (Santiago) [VCO = aol]
+*** CPU   :
+    AMD Phenom(tm) II X3 710 Processor
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 3
+    Number of logical processors      : 3
+*** Freq  : 800.000MHz
+*** Cache : 512 KB
+*** MEM   : 3665112 kB
+*** Date  : Wed Oct 18 23:21:15 2017
+
+
+***** PRE-PROCESSING ...
+
+
+***** ANALYSIS ....
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+Warning 1615: In file "./masterslaveDflipflopnew.cir_tsmc018a.cir" line 11:
++   COMMAND ".TRAN": TPRINT can not be <= 0.0.
++   It is set to TSTOP/20.0 = 1.500e-08 s.
+Warning 107:  NODE "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR3_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR2_ESC4.VSS": Less than two connections.
+Warning 107:  NODE "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR1_ESC5.VSS": Less than two connections.
+Warning  29: Such messages will not be displayed in future. Set .option MSGNODE = 0 to receive all such warnings.
+
+
+***** 0  error(s). 
+***** 8  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION...
+
+
+Memory space allocated (MB):    248
+24 elements
+20 nodes
+4 input signals
+
+***> Parsing CPU TIME 0h 0mn 0s 010ms <***
+
+Warning 117:  NODE "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR3_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR2_ESC4.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR1_ESC5.VSS": Not connected to any power supply.
+Warning 109: NODE "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+
+Eldo VERSION : ELDO 12.2d (64 bits) Mon Dec 16 16:33:30 GMT 2013
+
+*** DATE: 18-Oct-2017 23:21:15
+
+*** TITLE: * Component: /home/vlsi/dff/masterslaveDflipflopnew.cir Viewpoint: tsmc018a
+
+TEMPERATURE : 27.000000 degrees C
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR1_ESC6.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_DFLIPFLOPNOINVNEW_CIR2_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=6.111111e-04
+
+Connecting to JWDB server, please wait...
+connected to wdb server : -jwdbhost eeessl72 -jwdbport 42122
+
+Compute from 0.000000 Nano to 300.000000 Nano
+................................................
+Simulation progress                : 10% (t = 35.7383 N)
+Elapsed CPU time                   :  0h  0mn  0s  30   ( 0h  0mn  0s  30)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 20% (t = 64.7305 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  30)
+CPU Usage                          :   0%               ( 93%)
+................................................
+Simulation progress                : 30% (t = 99.1640 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  40)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 40% (t = 121.2900 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  50)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 50% (t = 150.2900 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  50)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 60% (t = 186.0513 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  60)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 70% (t = 214.9771 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  70)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 80% (t = 241.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  70)
+CPU Usage                          :   0%               (100%)
+................................................
+Simulation progress                : 90% (t = 271.2900 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  80)
+CPU Usage                          :  83%               ( 97%)
+................................................
+Simulation progress                : 100% (t = 300.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  80)
+CPU Usage                          :   0%               ( 95%)
+
+
+***>Current simulation completed
+
+
+
+
+SIMULATION INFORMATION 
+memory size allocated in Mbytes  250.6
+Latency: 0.000000%
+average number of newton iterations: 3.296791
+nb of components: 24
+nb of nodes: 60
+nb of MOS or BIP calls: 11278
+Number of steps computed: 358
+
+***>CPU TIME 0s 090ms <***
+
+***>MESSAGE SUMMARY: 44 warnings
+
+***>GLOBAL CPU TIME 0s 150ms <***
+
+
+***>GLOBAL ELAPSED TIME 1s <***
+

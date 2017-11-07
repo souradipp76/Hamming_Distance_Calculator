@@ -1,0 +1,5 @@
+mgc_rve_context "answer_lay" 1000
+mgc_rve_property "w" 3.6e-07  "l" 1.8e-07  "as" 2.349e-13  "ad" 2.349e-13 
+mgc_rve_layer "NGATE"
+mr 511300 -54100 513300 -50100
+mgc_rve_zoom 510.872 -54.957 513.728 -49.243 1

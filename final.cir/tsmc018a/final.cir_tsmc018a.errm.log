@@ -1,0 +1,160 @@
+START report: Tue Oct 31 11:19:50 2017 
+** Warning: (eldo - 1615)  In file "./final.cir_tsmc018a.cir" line 11:
++   COMMAND ".TRAN": TPRINT can not be <= 0.0.
++   It is set to TSTOP/20.0 = 1.000e-08 s.
+** Warning: (eldo - 346)  COMMAND ".PLOT": node /EXC undeclared.
+** Warning: (eldo - 109)  NODE "X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_EXC2.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_FULLADD1.X_OR1.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_FULLADD1.X_HALFADD2.X_EXC1.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_FULLADD1.X_HALFADD2.X_AND1.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_FULLADD1.X_HALFADD1.X_EXC1.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_FULLADD1.X_HALFADD1.X_AND1.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.VSS": This bulk node is not biased. 
+** Warning: (eldo - 240)  OBJECT "X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF3.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF2.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR1_ESC7.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR3_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR2_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_SIPO_CIR1_ESC10.X_DFF1.X_DFLIPFLOPNOINVNEW_CIR2_ESC8.X_INVERTER_CIR1_ESC5.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+

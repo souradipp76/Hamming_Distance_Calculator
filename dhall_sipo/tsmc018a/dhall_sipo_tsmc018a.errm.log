@@ -1,0 +1,4 @@
+START report: Sun Nov  5 22:36:38 2017 
+** Warning: (eldo - 1615)  In file "./dhall_sipo_tsmc018a.cir" line 11:
++   COMMAND ".TRAN": TPRINT can not be <= 0.0.
++   It is set to TSTOP/20.0 = 7.500e-09 s.

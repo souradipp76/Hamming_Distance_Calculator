@@ -1,0 +1,65 @@
+A 5 u Ic_cell_template 59f7f6dbd4e2.03.ac.10.1e.48.00.23.7d 8 4 18 0
+V v 4 2 59f8a4762137.03.ac.10.1e.48.00.49.4c
+F f 4 "hamminglay.iccel_4"
+F o 0 ""
+V v 5 2 59f8a7368ea8.03.ac.10.1e.48.00.49.4c
+F f 5 "hamminglay.iccel_5"
+F o 0 ""
+V v 6 2 59f8b710ab8c.03.ac.10.1e.48.00.49.4c
+F f 6 "hamminglay.iccel_6"
+F o 0 ""
+V v 7 2 59f8b88687a1.03.ac.10.1e.48.00.49.4c
+F f 7 "hamminglay.iccel_7"
+F o 0 ""
+V v 8 2 59fdbb0dd980.03.ac.10.1e.48.00.47.6a
+F f 8 "hamminglay.iccel_8"
+F o 0 ""
+O 8
+R csduv 1 "$ADK/technology/ic/process/tsmc018" 1 Ic_lib_template 43349e4fe097.03.93.22.46.d8.00.02.ea 43349f1b0fb1.03.93.22.46.d8.06.02.fa
+R csduv 2 "$ADK/technology/ic/process/tsmc018" 1 Ic_persist_process 43348e50e208.03.93.22.46.d8.00.6c.be 43349f1b0fb4.03.93.22.46.d8.06.02.fa
+R csdui 4 "$ADK/technology/ic/process/tsmc018.rules" 0 Mgc_file 43349f1b0e3a.03.93.22.46.d8.01.02.fa
+R csduv 8 "/home/vlsi/g4/notlay/ref_inv" 12 Ic_cell_template 59f8b8a2d90b.03.ac.10.1e.48.00.49.4c 59b6d5f55b51.03.ac.10.1e.4c.00.3e.e3
+R csduv 10 "/home/vlsi/g4/ex2" 4 Ic_cell_template 59f8af709d96.03.ac.10.1e.48.00.49.4c 59f8a645e46d.03.ac.10.1e.48.00.49.4c
+R csduv 12 "/home/vlsi/g4/sipo2" 2 Ic_cell_template 59f8b8a2d757.03.ac.10.1e.48.00.49.4c 59f8a9c19151.03.ac.10.1e.48.00.49.4c
+R csduv 14 "/home/vlsi/g4/fulladdlay2" 3 Ic_cell_template 59f8b5d036b0.03.ac.10.1e.48.00.49.4c 59f8aaac1e69.03.ac.10.1e.48.00.49.4c
+R csduv 15 "$ADK/technology/ic/process/tsmc025_via/via" 1 Ic_cell_template 40d9f3dc7d8b.03.93.22.46.d8.00.3c.c7 43349f1b0e14.03.93.22.46.d8.02.02.fa
+R csduv 16 "$ADK/technology/ic/process/tsmc025_via/via2" 1 Ic_cell_template 40d9f3232628.03.93.22.46.d8.00.3c.40 43349f1b0e14.03.93.22.46.d8.03.02.fa
+R csduv 17 "$ADK/technology/ic/process/tsmc025_via/via3" 1 Ic_cell_template 40d9f2a93887.03.93.22.46.d8.00.3c.40 43349f1b0e14.03.93.22.46.d8.04.02.fa
+O 7
+R csduv 1 "$ADK/technology/ic/process/tsmc018" 1 Ic_lib_template 43349e4fe097.03.93.22.46.d8.00.02.ea 43349f1b0fb1.03.93.22.46.d8.06.02.fa
+R csduv 2 "$ADK/technology/ic/process/tsmc018" 1 Ic_persist_process 43348e50e208.03.93.22.46.d8.00.6c.be 43349f1b0fb4.03.93.22.46.d8.06.02.fa
+R csdui 4 "$ADK/technology/ic/process/tsmc018.rules" 0 Mgc_file 43349f1b0e3a.03.93.22.46.d8.01.02.fa
+R csduv 8 "/home/vlsi/g4/notlay/ref_inv" 12 Ic_cell_template 59f8af138991.03.ac.10.1e.48.00.49.4c 59b6d5f55b51.03.ac.10.1e.4c.00.3e.e3
+R csduv 10 "/home/vlsi/g4/ex2" 5 Ic_cell_template 59f8af70a12c.03.ac.10.1e.48.00.49.4c 59f8a645e46d.03.ac.10.1e.48.00.49.4c
+R csduv 12 "/home/vlsi/g4/sipo2" 2 Ic_cell_template 59f8b7e9ce2d.03.ac.10.1e.48.00.49.4c 59f8a9c19151.03.ac.10.1e.48.00.49.4c
+R csduv 14 "/home/vlsi/g4/fulladdlay2" 4 Ic_cell_template 59f8b5d03a00.03.ac.10.1e.48.00.49.4c 59f8aaac1e69.03.ac.10.1e.48.00.49.4c
+R csduv 15 "$ADK/technology/ic/process/tsmc025_via/via" 1 Ic_cell_template 40d9f3dc7d8b.03.93.22.46.d8.00.3c.c7 43349f1b0e14.03.93.22.46.d8.02.02.fa
+R csduv 16 "$ADK/technology/ic/process/tsmc025_via/via2" 1 Ic_cell_template 40d9f3232628.03.93.22.46.d8.00.3c.40 43349f1b0e14.03.93.22.46.d8.03.02.fa
+R csduv 17 "$ADK/technology/ic/process/tsmc025_via/via3" 1 Ic_cell_template 40d9f2a93887.03.93.22.46.d8.00.3c.40 43349f1b0e14.03.93.22.46.d8.04.02.fa
+O 6
+R csduv 1 "$ADK/technology/ic/process/tsmc018" 1 Ic_lib_template 43349e4fe097.03.93.22.46.d8.00.02.ea 43349f1b0fb1.03.93.22.46.d8.06.02.fa
+R csduv 2 "$ADK/technology/ic/process/tsmc018" 1 Ic_persist_process 43348e50e208.03.93.22.46.d8.00.6c.be 43349f1b0fb4.03.93.22.46.d8.06.02.fa
+R csdui 4 "$ADK/technology/ic/process/tsmc018.rules" 0 Mgc_file 43349f1b0e3a.03.93.22.46.d8.01.02.fa
+R csduv 8 "/home/vlsi/g4/notlay/ref_inv" 12 Ic_cell_template 59f8af138991.03.ac.10.1e.48.00.49.4c 59b6d5f55b51.03.ac.10.1e.4c.00.3e.e3
+R csduv 10 "/home/vlsi/g4/ex2" 5 Ic_cell_template 59f8af70a12c.03.ac.10.1e.48.00.49.4c 59f8a645e46d.03.ac.10.1e.48.00.49.4c
+R csduv 12 "/home/vlsi/g4/sipo2" 1 Ic_cell_template 59f8a9c191bb.03.ac.10.1e.48.00.49.4c 59f8a9c19151.03.ac.10.1e.48.00.49.4c
+R csduv 14 "/home/vlsi/g4/fulladdlay2" 4 Ic_cell_template 59f8b5d03a00.03.ac.10.1e.48.00.49.4c 59f8aaac1e69.03.ac.10.1e.48.00.49.4c
+R csduv 15 "$ADK/technology/ic/process/tsmc025_via/via" 1 Ic_cell_template 40d9f3dc7d8b.03.93.22.46.d8.00.3c.c7 43349f1b0e14.03.93.22.46.d8.02.02.fa
+R csduv 16 "$ADK/technology/ic/process/tsmc025_via/via2" 1 Ic_cell_template 40d9f3232628.03.93.22.46.d8.00.3c.40 43349f1b0e14.03.93.22.46.d8.03.02.fa
+R csduv 17 "$ADK/technology/ic/process/tsmc025_via/via3" 1 Ic_cell_template 40d9f2a93887.03.93.22.46.d8.00.3c.40 43349f1b0e14.03.93.22.46.d8.04.02.fa
+O 5
+R csduv 1 "$ADK/technology/ic/process/tsmc018" 1 Ic_lib_template 43349e4fe097.03.93.22.46.d8.00.02.ea 43349f1b0fb1.03.93.22.46.d8.06.02.fa
+R csduv 2 "$ADK/technology/ic/process/tsmc018" 1 Ic_persist_process 43348e50e208.03.93.22.46.d8.00.6c.be 43349f1b0fb4.03.93.22.46.d8.06.02.fa
+R csdui 4 "$ADK/technology/ic/process/tsmc018.rules" 0 Mgc_file 43349f1b0e3a.03.93.22.46.d8.01.02.fa
+R csduv 6 "/home/vlsi/g4/fuladdlay" 12 Ic_cell_template 59f8a6ce424a.03.ac.10.1e.48.00.49.4c 59f6c8f4e578.03.ac.10.1e.48.00.6b.16
+R csduv 7 "/home/vlsi/g4/dhallsipolay" 8 Ic_cell_template 59f4279f32f0.03.ac.10.1e.48.00.0f.de 59db9abac8b0.03.ac.10.1e.3b.00.7c.cf
+R csduv 8 "/home/vlsi/g4/notlay/ref_inv" 8 Ic_cell_template 59f809f62197.03.ac.10.1e.48.00.27.25 59b6d5f55b51.03.ac.10.1e.4c.00.3e.e3
+R csduv 10 "/home/vlsi/g4/ex2" 1 Ic_cell_template 59f8a645e4ce.03.ac.10.1e.48.00.49.4c 59f8a645e46d.03.ac.10.1e.48.00.49.4c
+O 4
+R csduv 1 "$ADK/technology/ic/process/tsmc018" 1 Ic_lib_template 43349e4fe097.03.93.22.46.d8.00.02.ea 43349f1b0fb1.03.93.22.46.d8.06.02.fa
+R csduv 2 "$ADK/technology/ic/process/tsmc018" 1 Ic_persist_process 43348e50e208.03.93.22.46.d8.00.6c.be 43349f1b0fb4.03.93.22.46.d8.06.02.fa
+R csduv 3 "/home/vlsi/g4/exclay" 3 Ic_cell_template 59f6192ab1ee.03.ac.10.1e.48.00.2c.f7 59f5b1fcf1e4.03.ac.10.1e.48.00.26.46
+R csdui 4 "$ADK/technology/ic/process/tsmc018.rules" 0 Mgc_file 43349f1b0e3a.03.93.22.46.d8.01.02.fa
+R csduv 6 "/home/vlsi/g4/fuladdlay" 10 Ic_cell_template 59f740603709.03.ac.10.1e.48.00.01.8c 59f6c8f4e578.03.ac.10.1e.48.00.6b.16
+R csduv 7 "/home/vlsi/g4/dhallsipolay" 8 Ic_cell_template 59f4279f32f0.03.ac.10.1e.48.00.0f.de 59db9abac8b0.03.ac.10.1e.3b.00.7c.cf
+R csduv 8 "/home/vlsi/g4/notlay/ref_inv" 8 Ic_cell_template 59f809f62197.03.ac.10.1e.48.00.27.25 59b6d5f55b51.03.ac.10.1e.4c.00.3e.e3

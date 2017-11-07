@@ -1,0 +1,228 @@
+
+Running eldo on eeessl72
+with Eldo libraries :
+/home/simulator/mentor/ams/aol/lib/libeldoudm_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos1_64.so
+/home/simulator/mentor/ams/aol/lib/libeldoekv_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomosp9_64.so
+/home/simulator/mentor/ams/aol/lib/libeldocsem_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos2_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos3_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobip_64.so
+/home/simulator/mentor/ams/aol/lib/libeldodio_64.so
+/home/simulator/mentor/ams/aol/lib/libeldojfet_64.so
+/home/simulator/mentor/ams/aol/lib/libeldosoi_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos4_64.so
+/home/simulator/mentor/ams/aol/lib/libeldoasitft_64.so
+/home/simulator/mentor/ams/aol/lib/libeldohisim_64.so
+/home/simulator/mentor/ams/aol/lib/libeldospmod_64.so
+/home/simulator/mentor/ams/aol/lib/libeldopsp_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomosvar_64.so
+/home/simulator/mentor/ams/aol/lib/libeldolegtft_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomoto_64.so
+/home/simulator/mentor/ams/aol/lib/libeldost_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobnr_64.so
+/home/simulator/mentor/ams/aol/lib/libeldorockw_64.so
+/home/simulator/mentor/ams/aol/lib/libeldopubhicum_64.so
+/home/simulator/mentor/ams/aol/lib/libeldotftsh_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobta_64.so
+/home/simulator/mentor/ams/aol/lib/libeldofas_64.so
+/home/simulator/mentor/ams/aol/lib/libeldofascm_64.so
+/home/simulator/mentor/ams/aol/lib/libeldosdsim_64.so
+/home/simulator/mentor/ams/aol/lib/libeldowire_64.so
+/home/simulator/mentor/ams/aol/lib/libogr_64.so loaded.
+
+
+
+Copyright 1988 Mentor Graphics Corporation
+All Rights Reserved
+
+THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY
+INFORMATION WHICH ARE THE PROPERTY OF MENTOR
+GRAPHICS CORPORATION OR ITS LICENSORS AND IS
+SUBJECT TO LICENSE TERMS.
+
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : vlsi@eeessl72
+*** OS    : Red Hat Enterprise Linux Server release 6.9 (Santiago) [VCO = aol]
+*** CPU   :
+    AMD Phenom(tm) II X3 710 Processor
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 3
+    Number of logical processors      : 3
+*** Freq  : 2600.000MHz
+*** Cache : 512 KB
+*** MEM   : 3665112 kB
+*** Date  : Mon Oct 23 11:53:56 2017
+
+
+***** PRE-PROCESSING ...
+
+
+***** ANALYSIS ....
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+Warning 1615: In file "./fulladd_tsmc018a.cir" line 11:
++   COMMAND ".TRAN": TPRINT can not be <= 0.0.
++   It is set to TSTOP/20.0 = 2.000e-08 s.
+
+***** 0  error(s). 
+***** 1  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION...
+
+
+Memory space allocated (MB):    248
+50 elements
+34 nodes
+4 input signals
+
+***> Parsing CPU TIME 0h 0mn 0s 010ms <***
+
+Warning 117:  NODE "X_OR1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_HALFADD2.X_EXC1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_HALFADD2.X_AND1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_HALFADD1.X_EXC1.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_HALFADD1.X_AND1.VSS": Not connected to any power supply.
+Warning 109: NODE "X_OR1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_HALFADD2.X_EXC1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_HALFADD2.X_AND1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_HALFADD1.X_EXC1.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_HALFADD1.X_AND1.VSS": This bulk node is not biased. 
+
+Eldo VERSION : ELDO 12.2d (64 bits) Mon Dec 16 16:33:30 GMT 2013
+
+*** DATE: 23-Oct-2017 11:53:56
+
+*** TITLE: * Component: /home/vlsi/g4/fulladd Viewpoint: tsmc018a
+
+TEMPERATURE : 27.000000 degrees C
+
+
+Performing DC analysis...
+
+--> Partitioning circuit...
+
+***> DC CPU TIME 0s 010ms <***
+
+DC:9 iterations FOR DC analysis
+C  8.3476N    
+CIN  0.0000     
+IN1  0.0000     
+IN2  0.0000     
+N$11  8.7052N    
+N$13  7.9632N    
+N$16  7.9632N    
+S  8.7052N    
+VDD  1.8000     
+X_HALFADD1.X_AND1.N$2  43.9796M   
+X_HALFADD1.X_AND1.N$5  1.8000     
+X_HALFADD1.X_AND1.VSS  95.9122M   
+X_HALFADD1.X_EXC1.N$2  25.5849N   
+X_HALFADD1.X_EXC1.N$22  1.8000     
+X_HALFADD1.X_EXC1.N$24  1.4252     
+X_HALFADD1.X_EXC1.N$31  1.8000     
+X_HALFADD1.X_EXC1.N$47  1.8000     
+X_HALFADD1.X_EXC1.N$59  1.8000     
+X_HALFADD1.X_EXC1.N$7  1.8000     
+X_HALFADD1.X_EXC1.VSS  120.6799M  
+X_HALFADD2.X_AND1.N$2  43.9796M   
+X_HALFADD2.X_AND1.N$5  1.8000     
+X_HALFADD2.X_AND1.VSS  95.9122M   
+X_HALFADD2.X_EXC1.N$2  25.5850N   
+X_HALFADD2.X_EXC1.N$22  1.8000     
+X_HALFADD2.X_EXC1.N$24  1.4252     
+X_HALFADD2.X_EXC1.N$31  1.8000     
+X_HALFADD2.X_EXC1.N$47  1.8000     
+X_HALFADD2.X_EXC1.N$59  1.8000     
+X_HALFADD2.X_EXC1.N$7  1.8000     
+X_HALFADD2.X_EXC1.VSS  120.6799M  
+X_OR1.N$5  1.8000     
+X_OR1.N$7  1.8000     
+X_OR1.VSS  111.5861M  
+
+   TOTAL POWER DISSIPATION:  625.8025P   WATTS
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=6.111111e-04
+
+Connecting to JWDB server, please wait...
+connected to wdb server : -jwdbhost eeessl72 -jwdbport 39624
+
+Compute from 0.000000 Nano to 400.000000 Nano
+................................................
+Simulation progress                : 10% (t = 44.4818 N)
+Elapsed CPU time                   :  0h  0mn  0s  50   ( 0h  0mn  0s  50)
+CPU Usage                          :  98%               ( 98%)
+................................................
+Simulation progress                : 20% (t = 83.8625 N)
+Elapsed CPU time                   :  0h  0mn  0s  40   ( 0h  0mn  0s  90)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 30% (t = 122.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s  30   ( 0h  0mn  0s 120)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 40% (t = 162.5827 N)
+Elapsed CPU time                   :  0h  0mn  0s  40   ( 0h  0mn  0s 160)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 50% (t = 201.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s 170)
+CPU Usage                          :  71%               (100%)
+................................................
+Simulation progress                : 60% (t = 244.5417 N)
+Elapsed CPU time                   :  0h  0mn  0s  40   ( 0h  0mn  0s 210)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 70% (t = 284.0421 N)
+Elapsed CPU time                   :  0h  0mn  0s  40   ( 0h  0mn  0s 250)
+CPU Usage                          :  93%               ( 99%)
+................................................
+Simulation progress                : 80% (t = 322.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s  30   ( 0h  0mn  0s 280)
+CPU Usage                          : 100%               (100%)
+................................................
+Simulation progress                : 90% (t = 364.0447 N)
+Elapsed CPU time                   :  0h  0mn  0s  40   ( 0h  0mn  0s 320)
+CPU Usage                          :  81%               ( 98%)
+................................................
+Simulation progress                : 100% (t = 400.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s 330)
+CPU Usage                          :  76%               ( 97%)
+
+
+***>Current simulation completed
+
+
+
+
+SIMULATION INFORMATION 
+memory size allocated in Mbytes  250.7
+Latency: 0.000000%
+average number of newton iterations: 3.398892
+nb of components: 50
+nb of nodes: 126
+nb of MOS or BIP calls: 59573
+Number of steps computed: 694
+
+***>CPU TIME 0s 330ms <***
+
+***>MESSAGE SUMMARY: 11 warnings
+
+***>GLOBAL CPU TIME 0s 400ms <***
+
+
+***>GLOBAL ELAPSED TIME 1s <***
+

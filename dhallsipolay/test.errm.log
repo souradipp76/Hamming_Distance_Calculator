@@ -1,0 +1,9 @@
+START report: Sat Oct 28 17:45:45 2017 
+** Warning: (eldo - 713)  In file "./g4/dhallsipolay/test.sp" line 7:
++   SUBCKT "DHALLSIPOLAY": 
++   The header of this SUBCKT contains node names defined as global.
++   Such nodes will be connected to the parent nodes which are 
++   passed by the X instance.
++   If this is not the expected behaviour, i.e if it is expected
++   that these nodes are connected to the global nodes, then use
++   .OPTION DSCGLOB=GLOB

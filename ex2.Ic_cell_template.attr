@@ -1,0 +1,37 @@
+A 5 u Ic_cell_template 59f8a645e46d.03.ac.10.1e.48.00.49.4c 4 4 12 0
+V v 1 2 59f8a645e4ce.03.ac.10.1e.48.00.49.4c
+F f 1 "ex2.iccel_1"
+F o 0 
+V v 2 2 59f8a8435187.03.ac.10.1e.48.00.49.4c
+F f 2 "ex2.iccel_2"
+F o 0 
+V v 3 2 59f8ac5f7486.03.ac.10.1e.48.00.49.4c
+F f 3 "ex2.iccel_3"
+F o 0 
+V v 4 2 59f8af709d96.03.ac.10.1e.48.00.49.4c
+F f 4 "ex2.iccel_4"
+F o 0 
+O 4
+R csduv 1 "$ADK/technology/ic/process/tsmc018" 1 Ic_lib_template 43349e4fe097.03.93.22.46.d8.00.02.ea 43349f1b0fb1.03.93.22.46.d8.06.02.fa
+R csduv 2 "$ADK/technology/ic/process/tsmc018" 1 Ic_persist_process 43348e50e208.03.93.22.46.d8.00.6c.be 43349f1b0fb4.03.93.22.46.d8.06.02.fa
+R csdui 4 "$ADK/technology/ic/process/tsmc018.rules" 0 Mgc_file 43349f1b0e3a.03.93.22.46.d8.01.02.fa
+R cmduv 5 "49052f642000.0d.00.01.a5.b0.00.00.00" 1 Ic_device_template 49fba4394000.0d.00.01.a5.b0.00.00.00 49052f642000.0d.00.01.a5.b0.00.00.00
+R csduv 6 "$ADK/technology/ic/process/tsmc025_via/via" 1 Ic_cell_template 40d9f3dc7d8b.03.93.22.46.d8.00.3c.c7 43349f1b0e14.03.93.22.46.d8.02.02.fa
+O 3
+R csduv 1 "$ADK/technology/ic/process/tsmc018" 1 Ic_lib_template 43349e4fe097.03.93.22.46.d8.00.02.ea 43349f1b0fb1.03.93.22.46.d8.06.02.fa
+R csduv 2 "$ADK/technology/ic/process/tsmc018" 1 Ic_persist_process 43348e50e208.03.93.22.46.d8.00.6c.be 43349f1b0fb4.03.93.22.46.d8.06.02.fa
+R csdui 4 "$ADK/technology/ic/process/tsmc018.rules" 0 Mgc_file 43349f1b0e3a.03.93.22.46.d8.01.02.fa
+R cmduv 5 "49052f642000.0d.00.01.a5.b0.00.00.00" 1 Ic_device_template 49fba4394000.0d.00.01.a5.b0.00.00.00 49052f642000.0d.00.01.a5.b0.00.00.00
+R csduv 6 "$ADK/technology/ic/process/tsmc025_via/via" 1 Ic_cell_template 40d9f3dc7d8b.03.93.22.46.d8.00.3c.c7 43349f1b0e14.03.93.22.46.d8.02.02.fa
+O 2
+R csduv 1 "$ADK/technology/ic/process/tsmc018" 1 Ic_lib_template 43349e4fe097.03.93.22.46.d8.00.02.ea 43349f1b0fb1.03.93.22.46.d8.06.02.fa
+R csduv 2 "$ADK/technology/ic/process/tsmc018" 1 Ic_persist_process 43348e50e208.03.93.22.46.d8.00.6c.be 43349f1b0fb4.03.93.22.46.d8.06.02.fa
+R csdui 4 "$ADK/technology/ic/process/tsmc018.rules" 0 Mgc_file 43349f1b0e3a.03.93.22.46.d8.01.02.fa
+R cmduv 5 "49052f642000.0d.00.01.a5.b0.00.00.00" 1 Ic_device_template 49fba4394000.0d.00.01.a5.b0.00.00.00 49052f642000.0d.00.01.a5.b0.00.00.00
+R csduv 6 "$ADK/technology/ic/process/tsmc025_via/via" 1 Ic_cell_template 40d9f3dc7d8b.03.93.22.46.d8.00.3c.c7 43349f1b0e14.03.93.22.46.d8.02.02.fa
+O 1
+R csduv 1 "$ADK/technology/ic/process/tsmc018" 1 Ic_lib_template 43349e4fe097.03.93.22.46.d8.00.02.ea 43349f1b0fb1.03.93.22.46.d8.06.02.fa
+R csduv 2 "$ADK/technology/ic/process/tsmc018" 1 Ic_persist_process 43348e50e208.03.93.22.46.d8.00.6c.be 43349f1b0fb4.03.93.22.46.d8.06.02.fa
+R csdui 4 "$ADK/technology/ic/process/tsmc018.rules" 0 Mgc_file 43349f1b0e3a.03.93.22.46.d8.01.02.fa
+R cmduv 5 "49052f642000.0d.00.01.a5.b0.00.00.00" 1 Ic_device_template 49fba4394000.0d.00.01.a5.b0.00.00.00 49052f642000.0d.00.01.a5.b0.00.00.00
+R csduv 6 "$ADK/technology/ic/process/tsmc025_via/via" 1 Ic_cell_template 40d9f3dc7d8b.03.93.22.46.d8.00.3c.c7 43349f1b0e14.03.93.22.46.d8.02.02.fa

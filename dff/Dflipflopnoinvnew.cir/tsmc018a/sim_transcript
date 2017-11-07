@@ -1,0 +1,206 @@
+
+Running eldo on eeessl72
+with Eldo libraries :
+/home/simulator/mentor/ams/aol/lib/libeldoudm_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos1_64.so
+/home/simulator/mentor/ams/aol/lib/libeldoekv_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomosp9_64.so
+/home/simulator/mentor/ams/aol/lib/libeldocsem_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos2_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos3_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobip_64.so
+/home/simulator/mentor/ams/aol/lib/libeldodio_64.so
+/home/simulator/mentor/ams/aol/lib/libeldojfet_64.so
+/home/simulator/mentor/ams/aol/lib/libeldosoi_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomos4_64.so
+/home/simulator/mentor/ams/aol/lib/libeldoasitft_64.so
+/home/simulator/mentor/ams/aol/lib/libeldohisim_64.so
+/home/simulator/mentor/ams/aol/lib/libeldospmod_64.so
+/home/simulator/mentor/ams/aol/lib/libeldopsp_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomosvar_64.so
+/home/simulator/mentor/ams/aol/lib/libeldolegtft_64.so
+/home/simulator/mentor/ams/aol/lib/libeldomoto_64.so
+/home/simulator/mentor/ams/aol/lib/libeldost_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobnr_64.so
+/home/simulator/mentor/ams/aol/lib/libeldorockw_64.so
+/home/simulator/mentor/ams/aol/lib/libeldopubhicum_64.so
+/home/simulator/mentor/ams/aol/lib/libeldotftsh_64.so
+/home/simulator/mentor/ams/aol/lib/libeldobta_64.so
+/home/simulator/mentor/ams/aol/lib/libeldofas_64.so
+/home/simulator/mentor/ams/aol/lib/libeldofascm_64.so
+/home/simulator/mentor/ams/aol/lib/libeldosdsim_64.so
+/home/simulator/mentor/ams/aol/lib/libeldowire_64.so
+/home/simulator/mentor/ams/aol/lib/libogr_64.so loaded.
+
+
+
+Copyright 1988 Mentor Graphics Corporation
+All Rights Reserved
+
+THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY
+INFORMATION WHICH ARE THE PROPERTY OF MENTOR
+GRAPHICS CORPORATION OR ITS LICENSORS AND IS
+SUBJECT TO LICENSE TERMS.
+
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : vlsi@eeessl72
+*** OS    : Red Hat Enterprise Linux Server release 6.9 (Santiago) [VCO = aol]
+*** CPU   :
+    AMD Phenom(tm) II X3 710 Processor
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 3
+    Number of logical processors      : 3
+*** Freq  : 800.000MHz
+*** Cache : 512 KB
+*** MEM   : 3665112 kB
+*** Date  : Tue Oct  3 10:13:17 2017
+
+
+***** PRE-PROCESSING ...
+
+
+***** ANALYSIS ....
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+Warning 1615: In file "./Dflipflopnoinvnew.cir_tsmc018a.cir" line 11:
++   COMMAND ".TRAN": TPRINT can not be <= 0.0.
++   It is set to TSTOP/20.0 = 5.000e-09 s.
+Warning 107:  NODE "X_INVERTER_CIR3_ESC2.VSS": Less than two connections.
+Warning 107:  NODE "X_INVERTER_CIR2_ESC3.VSS": Less than two connections.
+Warning 107:  NODE "X_INVERTER_CIR1_ESC4.VSS": Less than two connections.
+Warning  29: Such messages will not be displayed in future. Set .option MSGNODE = 0 to receive all such warnings.
+
+
+***** 0  error(s). 
+***** 5  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION...
+
+
+Memory space allocated (MB):    248
+14 elements
+12 nodes
+4 input signals
+
+***> Parsing CPU TIME 0h 0mn 0s 020ms <***
+
+Warning 117:  NODE "VSS": Not connected to any power supply.
+Warning 117:  NODE "X_INVERTER_CIR3_ESC2.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_INVERTER_CIR2_ESC3.VSS": Not connected to any power supply.
+Warning 117:  NODE "X_INVERTER_CIR1_ESC4.VSS": Not connected to any power supply.
+Warning 109: NODE "VSS": This bulk node is not biased. 
+Warning 109: NODE "X_INVERTER_CIR3_ESC2.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_INVERTER_CIR2_ESC3.VSS": This bulk node is not biased. 
+Warning 109: NODE "X_INVERTER_CIR1_ESC4.VSS": This bulk node is not biased. 
+
+Eldo VERSION : ELDO 12.2d (64 bits) Mon Dec 16 16:33:30 GMT 2013
+
+*** DATE:  3-Oct-2017 10:13:17
+
+*** TITLE: * Component: /home/vlsi/dff/Dflipflopnoinvnew.cir Viewpoint: tsmc018a
+
+TEMPERATURE : 27.000000 degrees C
+
+Warning 240: OBJECT "MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_INVERTER_CIR3_ESC2.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_INVERTER_CIR3_ESC2.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_INVERTER_CIR2_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_INVERTER_CIR2_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+Warning 240: OBJECT "X_INVERTER_CIR1_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+Warning 240: OBJECT "X_INVERTER_CIR1_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=6.111111e-04
+
+Connecting to JWDB server, please wait...
+connected to wdb server : -jwdbhost eeessl72 -jwdbport 33218
+
+Compute from 0.000000 Nano to 100.000000 Nano
+................................................
+Simulation progress                : 10% (t = 10.1000 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  10)
+CPU Usage                          :  76%               ( 76%)
+................................................
+Simulation progress                : 20% (t = 21.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  10)
+CPU Usage                          :   0%               ( 62%)
+................................................
+Simulation progress                : 30% (t = 32.8617 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               ( 86%)
+................................................
+Simulation progress                : 40% (t = 40.3101 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          :   0%               ( 76%)
+................................................
+Simulation progress                : 50% (t = 50.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  20)
+CPU Usage                          : 100%               ( 76%)
+................................................
+Simulation progress                : 60% (t = 60.1000 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  30)
+CPU Usage                          : 100%               ( 96%)
+................................................
+Simulation progress                : 70% (t = 71.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  30)
+CPU Usage                          :   0%               ( 90%)
+................................................
+Simulation progress                : 80% (t = 82.5105 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  30)
+CPU Usage                          :   0%               ( 75%)
+................................................
+Simulation progress                : 90% (t = 90.3101 N)
+Elapsed CPU time                   :  0h  0mn  0s  10   ( 0h  0mn  0s  40)
+CPU Usage                          : 100%               ( 95%)
+................................................
+Simulation progress                : 100% (t = 100.0000 N)
+Elapsed CPU time                   :  0h  0mn  0s   0   ( 0h  0mn  0s  40)
+CPU Usage                          :   0%               ( 93%)
+
+
+***>Current simulation completed
+
+
+
+
+SIMULATION INFORMATION 
+memory size allocated in Mbytes  250.4
+Latency: 0.000000%
+average number of newton iterations: 3.067616
+nb of components: 14
+nb of nodes: 32
+nb of MOS or BIP calls: 4732
+Number of steps computed: 271
+
+***>CPU TIME 0s 040ms <***
+
+***>MESSAGE SUMMARY: 23 warnings
+
+***>GLOBAL CPU TIME 0s 100ms <***
+
+
+***>GLOBAL ELAPSED TIME 1s <***
+

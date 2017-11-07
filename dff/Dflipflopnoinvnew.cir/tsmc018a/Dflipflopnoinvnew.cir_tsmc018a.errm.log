@@ -1,0 +1,28 @@
+START report: Tue Oct  3 10:13:17 2017 
+** Warning: (eldo - 1615)  In file "./Dflipflopnoinvnew.cir_tsmc018a.cir" line 11:
++   COMMAND ".TRAN": TPRINT can not be <= 0.0.
++   It is set to TSTOP/20.0 = 5.000e-09 s.
+** Warning: (eldo - 109)  NODE "VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_INVERTER_CIR3_ESC2.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_INVERTER_CIR2_ESC3.VSS": This bulk node is not biased. 
+** Warning: (eldo - 109)  NODE "X_INVERTER_CIR1_ESC4.VSS": This bulk node is not biased. 
+** Warning: (eldo - 240)  OBJECT "MN2":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "MN2":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_INVERTER_CIR3_ESC2.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_INVERTER_CIR3_ESC2.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_INVERTER_CIR2_ESC3.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_INVERTER_CIR2_ESC3.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+
+** Warning: (eldo - 240)  OBJECT "X_INVERTER_CIR1_ESC4.MN1":  RDSW = -28.4678 is negative. Should be set to zero, set PARAMCHK=1 to enable clipping.
+
+** Warning: (eldo - 240)  OBJECT "X_INVERTER_CIR1_ESC4.MN1":  Rds at current temperature = -28.4678 is negative. Set to zero.
+

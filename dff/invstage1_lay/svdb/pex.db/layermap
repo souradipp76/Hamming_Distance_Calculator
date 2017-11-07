@@ -1,0 +1,43 @@
+OK
+VERSION          2
+TIME_NUMBER 3636716757
+LAYER_COUNT         28
+VIACOR_COUNT          8
+FIELD_NAMES drc_layer_nb layer_name
+         3 N_WELL
+         4 PSUB
+        11 P_PLUS_SELECT
+        14 N_PLUS_SELECT
+        28 NPOLY
+        32 CONTACT_TO_ACTIVE
+        38 PSRCDRN
+        39 NSRCDRN
+        45 NC_VIA5
+        48 RESPIN
+        50 METAL5
+        54 METAL6
+        57 VIA4
+        59 METAL4
+        63 VIA3
+        65 METAL3
+        69 VIA2
+        71 METAL2
+        75 VIA
+        77 METAL1
+        81 CONTACT_TO_POLY
+        85 METAL6.PORT
+        89 METAL5.PORT
+        93 METAL4.PORT
+        97 METAL3.PORT
+       101 METAL2.PORT
+       105 METAL1.PORT
+       236 temporary_layer236
+VIACOR_FIELD_NAMES VIA_drc_layer_nb LAYER1_drc_layer_nb LAYER2_drc_layer_nb
+45  50  54
+57  50  59
+63  59  65
+69  65  71
+75  71  77
+81  28  77
+32  39  77
+236  38  77

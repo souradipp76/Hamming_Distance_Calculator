@@ -1,0 +1,14 @@
+* Calibre pushdown separate-properties (back-annotation) data
+***************************************
+*
+* These lvs-actionable properties, indexed by DEVICE element(model) will be kept in the netlist:
+*
+* KEEP_PROP_BEGIN
+* KEEP_PROP MN w l
+* KEEP_PROP MP w l
+* KEEP_PROP_END
+*
+.SUBCKT invstage1_lay
+* nothing transcripted
+.ENDS
+***************************************

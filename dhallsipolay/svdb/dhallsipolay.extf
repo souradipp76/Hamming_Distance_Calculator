@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1509173845 1509173845
+lvs_ExtOutFile RUNDIR /home/vlsi/g4/dhallsipolay
+lvs_ExtOutFile RULES_FILE /home/vlsi/g4/dhallsipolay/_tsmc018.calibre.rules_
+lvs_ExtInfoExtSummary {0 0 0 0 1 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST svdb/dhallsipolay.sp
+lvs_ExtOutFile EXTRACTION_REPORT dhallsipolay.lvs.report.ext

@@ -1,0 +1,10 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/fuladdlay.dv
+dv_start matched                                  
+dv_global
+dv_discrep 1 {Warning: }
+dv_discrep_line {Can't understand statement ".CONNECT" at line 3 in file "/home/vlsi/g4/fuladdlay/fuladdlay.src.net"}
+dv_discrep_line {}
+dv_cell {fuladdlay} {fuladdlay} matched
+dv_obj_count -transformed_nets {15 15} -transformed_inst {14 14} -transformed_port {7 7}
+dv_end

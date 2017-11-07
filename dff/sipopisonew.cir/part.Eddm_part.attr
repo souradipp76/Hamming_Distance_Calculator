@@ -1,0 +1,12 @@
+A 5 u Eddm_part 59e79f838f38.03.ac.10.1e.48.00.59.8a 2 2 2 0
+V v 1 1 59e79f838f38.03.ac.10.1e.48.01.59.8a
+F f 1 "part.part_1"
+V v 2 1 59e7a8cf2c9e.03.ac.10.1e.48.00.59.8a
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/dff/sipopisonew.cir/schematic" 1 mgc_schematic 59e79f7a149b.03.ac.10.1e.48.00.59.8a 59e79f7a149a.03.ac.10.1e.48.00.59.8a
+R csduv 1 "/home/vlsi/dff/sipopisonew.cir/sipopisonew.cir" 1 mgc_symbol 59e7a8cf2aab.03.ac.10.1e.48.00.59.8a 59e7a8cf2aaa.03.ac.10.1e.48.00.59.8a
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/vlsi/dff/sipopisonew.cir/schematic" 1 mgc_schematic 59e79f7a149b.03.ac.10.1e.48.00.59.8a 59e79f7a149a.03.ac.10.1e.48.00.59.8a

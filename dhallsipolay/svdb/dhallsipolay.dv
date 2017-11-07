@@ -1,0 +1,10 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/dhallsipolay.dv
+dv_start matched                                  
+dv_global
+dv_discrep 1 {Warning: }
+dv_discrep_line {Can't understand statement ".CONNECT" at line 3 in file "/home/vlsi/g4/dhallsipolay/dhallsipolay.src.net"}
+dv_discrep_line {}
+dv_cell {dhallsipolay} {dhallsipolay} matched
+dv_obj_count -transformed_nets {29 29} -transformed_inst {42 42} -transformed_port {8 8}
+dv_end

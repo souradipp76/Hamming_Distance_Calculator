@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /home/vlsi/g4/notlay/ref_inv
+lvs_LvsfVersion 2
+lvs_LvsInputSummary {0 1 0}
+lvs_LvsComparisonSummary {3 0 0 0}
+lvs_LvsOutFile LVS_REPORT ref_inv.lvs.report
+lvs_LvsOutFile SOURCE_NETLIST /home/vlsi/g4/notlay/ref_inv/ref_inv.src.net
+lvs_LvsOutFile RULES_FILE /home/vlsi/g4/notlay/ref_inv/_tsmc018.calibre.rules_
+lvs_LvsRunTimes 1509425929 1509425929

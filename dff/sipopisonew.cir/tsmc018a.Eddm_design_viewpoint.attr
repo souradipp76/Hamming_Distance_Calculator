@@ -1,0 +1,41 @@
+A 5 u Eddm_design_viewpoint 59e79f8f468d.03.ac.10.1e.48.00.59.8a 4 2 77 0
+V v 3 4 59e7a41fdccf.03.ac.10.1e.48.00.59.8a
+F f 3 "tsmc018a.dvpt_3"
+F o 0 ""
+F o 0 ""
+F o 0 ""
+V v 4 4 59e7a8520060.03.ac.10.1e.48.00.59.8a
+F f 4 "tsmc018a.dvpt_4"
+F o 0 ""
+F o 0 ""
+F o 0 ""
+O 4
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/vlsi/dff/sipopisonew.cir/part" 1 Eddm_part 59e79f838f38.03.ac.10.1e.48.01.59.8a 59e79f838f38.03.ac.10.1e.48.00.59.8a
+R cspuv 1 "/home/vlsi/dff/sipopisonew.cir/schematic" 2 mgc_schematic 59e79f838fc4.03.ac.10.1e.48.00.59.8a 59e79f7a149a.03.ac.10.1e.48.00.59.8a
+R cspuv 2 "/home/vlsi/dff/sipopisonew.cir/tsmc018a/default" 1 Eddm_ba_mgr 59e79f8f47c0.03.ac.10.1e.48.01.59.8a 59e79f8f47c0.03.ac.10.1e.48.00.59.8a
+R cspuv 3 "/home/vlsi/dff/masterslaveDflipflopnew.cir/part" 4 Eddm_part 59e794da1657.03.ac.10.1e.48.00.59.8a 59d2fa5a4bb2.03.ac.10.1e.48.00.30.37
+R cspuv 4 "/home/vlsi/dff/mux.cir/part" 4 Eddm_part 59e79a16641e.03.ac.10.1e.48.00.59.8a 59e7960c47d6.03.ac.10.1e.48.00.59.8a
+R cspuv 5 "/home/vlsi/dff/mux.cir/schematic" 3 mgc_schematic 59e798fa4fb2.03.ac.10.1e.48.00.59.8a 59e795df8ba8.03.ac.10.1e.48.00.59.8a
+R cspuv 7 "/home/vlsi/dff/masterslaveDflipflopnew.cir/schematic" 11 mgc_schematic 59e7948ebcda.03.ac.10.1e.48.00.59.8a 59d2f8e8361b.03.ac.10.1e.48.00.30.37
+R cspuv 13 "$ADK/technology/ic/symbols/pmos4/part" 1 Eddm_part 40edb88c70ab.03.93.22.46.d8.00.35.07 43349f1b0e00.03.93.22.46.d8.05.02.fa
+R cspuv 14 "$ADK/technology/ic/symbols/nmos4/part" 1 Eddm_part 40edb84b1b42.03.93.22.46.d8.00.35.07 43349f1b0dfe.03.93.22.46.d8.01.02.fa
+R cspuv 19 "/home/vlsi/dff/Dflipflopnoinvnew.cir/part" 5 Eddm_part 59d31696c59c.03.ac.10.1e.48.00.45.46 59d2f4a88f00.03.ac.10.1e.48.00.30.37
+R cspuv 20 "/home/vlsi/dff/Dflipflopnoinvnew.cir/schematic" 11 mgc_schematic 59d3128534bc.03.ac.10.1e.48.00.3e.69 59d2f1d1544d.03.ac.10.1e.48.00.28.f5
+R cspuv 22 "/home/vlsi/dff/inverter.cir/part" 10 Eddm_part 59d2f0b037b8.03.ac.10.1e.48.00.28.f5 59d295d19578.03.ac.10.1e.48.00.54.7d
+R cspuv 23 "/home/vlsi/dff/inverter.cir/schematic" 31 mgc_schematic 59d2f0bb831e.03.ac.10.1e.48.00.28.f5 59d295cea7cd.03.ac.10.1e.48.00.54.7d
+O 3
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/vlsi/dff/sipopisonew.cir/part" 1 Eddm_part 59e79f838f38.03.ac.10.1e.48.01.59.8a 59e79f838f38.03.ac.10.1e.48.00.59.8a
+R cspuv 1 "/home/vlsi/dff/sipopisonew.cir/schematic" 2 mgc_schematic 59e79f838fc4.03.ac.10.1e.48.00.59.8a 59e79f7a149a.03.ac.10.1e.48.00.59.8a
+R cspuv 2 "/home/vlsi/dff/sipopisonew.cir/tsmc018a/default" 1 Eddm_ba_mgr 59e79f8f47c0.03.ac.10.1e.48.01.59.8a 59e79f8f47c0.03.ac.10.1e.48.00.59.8a
+R cspuv 3 "/home/vlsi/dff/masterslaveDflipflopnew.cir/part" 4 Eddm_part 59e794da1657.03.ac.10.1e.48.00.59.8a 59d2fa5a4bb2.03.ac.10.1e.48.00.30.37
+R cspuv 4 "/home/vlsi/dff/mux.cir/part" 4 Eddm_part 59e79a16641e.03.ac.10.1e.48.00.59.8a 59e7960c47d6.03.ac.10.1e.48.00.59.8a
+R cspuv 5 "/home/vlsi/dff/mux.cir/schematic" 3 mgc_schematic 59e798fa4fb2.03.ac.10.1e.48.00.59.8a 59e795df8ba8.03.ac.10.1e.48.00.59.8a
+R cspuv 7 "/home/vlsi/dff/masterslaveDflipflopnew.cir/schematic" 11 mgc_schematic 59e7948ebcda.03.ac.10.1e.48.00.59.8a 59d2f8e8361b.03.ac.10.1e.48.00.30.37
+R cspuv 13 "$ADK/technology/ic/symbols/pmos4/part" 1 Eddm_part 40edb88c70ab.03.93.22.46.d8.00.35.07 43349f1b0e00.03.93.22.46.d8.05.02.fa
+R cspuv 14 "$ADK/technology/ic/symbols/nmos4/part" 1 Eddm_part 40edb84b1b42.03.93.22.46.d8.00.35.07 43349f1b0dfe.03.93.22.46.d8.01.02.fa
+R cspuv 19 "/home/vlsi/dff/Dflipflopnoinvnew.cir/part" 5 Eddm_part 59d31696c59c.03.ac.10.1e.48.00.45.46 59d2f4a88f00.03.ac.10.1e.48.00.30.37
+R cspuv 20 "/home/vlsi/dff/Dflipflopnoinvnew.cir/schematic" 11 mgc_schematic 59d3128534bc.03.ac.10.1e.48.00.3e.69 59d2f1d1544d.03.ac.10.1e.48.00.28.f5
+R cspuv 22 "/home/vlsi/dff/inverter.cir/part" 10 Eddm_part 59d2f0b037b8.03.ac.10.1e.48.00.28.f5 59d295d19578.03.ac.10.1e.48.00.54.7d
+R cspuv 23 "/home/vlsi/dff/inverter.cir/schematic" 31 mgc_schematic 59d2f0bb831e.03.ac.10.1e.48.00.28.f5 59d295cea7cd.03.ac.10.1e.48.00.54.7d

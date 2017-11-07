@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 59e7a9041b89.03.ac.10.1e.48.00.10.c5 5 2 1 0
+V v 3 1 59e7a9f49313.03.ac.10.1e.48.00.10.c5
+F o 0 ""
+V v 4 1 59e7ab060acc.03.ac.10.1e.48.00.10.c5
+F o 0 ""
+V v 5 1 59e7ab06a2cf.03.ac.10.1e.48.00.10.c5
+F o 0 ""
+O 5
+R cspuv 0 "/home/vlsi/g4/halfadd/schematic/sheet1" 4 mgc_sheet 59e7ab06a2b9.03.ac.10.1e.48.00.10.c5 59e7a9041bf8.03.ac.10.1e.48.00.10.c5
+O 4
+R cspuv 0 "/home/vlsi/g4/halfadd/schematic/sheet1" 3 mgc_sheet 59e7ab060aac.03.ac.10.1e.48.00.10.c5 59e7a9041bf8.03.ac.10.1e.48.00.10.c5
+O 3
+R cspuv 0 "/home/vlsi/g4/halfadd/schematic/sheet1" 2 mgc_sheet 59e7a9f492fc.03.ac.10.1e.48.00.10.c5 59e7a9041bf8.03.ac.10.1e.48.00.10.c5
