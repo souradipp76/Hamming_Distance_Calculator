@@ -8,9 +8,9 @@ Main features:
     
 ## Development and contribution
 Main developers:
-* [Krishna Praveen Y.]
-* [Abhinav Bollam]
+* Krishna Praveen Y.
+* Abhinav Bollam
 * [Souradip Pal](https://github.com/Souradip-sopho)
-* [Saurabh Dhall]
+* Saurabh Dhall
 
 Contributions in shape of [Pull Requests] are always welcome.
