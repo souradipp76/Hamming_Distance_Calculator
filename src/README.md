@@ -1,1 +1,0 @@
-# hamming_distance_calculator
