@@ -8,8 +8,8 @@ Main features:
     
 ## Development and contribution
 Main developers:
-* Krishna Praveen Y.
-* Abhinav Bollam
+* [Krishna Praveen Y.](https://github.com/KrishnaPY)
+* [Abhinav Bollam](https://github.com/lucifer12527)
 * [Souradip Pal](https://github.com/Souradip-sopho)
 * Saurabh Dhall
 
